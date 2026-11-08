@@ -68,8 +68,9 @@ The map loads its pinned graph libraries from jsDelivr and needs WebGL. The
 resource catalog and component tree can also be opened directly from the preview.
 
 All three pages share an English / Simplified Chinese switch. A saved choice
-wins over the browser's preferred language; a Chinese browser preference selects
-Simplified Chinese, and other languages fall back to English. The choice is
+wins over the site's default language. This fork sets `data-default-language` to
+`zh-CN` on its three pages; pages without that attribute use the browser's preferred
+language, with English as the fallback. The choice is
 stored locally under `sbos:language`.
 
 | File | Translation responsibility |

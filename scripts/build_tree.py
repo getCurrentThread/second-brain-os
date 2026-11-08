@@ -323,7 +323,7 @@ def main():
     print("tree.html written")
 
 
-TEMPLATE = """<!DOCTYPE html><html lang="en"><head>
+TEMPLATE = """<!DOCTYPE html><html lang="en" data-default-language="zh-CN"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <script>try{var t=JSON.parse(localStorage.getItem('sbos:theme'));if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script><title data-i18n="The full component tree - Second Brain OS">The full component tree - Second Brain OS</title>
 <meta name="description" content="Every component in second-brain-os on one page: the agents course, five handbooks, the second-brain project, skills, commands, agents, scripts and resources, each line a link.">
@@ -373,7 +373,7 @@ summary a{font-weight:700}
   color:var(--soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .counts b{color:var(--ink);font-weight:600}
 footer{border-top:1px solid var(--rule);padding:22px;text-align:center;color:var(--faint)}
-</style><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "251090521ca24c01bde87a953db3dea4"}'></script><!-- End Cloudflare Web Analytics -->
+</style>
 <link rel="stylesheet" href="assets/site/i18n.css">
 <script src="assets/site/i18n.js"></script>
 <script src="assets/site/catalog-i18n.js"></script>

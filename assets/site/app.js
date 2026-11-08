@@ -698,7 +698,7 @@ function renderInfo(n) {
     h += kicker(n, `${esc(sec.badge)} ${esc(sec.label)} · ${n.pos}/${n.of}`) +
       `<h2>${esc(n.label)}</h2><p class="desc">${esc(n.desc)}</p>` +
       `<div class="meta"><span><b>${n.words?.toLocaleString(I18N.locale)}</b> ${t('words')}</span><span>~${mins(n.words)} ${t('min')}</span><span><b>${out.length}</b> ${t('links out')}</span><span><b>${inn.length}</b> ${t('linked from')}</span></div>` +
-      `<div class="acts"><button class="btn primary" data-read="${esc(n.id)}">${t('Read the page')} &rarr;</button>${ghBtn('https://github.com/undefined-ui/second-brain-os/blob/main/' + (P?.path || n.path), 'Source')}</div>` +
+      `<div class="acts"><button class="btn primary" data-read="${esc(n.id)}">${t('Read the page')} &rarr;</button>${ghBtn('https://github.com/fuyundev/second-brain-os/blob/codex/zh-cn-pages/' + (P?.path || n.path), 'Source')}</div>` +
       group('On this page', P && P.heads.length ? P.heads.map((x, k) => `<button class="li" data-read="${esc(n.id)}" data-anchor="${esc(x.id)}" style="--dot:var(--rule)"><span class="n">${String(k + 1).padStart(2, '0')}</span><span>${esc(x.t)}</span></button>`).join('') : '') +
       group('Links to', listOf(out, id => byId.get(id).sec ? esc(byId.get(byId.get(id).sec).badge) : ''), out.length) +
       group('Linked from', listOf(inn, id => byId.get(id).sec ? esc(byId.get(byId.get(id).sec).badge) : ''), inn.length) +
@@ -815,7 +815,7 @@ function renderReader(n) {
     ((n.terms || []).length ? `<div class="rterms"><h4>${t('terms on this page')}</h4><div class="chips">${n.terms.slice(0, 18).map(chip).join('')}</div></div>` : '') +
     `<nav class="pager">${prev ? `<a href="#/read/${esc(prev)}" data-node="${esc(prev)}"><span class="lbl">&larr; ${t('previous')}</span>${esc(byId.get(prev).label)}</a>` : '<span></span>'}` +
     `${next ? `<a href="#/read/${esc(next)}" data-node="${esc(next)}" style="text-align:right"><span class="lbl">${t('next')} &rarr;</span>${esc(byId.get(next).label)}</a>` : '<span></span>'}</nav>` +
-    `<div class="src">${t('source:')} <a class="ext" href="https://github.com/undefined-ui/second-brain-os/blob/main/${esc(sourcePath)}" target="_blank" rel="noopener">${esc(sourcePath)}</a></div>`;
+    `<div class="src">${t('source:')} <a class="ext" href="https://github.com/fuyundev/second-brain-os/blob/codex/zh-cn-pages/${esc(sourcePath)}" target="_blank" rel="noopener">${esc(sourcePath)}</a></div>`;
   rScroll.style.scrollBehavior = 'auto';
   rScroll.scrollTop = 0;
   if (pendingAnchor) { const el = rBody.querySelector('#' + CSS.escape(pendingAnchor)); if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 450); pendingAnchor = null; }

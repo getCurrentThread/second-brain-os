@@ -72,7 +72,8 @@
   } };
   let saved;
   try { saved = JSON.parse(localStorage.getItem(storageKey)); } catch { /* Storage may be disabled. */ }
-  const preferred = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+  const preferred = document.documentElement.getAttribute('data-default-language') ||
+    (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
   let locale = supported.includes(saved) ? saved : /^zh(?:-|$)/i.test(preferred) ? 'zh-CN' : 'en';
   const originalLabels = new WeakMap();
 

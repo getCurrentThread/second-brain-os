@@ -42,11 +42,12 @@ class Element {
   closest(selector) { return this.matches(selector) ? this : null; }
 }
 
-function environment({ saved, languages = ['en-US'], language = 'en-US', blockedStorage = false, elements = [] } = {}) {
+function environment({ saved, languages = ['en-US'], language = 'en-US', siteDefault, blockedStorage = false, elements = [] } = {}) {
   const listeners = new Map();
   const documentListeners = new Map();
   const storage = new Map(saved === undefined ? [] : [['sbos:language', saved]]);
   const documentElement = new Element();
+  if (siteDefault) documentElement.setAttribute('data-default-language', siteDefault);
   documentElement.children = elements;
   const listen = (map, type, callback) => map.set(type, [...(map.get(type) || []), callback]);
   const fire = (map, event) => (map.get(event.type) || []).forEach(callback => callback(event));
@@ -81,6 +82,11 @@ function environment({ saved, languages = ['en-US'], language = 'en-US', blocked
 test('saved language takes precedence over browser language', () => {
   assert.equal(environment({ saved: '"en"', languages: ['zh-CN'] }).i18n.locale, 'en');
   assert.equal(environment({ saved: '"zh-CN"', languages: ['en-US'] }).i18n.locale, 'zh-CN');
+});
+
+test('the Chinese learning site defaults to Chinese while honoring an explicit saved choice', () => {
+  assert.equal(environment({ siteDefault: 'zh-CN', languages: ['en-US'] }).i18n.locale, 'zh-CN');
+  assert.equal(environment({ siteDefault: 'zh-CN', saved: '"en"' }).i18n.locale, 'en');
 });
 
 test('first browser preference chooses Chinese, with English as the fallback', () => {
