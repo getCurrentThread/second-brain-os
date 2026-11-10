@@ -10,7 +10,7 @@
     'Second Brain OS - guides and resources for AI engineers': 'Second Brain OS - AI 엔지니어를 위한 가이드와 자료',
     'Guides and resources for AI engineers': 'AI 엔지니어를 위한 가이드와 자료',
     'the whole site, as one graph': '사이트 전체를 한 장의 그래프로',
-    'A course on building agents from a single prompt to production, five handbooks that go deep on one layer each, a hands-on second-brain project, and the links worth your time. Free, plain markdown.': '프롬프트 하나에서 프로덕션까지 에이전트를 만드는 강좌, 계층 하나씩 깊이 파고드는 핸드북 다섯 권, 직접 해 보는 세컨드 브레인 프로젝트, 그리고 시간을 들일 만한 링크를 모았습니다. 무료이고, 평범한 마크다운으로 되어 있습니다.',
+    'A course on building agents from a single prompt to production, five handbooks that go deep on one layer each, a hands-on second-brain project, and the links worth your time. Free, plain markdown.': '프롬프트 하나에서 프로덕션까지 에이전트를 만드는 강좌, 계층 하나씩 깊이 파고드는 핸드북 다섯 권, 직접 해 보는 세컨드 브레인 프로젝트, 그리고 시간을 들일 만한 링크를 모았습니다. 무료이고, 순수 마크다운으로 되어 있습니다.',
     'Every page, term and tool on this site is a bubble. The lines are the real links between them. Click one to see what it leans on.': '이 사이트의 모든 페이지, 용어, 도구가 버블 하나입니다. 선은 그 사이의 실제 링크입니다. 버블을 클릭하면 무엇에 기대고 있는지 볼 수 있습니다.',
     'Back to the whole map': '전체 지도로 돌아가기',
     'Contents': '목차',
