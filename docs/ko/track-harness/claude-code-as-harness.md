@@ -12,7 +12,7 @@ Claude Code는 공부하기에 가장 배울 것이 많은 하네스입니다. A
 
 ## 훅
 
-[훅](https://code.claude.com/docs/en/hooks)은 생명주기 이벤트에 묶인 셸 명령입니다. `PreToolUse`, `PostToolUse`, `SessionStart`, `PreCompact`가 있고, 2026년까지 수십 가지가 더 생겼습니다. 훅은 제안이 아니라 결정적 강제입니다. `PreToolUse` 훅은 위험한 명령을 매번 빠짐없이 막을 수 있지만, 프롬프트 지시는 확률을 낮출 뿐입니다. 경험칙은 판단에는 프롬프트, 정책에는 훅입니다.
+[훅](https://code.claude.com/docs/en/hooks)은 생명주기 이벤트에 묶인 셸 명령입니다. `PreToolUse`, `PostToolUse`, `SessionStart`, `PreCompact`가 있고, 2026년까지 수십 가지가 더 생겼습니다. 훅은 제안이 아니라 결정론적 강제입니다. `PreToolUse` 훅은 위험한 명령을 매번 빠짐없이 막을 수 있지만, 프롬프트 지시는 확률을 낮출 뿐입니다. 경험칙은 판단에는 프롬프트, 정책에는 훅입니다.
 
 <a id="subagents"></a>
 

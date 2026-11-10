@@ -8,7 +8,7 @@
 
 2026년 6월 7일 Peter Steinberger가 이 변화에 이름을 붙인 글을 올렸습니다. "You shouldn't be prompting coding agents anymore. You should be designing loops that prompt your agents."(이제 코딩 에이전트에 프롬프트를 쓰지 마십시오. 에이전트에 프롬프트를 던지는 루프를 설계하십시오.) 이 글은 하루 만에 수백만 번 조회되었습니다. 곧이어 Addy Osmani의 에세이 "Loop Engineering"이 나왔고(O'Reilly Radar가 6월 22일에 전재했습니다), 이 개념에 해부도를 그려 주었습니다. 자동화, 워크트리, 스킬, 커넥터, 서브에이전트, 그리고 실행 사이에도 진행 상황이 남도록 하는 외부 상태입니다. Anthropic의 Boris Cherny는 이렇게 단언했습니다. "I don't prompt Claude anymore. I have loops running that prompt Claude... My job is to write loops."(나는 더 이상 Claude에 프롬프트를 쓰지 않습니다. Claude에 프롬프트를 던지는 루프를 돌립니다. 내 일은 루프를 쓰는 것입니다.)
 
-실천은 이름보다 오래되었습니다. Geoffrey Huntley의 Ralph 루프는 2025년 7월로 거슬러 올라가고, Simon Willison은 그해 9월에 "Designing agentic loops"를 써서 에이전트를 "runs tools in a loop to achieve a goal"(목표를 이루기 위해 루프 안에서 도구를 실행하는 것)이라고 정의했습니다. 2026년 6월은 이 분야가 이름을 얻은 때일 뿐입니다. 이 핸드북을 쓰는 시점에서 석 달밖에 되지 않았으니, 용어는 계속 바뀔 수 있습니다.
+실무 관행은 이름보다 오래되었습니다. Geoffrey Huntley의 Ralph 루프는 2025년 7월로 거슬러 올라가고, Simon Willison은 그해 9월에 "Designing agentic loops"를 써서 에이전트를 "runs tools in a loop to achieve a goal"(목표를 이루기 위해 루프 안에서 도구를 실행하는 것)이라고 정의했습니다. 2026년 6월은 이 분야가 이름을 얻은 때일 뿐입니다. 이 핸드북을 쓰는 시점에서 석 달밖에 되지 않았으니, 용어는 계속 바뀔 수 있습니다.
 
 <a id="prompt-engineering-versus-loop-engineering"></a>
 

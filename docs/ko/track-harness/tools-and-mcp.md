@@ -16,7 +16,7 @@
 
 ## 2026년의 MCP
 
-[Model Context Protocol](https://modelcontextprotocol.io)은 2024년 말에 나온 Anthropic의 공개 표준으로, 어떤 클라이언트에든 도구를 연결하는 사실상의 배관이 되었습니다. [2026-07-28 사양](https://modelcontextprotocol.io/specification/2026-07-28)이 현재 버전이며 중요한 전환점입니다. 프로토콜의 핵심이 이제 상태를 가진 세션이 아니라 상태 없는 요청/응답이 되었고, 캐시할 수 있는 목록 결과, 헤더 기반 라우팅, 공식 확장 프레임워크, 강화된 인가가 함께 들어왔습니다. 쉽게 말해 MCP 서버가 이제 일반 웹 서비스처럼 확장됩니다. 주요 클라이언트가 모두 채택했습니다. [Claude Code](claude-code-as-harness.md), OpenAI 스택, Vercel AI SDK 6, 그리고 [지형](harness-landscape.md)의 대부분이 그렇습니다.
+[Model Context Protocol](https://modelcontextprotocol.io)은 2024년 말에 나온 Anthropic의 공개 표준으로, 어떤 클라이언트에든 도구를 연결하는 사실상의 표준 기반이 되었습니다. [2026-07-28 사양](https://modelcontextprotocol.io/specification/2026-07-28)이 현재 버전이며 중요한 전환점입니다. 프로토콜의 핵심이 이제 상태를 가진 세션이 아니라 상태 없는 요청/응답이 되었고, 캐시할 수 있는 목록 결과, 헤더 기반 라우팅, 공식 확장 프레임워크, 강화된 인가가 함께 들어왔습니다. 쉽게 말해 MCP 서버가 이제 일반 웹 서비스처럼 확장됩니다. 주요 클라이언트가 모두 채택했습니다. [Claude Code](claude-code-as-harness.md), OpenAI 스택, Vercel AI SDK 6, 그리고 [지형](harness-landscape.md)의 대부분이 그렇습니다.
 
 <a id="security-the-part-everyone-skips"></a>
 

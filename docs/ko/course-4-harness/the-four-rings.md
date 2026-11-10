@@ -23,13 +23,13 @@
 - Your database user is read-only. Ask before proposing any schema change.
 ```
 
-도구 설계가 이 고리의 나머지 절반입니다. Google의 Kaggle 백서 [Agent Tools & Interoperability with MCP](https://www.kaggle.com/whitepaper-agent-tools-and-interoperability-with-mcp)는 도구를 함수 도구, 내장 도구, 에이전트 도구로 나누는데, 그 모범 사례는 모두 가이드를 쓰는 일에 관한 것입니다. 모델이 설명만 보고 고를 수 있을 만큼 각 도구를 잘 문서화하고, API 표면이 아니라 작업을 기준으로 도구를 설계하고, 출력은 간결하게 돌려주고, 오류가 해결 방법을 알려 주게 하라는 것입니다. 원시 접근보다 타입이 있는 도구를 택하십시오. `search_orders(customer_id)`가 SQL 연결을 통째로 넘겨주는 것보다 낫습니다. 스키마 자체가 격리이기 때문입니다. 백서가 MCP를 옹호하는 이유는 상호운용성입니다. 열린 프로토콜 하나(stdio 또는 스트리밍 가능한 HTTP 위의 JSON-RPC 2.0)면 클라이언트 N개와 도구 서버 M개가 각각 한 번씩만 통합하면 되고, N×M번 통합할 필요가 없습니다. 전체 내용은 [도구와 MCP](../track-harness/tools-and-mcp.md)에 있습니다.
+도구 설계가 이 고리의 나머지 절반입니다. Google의 Kaggle 화이트페이퍼 [Agent Tools & Interoperability with MCP](https://www.kaggle.com/whitepaper-agent-tools-and-interoperability-with-mcp)는 도구를 함수 도구, 내장 도구, 에이전트 도구로 나누는데, 그 모범 사례는 모두 가이드를 쓰는 일에 관한 것입니다. 모델이 설명만 보고 고를 수 있을 만큼 각 도구를 잘 문서화하고, API 표면이 아니라 작업을 기준으로 도구를 설계하고, 출력은 간결하게 돌려주고, 오류가 해결 방법을 알려 주게 하라는 것입니다. 원시 접근보다 타입이 있는 도구를 택하십시오. `search_orders(customer_id)`가 SQL 연결을 통째로 넘겨주는 것보다 낫습니다. 스키마 자체가 격리이기 때문입니다. 화이트페이퍼가 MCP를 옹호하는 이유는 상호운용성입니다. 열린 프로토콜 하나(stdio 또는 스트리밍 가능한 HTTP 위의 JSON-RPC 2.0)면 클라이언트 N개와 도구 서버 M개가 각각 한 번씩만 통합하면 되고, N×M번 통합할 필요가 없습니다. 전체 내용은 [도구와 MCP](../track-harness/tools-and-mcp.md)에 있습니다.
 
 <a id="ring-three-sensors"></a>
 
 ## 셋째 고리: 센서
 
-센서는 작업이 건전한지를 결정적으로 알려 줍니다. 값싼 센서는 모든 변경에 돌리십시오. 린터, 타입 체커, 변경할 때마다 도는 테스트 스위트는 몇 초밖에 걸리지 않고 지치지도 않습니다. 비싼 센서(diff를 검토하는 두 번째 모델, 직접 읽는 사람)는 중요한 곳에만 쓰십시오. 인증 코드, 마이그레이션, 돈이 오가는 모든 것입니다. `make test`가 자동으로 도는 하네스는 검토자가 기억해 주기를 바라는 하네스보다 더 많이 잡아냅니다.
+센서는 작업이 건전한지를 결정론적으로 알려 줍니다. 값싼 센서는 모든 변경에 돌리십시오. 린터, 타입 체커, 변경할 때마다 도는 테스트 스위트는 몇 초밖에 걸리지 않고 지치지도 않습니다. 비싼 센서(diff를 검토하는 두 번째 모델, 직접 읽는 사람)는 중요한 곳에만 쓰십시오. 인증 코드, 마이그레이션, 돈이 오가는 모든 것입니다. `make test`가 자동으로 도는 하네스는 검토자가 기억해 주기를 바라는 하네스보다 더 많이 잡아냅니다.
 
 <a id="ring-four-permissions"></a>
 
@@ -39,7 +39,7 @@ Anthropic에 따르면 [Claude Code 사용자는 권한 요청의 93%를 승인�
 
 <a id="hooks-guides-with-teeth"></a>
 
-## 훅: 이빨 달린 가이드
+## 훅: 강제력 있는 가이드
 
 모델이 대충 훑어볼 수 있는 가이드가 하네스가 강제하는 규칙이 됩니다. Claude Code에서는 PreToolUse 훅이 모든 도구 호출 전에 실행되어 그 호출을 막을 수 있습니다. 다음 훅은 "main에는 절대 푸시하지 않는다"를 강제합니다.
 

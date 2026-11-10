@@ -8,7 +8,7 @@
 
 - [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) — Anthropic, 2024년 12월. 여전히 가장 명료한 분류입니다. 워크플로 대 에이전트, 그리고 모두가 인용하지만 따르는 사람은 드문 조언인 "단순하게 시작하라"가 담겨 있습니다.
 - [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic. [컨텍스트 엔지니어링](context-engineering.md)에서 다룬 분야에 이름을 붙인 글입니다.
-- [Context engineering for AI agents: lessons from building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) — 프로덕션에서 얻은 상처들: KV 캐시 경제학, 추가만 하는 컨텍스트, 도구를 제거하는 대신 마스킹하기.
+- [Context engineering for AI agents: lessons from building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) — 프로덕션에서 겪으며 얻은 쓰라린 교훈들: KV 캐시 경제학, 추가만 하는 컨텍스트, 도구를 제거하는 대신 마스킹하기.
 - [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents) — [도구와 MCP](tools-and-mcp.md)의 짝이 되는 도구 설계 글.
 
 <a id="deep-guides-and-talks"></a>

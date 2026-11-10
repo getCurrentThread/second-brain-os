@@ -50,7 +50,7 @@ b = nx.betweenness_centrality(g)
 
 ## 그래프 데이터베이스
 
-[Ladybug](https://github.com/LadybugDB/ladybug)는 임베디드라 서버가 없고, [CSV를 바로 읽으며](https://docs.ladybugdb.com/import/csv), 자기 노트에 Cypher 질의를 던지는 것은 저녁 한나절 즐기기에 정말 재미있습니다. 2025년 10월에 아카이브된 Kuzu의 유지보수되는 후속 프로젝트입니다. Neo4j는 완전한 버전이며, 그 위에 무언가를 만들 것이 아니라면 과합니다.
+[Ladybug](https://github.com/LadybugDB/ladybug)는 임베디드라 서버가 없고, [CSV를 바로 읽으며](https://docs.ladybugdb.com/import/csv), 자기 노트에 Cypher 질의를 던지는 것은 하룻저녁 즐기기에 정말 재미있습니다. 2025년 10월에 아카이브된 Kuzu의 유지보수되는 후속 프로젝트입니다. Neo4j는 완전한 버전이며, 그 위에 무언가를 만들 것이 아니라면 과합니다.
 
 이것이 무엇인지 분명히 해 두십시오. 분석 계층이지 대체물이 아닙니다. 마크다운이 계속 기준이고, 데이터베이스는 다시 만들 수 있는 파생물입니다. 데이터베이스에만 존재하는 지식을 쓰기 시작하는 순간, 이 접근을 택할 가치가 있게 해 준 이식성을 잃습니다.
 

@@ -45,7 +45,7 @@ claude mcp add-json obsidian-vault '{
 
 <a id="step-3-test-it"></a>
 
-## 3단계: 시험하기
+## 3단계: 테스트하기
 
 ```
 List every file in my Obsidian vault.

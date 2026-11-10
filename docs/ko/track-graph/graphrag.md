@@ -17,17 +17,17 @@ GraphRAG는 인덱스가 임베딩된 청크 더미가 아니라 코퍼스로 �
 
 <a id="microsoft-graphrag-and-its-successors"></a>
 
-## Microsoft GraphRAG와 그 후속작
+## Microsoft GraphRAG와 그 후속 프로젝트
 
 [microsoft/graphrag](https://github.com/microsoft/graphrag) 저장소는 이제 유지보수 모드입니다. 버그 수정과 CVE 패치만 있고 새 기능은 없습니다. 도입할 프레임워크가 아니라 읽어 볼 참조 구현으로 취급하십시오.
 
-흥미로운 작업은 더 저렴한 후손들로 옮겨 갔습니다. [LazyGraphRAG](https://www.microsoft.com/en-us/research/blog/lazygraphrag-setting-a-new-standard-for-quality-and-cost/)는 거의 모든 LLM 작업을 질의 시점으로 미룹니다. 사전 요약이 없고 인덱싱 비용은 원본의 0.1%라고 주장되지만, 오픈 라이브러리가 아니라 Microsoft의 Azure 제품으로 출시되었습니다. 오픈소스에서는 [LightRAG](https://github.com/HKUDS/LightRAG)(EMNLP 2025, 지금도 활발히 개발 중)가 그래프와 벡터의 이중 인덱스를 증분 업데이트와 함께 유지하고, [fast-graphrag](https://github.com/circlemind-ai/fast-graphrag)는 커뮤니티 요약을 PageRank 순회로 대체합니다. 2026년의 새 배포 대부분은 이 중 하나를 고르며, [도구](tools.md) 페이지가 이 분야를 개관합니다.
+흥미로운 작업은 더 저렴한 후속 프로젝트들로 옮겨 갔습니다. [LazyGraphRAG](https://www.microsoft.com/en-us/research/blog/lazygraphrag-setting-a-new-standard-for-quality-and-cost/)는 거의 모든 LLM 작업을 질의 시점으로 미룹니다. 사전 요약이 없고 인덱싱 비용은 원본의 0.1%라고 주장되지만, 오픈 라이브러리가 아니라 Microsoft의 Azure 제품으로 출시되었습니다. 오픈소스에서는 [LightRAG](https://github.com/HKUDS/LightRAG)(EMNLP 2025, 지금도 활발히 개발 중)가 그래프와 벡터의 이중 인덱스를 증분 업데이트와 함께 유지하고, [fast-graphrag](https://github.com/circlemind-ai/fast-graphrag)는 커뮤니티 요약을 PageRank 순회로 대체합니다. 2026년의 새 배포 대부분은 이 중 하나를 고르며, [도구](tools.md) 페이지가 이 분야를 개관합니다.
 
 <a id="costs-and-trade-offs"></a>
 
 ## 비용과 트레이드오프
 
-원본 파이프라인은 특정한 방식으로 비쌉니다. 인제스트 때 모든 청크가 LLM을 거치고, 그다음 모든 커뮤니티가 요약되고, 다시 계층을 따라 올라가며 재요약됩니다. 소박한 코퍼스를 인덱싱하는 데도 실제 돈이 들고, 편집 뒤의 재인덱싱에는 같은 돈이 또 듭니다. 후속작들이 존재하는 이유가 바로 이 세금을 피하는 것입니다. 지연 평가, 증분 업데이트, 아니면 요약을 아예 생략하는 방식으로 말입니다.
+원본 파이프라인은 특정한 방식으로 비쌉니다. 인제스트 때 모든 청크가 LLM을 거치고, 그다음 모든 커뮤니티가 요약되고, 다시 계층을 따라 올라가며 재요약됩니다. 소박한 코퍼스를 인덱싱하는 데도 실제 돈이 들고, 편집 뒤의 재인덱싱에는 같은 돈이 또 듭니다. 후속 프로젝트들이 존재하는 이유가 바로 이 반복 비용을 피하는 것입니다. 지연 평가, 증분 업데이트, 아니면 요약을 아예 생략하는 방식으로 말입니다.
 
 조용한 트레이드오프는 충실도입니다. 추출은 뉘앙스를 트리플로 납작하게 만들고, 단서 표현이나 날짜 한정어, 출처 표시는 사라질 수 있습니다. 커뮤니티 요약은 요약일 뿐이며, 이해하지 못하는 텍스트를 모델에게 압축시킬 때 생기는 모든 실패 모드를 물려받습니다. GraphRAG는 벡터 RAG가 답하지 못하는 전역 질문에 답하지만, 그 답은 원본 자료에서 모델이 생성한 계층 하나만큼 더 멀어져 있습니다.
 
