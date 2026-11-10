@@ -2,7 +2,7 @@
 .language-toggle{
   flex:none;white-space:nowrap;cursor:pointer;color:var(--soft);background:var(--card);
   border:1px solid var(--rule);border-radius:6px;padding:8px 10px;
-  font:13px/1.2 ui-monospace,SFMono-Regular,Menlo,"PingFang SC","Microsoft YaHei",monospace;
+  font:13px/1.2 ui-monospace,SFMono-Regular,Menlo,"Apple SD Gothic Neo","Malgun Gothic",monospace;
 }
 .language-toggle:hover{color:var(--ink);border-color:var(--accent)}
 .language-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -11,9 +11,11 @@ header>.bar>.theme{margin-left:auto}
 header>.bar>.language-toggle{margin-left:0}
 .content-language{color:var(--soft);font-size:13px;margin:0 0 18px}
 .hint i{font-style:normal}
-html[lang="zh-CN"]{--serif:Charter,Georgia,"Songti SC","Noto Serif CJK SC",serif;--mono:ui-monospace,SFMono-Regular,Menlo,"PingFang SC","Microsoft YaHei",monospace}
-html[lang="zh-CN"] #hero h1{line-height:1.25;letter-spacing:0;text-wrap:balance}
-html[lang="zh-CN"] #hero .kick{letter-spacing:.06em}
+html[lang="ko"]{--serif:Charter,Georgia,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,"Apple SD Gothic Neo","Malgun Gothic",monospace}
+/* Korean wraps between words, not inside them */
+html[lang="ko"] body{word-break:keep-all;overflow-wrap:break-word}
+html[lang="ko"] #hero h1{line-height:1.25;letter-spacing:0;text-wrap:balance}
+html[lang="ko"] #hero .kick{letter-spacing:.06em}
 @media(min-width:761px) and (max-width:1399px){
   body.m-read .top .brand{display:none}
 }

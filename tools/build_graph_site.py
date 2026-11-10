@@ -141,7 +141,7 @@ for m in re.finditer(r"\]\(([a-z0-9-]+)/README\.md\)", index_md):
         sec_order.append(m.group(1))
 for d in sorted(glob.glob(os.path.join(ROOT, "docs", "*", "README.md"))):
     s = os.path.basename(os.path.dirname(d))
-    if s == "zh-CN":
+    if s == "ko":
         continue
     if s not in sec_order:
         sec_order.append(s)

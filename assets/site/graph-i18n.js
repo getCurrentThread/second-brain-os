@@ -1,667 +1,667 @@
-// Simplified Chinese navigation and glossary metadata, keyed by stable graph IDs.
+// Korean navigation and glossary metadata, keyed by stable graph IDs.
 // Keep source documents, file names, URLs and graph topology in their original form.
 // New upstream nodes fall back to the English metadata in graph-data.js.
-window.SBOS_NODE_ZH = {
-  'root': { label: 'Second Brain OS', desc: '面向 AI 工程师的指南与资源：从一条提示词到生产环境的智能体开发课程、深入各个层面的五本手册、第二大脑实战项目、工具箱，以及值得阅读的资料。' },
-  'col:course': { label: '智能体开发课程', desc: '七个模块，带你从一条提示词走向生产级智能体：理论来自白皮书，每个模块都有实战。建议按顺序学习。' },
-  'col:handbook': { label: '专题手册', desc: '围绕课程中的某一层，汇集技术、工具与实战项目，供你随时查阅。可以从任意主题开始。' },
-  'col:guide': { label: '第二大脑', desc: '一个实战项目：让智能体用纯 Markdown 为你建立并维护知识库。一个晚上即可搭建。' },
-  'col:glossary': { label: '术语表', desc: '全站反复出现的核心概念。每个术语都链接到最依赖它的页面。' },
-  'col:toolkit': { label: '工具箱', desc: '可安装使用的智能体技能、斜杠命令、子智能体、脚本、课程插件，以及知识库入门模板。' },
-  'col:resources': { label: '资源', desc: '经过筛选的论文、工具、Obsidian 插件、代码仓库与阅读资料。' },
+window.SBOS_NODE_KO = {
+  'root': { label: 'Second Brain OS', desc: 'AI 엔지니어를 위한 가이드와 자료입니다. 프롬프트 한 줄에서 프로덕션까지 에이전트를 만드는 강좌, 계층 하나씩을 깊이 다루는 핸드북 다섯 권, 실습형 세컨드 브레인 프로젝트, 툴킷, 그리고 시간을 들일 만한 링크를 담았습니다.' },
+  'col:course': { label: '에이전트 강좌', desc: '프롬프트 한 줄에서 프로덕션 에이전트까지 모듈 일곱 개로 이어집니다. 이론은 백서에서 가져오고, 모듈마다 실습이 있습니다. 순서대로 읽으십시오.' },
+  'col:handbook': { label: '핸드북', desc: '학습 경로가 아니라 참고 자료입니다. 강좌의 한 계층에 대한 기법, 도구, 실습을 모두 모았습니다. 어디서든 골라 읽을 수 있습니다.' },
+  'col:guide': { label: '세컨드 브레인', desc: '실습 프로젝트입니다. 에이전트가 순수 마크다운으로 지식 베이스를 만들고 관리해 줍니다. 설정에는 저녁 한 번이면 충분합니다.' },
+  'col:glossary': { label: '용어집', desc: '사이트 전체에서 거듭 등장하는 핵심 개념입니다. 각 용어는 그 개념에 가장 크게 기대는 페이지로 연결됩니다.' },
+  'col:toolkit': { label: '툴킷', desc: '설치해서 쓰는 것들입니다. 에이전트 스킬, 슬래시 커맨드, 서브에이전트, 스크립트, 강좌 플러그인, 스타터 볼트가 있습니다.' },
+  'col:resources': { label: '자료', desc: '검증을 마친 모든 링크입니다. 논문, 도구, Obsidian 플러그인, 저장소, 읽을거리가 있습니다.' },
 
-  'sec:course-0-map': { label: '0 · 全景图', desc: '什么是智能体，模型周围的五个层次，以及何时工作流比循环更合适。' },
-  'sec:course-1-context': { label: '1 · 上下文', desc: '模型能看到什么：注意力、缓存、四个位置、会话与记忆。' },
-  'sec:course-2-loop': { label: '2 · 循环', desc: '谁来决定下一步：目标、检查器、停止规则、预算，以及能在生产环境中运行的混合模式。' },
-  'sec:course-3-gate': { label: '3 · 决策关卡', desc: '在高成本模型之前先做低成本决策：从分类器开始，在合适的场景使用系统一模型。' },
-  'sec:course-4-harness': { label: '4 · 运行框架', desc: '模型周围的工作环境：隔离、指南、监测与权限，由外向内逐层搭建。' },
-  'sec:course-5-evals': { label: '5 · 评估', desc: '每月运行同一套测试：检查运行轨迹中的行为、校验评审器，并建立包含失败案例的基准集。' },
-  'sec:course-6-production': { label: '6 · 生产环境', desc: '从演示走向部署：网关、追踪、成本与安全，以及覆盖五个层次的首日行动计划。' },
-  'sec:track-graph': { label: '知识图谱', desc: '用图谱构建智能体记忆：GraphRAG、提取流程与存储，然后花一个晚上为自己的知识库搭建图谱层。' },
-  'sec:track-jev': { label: 'Jev 工程', desc: '决策关卡是系统的一层，Jev 是实现它的一种方式。返回带置信度的类型化决策，并在获得 Jev 使用权限前先搭建可运行的系统。' },
-  'sec:track-harness': { label: '智能体运行框架', desc: '模型周围的运行机制：循环、工具、上下文工程与框架选型，用约 150 行代码在一个晚上搭建可用的运行框架。' },
-  'sec:track-loop': { label: '循环工程', desc: '智能体的控制系统：停止条件、评审器与上下文整理，以及一个可放心运行到次日清晨的循环。' },
-  'sec:track-evals': { label: '评估工程', desc: '以测量规范 AI 产品：基准集、可靠的评审器与智能体轨迹，并在一个下午搭建第一套评估。' },
-  'sec:01-concepts': { label: '基本概念', desc: '为什么由大语言模型维护的知识库比被你弃用的笔记系统更有效，以及这种模式究竟是什么。' },
-  'sec:02-setup': { label: '搭建', desc: '一个晚上，从零搭建由智能体维护的知识库。首次使用请依次完成九个步骤：约二十分钟的输入操作，另加第四步访谈所需的时间。' },
-  'sec:03-ingestion': { label: '资料导入', desc: '尽可能顺畅地把阅读、观看和写作的内容收进 raw/，再有序整理到 Wiki 中。' },
-  'sec:04-structuring': { label: '组织结构', desc: '决定知识库成为知识图谱还是资料堆的规则。' },
-  'sec:05-graphs': { label: '图谱', desc: '深入大多数第二大脑指南一带而过的部分：图谱视图背后的结构与用途。' },
-  'sec:06-agents': { label: '智能体', desc: '让一次性的搭建变成可以自行维护的系统。' },
-  'sec:07-retrieval': { label: '检索', desc: '如何向知识库提问，并获得值得信任的回答。' },
-  'sec:08-outputs': { label: '知识输出', desc: '当知识库能够产出成果，它才真正发挥价值。' },
-  'sec:09-maintenance': { label: '维护', desc: '新鲜感过去后，让系统持续运转的方法。' },
-  'sec:10-troubleshooting': { label: '故障排查', desc: '具体问题与对应的解决方法。' },
+  'sec:course-0-map': { label: '0 · 지도', desc: '에이전트란 무엇인지, 모델을 둘러싼 다섯 계층, 그리고 워크플로가 루프보다 나은 때를 다룹니다.' },
+  'sec:course-1-context': { label: '1 · 컨텍스트', desc: '모델이 보는 것: 어텐션, 캐싱, 네 곳, 세션과 메모리.' },
+  'sec:course-2-loop': { label: '2 · 루프', desc: '다음 단계는 누가 정하는가: 목표, 체커, 종료 조건, 예산. 그리고 프로덕션에서 살아남는 하이브리드.' },
+  'sec:course-3-gate': { label: '3 · 게이트', desc: '값비싼 모델 앞의 값싼 결정: 분류기를 먼저 쓰고, 시스템 1 모델은 제값을 하는 곳에 씁니다.' },
+  'sec:course-4-harness': { label: '4 · 하네스', desc: '모델을 둘러싼 사무실입니다. 격리, 가이드, 센서, 권한을 바깥에서 안쪽으로 차례대로 세웁니다.' },
+  'sec:course-5-evals': { label: '5 · 평가', desc: '매달 같은 시험을 칩니다. 트레이스에 대한 행동 점검, 판정을 받는 판정자, 실패를 포함한 골든 세트입니다.' },
+  'sec:course-6-production': { label: '6 · 프로덕션', desc: '데모에서 배포까지 다룹니다. 게이트웨이, 트레이싱, 비용, 보안, 그리고 다섯 계층 전체에 걸친 첫날 계획입니다.' },
+  'sec:track-graph': { label: '지식 그래프', desc: '에이전트 메모리로서의 그래프: GraphRAG, 추출 파이프라인, 저장소, 그리고 자신의 볼트 위에 그래프 계층을 얹는 저녁 한나절의 실습.' },
+  'sec:track-jev': { label: 'Jev 엔지니어링', desc: '게이트는 하나의 계층이고, Jev는 그 계층을 만드는 한 가지 방법입니다. 생성한 텍스트 대신 신뢰도 점수가 붙은 타입 있는 결정을 쓰며, Jev 접근 권한이 나오기 전에도 돌려 볼 수 있는 실습이 있습니다.' },
+  'sec:track-harness': { label: '에이전트 하네스', desc: '모델을 둘러싼 장치들, 곧 루프, 도구, 컨텍스트 엔지니어링, 생태계 지형을 다루고, 저녁 한 번에 만들 수 있는 약 150줄짜리 동작하는 하네스까지 갖췄습니다.' },
+  'sec:track-loop': { label: '루프 엔지니어링', desc: '에이전트를 둘러싼 제어 시스템: 종료 조건, 크리틱, 컨텍스트 위생, 그리고 아침에 믿고 확인할 수 있는 야간 루프.' },
+  'sec:track-evals': { label: '평가 엔지니어링', desc: '측정을 AI 제품의 규율로 삼는 법: 골든 세트, 거짓말하지 않는 판정자, 에이전트의 실행 궤적, 그리고 오후 한나절에 만드는 첫 스위트.' },
+  'sec:01-concepts': { label: '개념', desc: 'LLM이 유지하는 지식 베이스가 왜 포기했던 노트 시스템보다 나은지, 그리고 그 패턴이 실제로 무엇인지 다룹니다.' },
+  'sec:02-setup': { label: '설정', desc: '처음부터 시작해 하룻저녁 만에 에이전트가 유지하는 볼트를 갖추는 과정입니다. 처음에는 페이지를 순서대로 따라가십시오. 단계는 아홉 개이며, 타이핑에는 대략 20분이 들고, 네 번째 단계의 인터뷰는 답하는 만큼 걸립니다.' },
+  'sec:03-ingestion': { label: '인제스트', desc: '읽고 보고 쓰는 모든 것을 최대한 적은 마찰로 raw/에 모은 다음, 위키가 넘치지 않게 위키로 들여옵니다.' },
+  'sec:04-structuring': { label: '구조화', desc: '볼트가 그래프가 될지 쓰레기 매립지가 될지 가르는 규칙입니다.' },
+  'sec:05-graphs': { label: '그래프', desc: '대부분의 세컨드 브레인 안내서가 건너뛰는 부분입니다. 그래프 뷰를 열어 보라고 하고, 뇌처럼 생겼다고 말한 뒤 넘어갑니다.' },
+  'sec:06-agents': { label: '에이전트', desc: '한 번 해 놓고 끝나는 설정을 스스로 유지되는 시스템으로 바꿉니다.' },
+  'sec:07-retrieval': { label: '검색', desc: '볼트에 실제로 질문하고, 믿을 만한 답을 얻는 방법입니다.' },
+  'sec:08-outputs': { label: '산출물', desc: '볼트가 제값을 하는 것은 거기서 무언가가 나올 때입니다.' },
+  'sec:09-maintenance': { label: '유지보수', desc: '신기함이 사라진 뒤에도 이것을 살아 있게 하는 것.' },
+  'sec:10-troubleshooting': { label: '문제 해결', desc: '구체적인 실패와 그 해결법.' },
 
-  'course-0-map/what-an-agent-is': { label: '什么是智能体' },
-  'course-0-map/five-layers': { label: '五个层次，一个系统' },
-  'course-0-map/agents-or-workflows': { label: '智能体还是工作流' },
-  'course-1-context/how-models-read': { label: '模型如何读取上下文' },
-  'course-1-context/the-four-places': { label: '上下文的四个位置' },
-  'course-1-context/context-practice': { label: '上下文实战' },
-  'course-2-loop/loops-vs-workflows': { label: '循环与工作流' },
-  'course-2-loop/the-four-parts': { label: '循环的四个组成部分' },
-  'course-2-loop/loop-practice': { label: '循环实战：筛选、循环与回退' },
-  'course-3-gate/cheap-decisions': { label: '低成本决策' },
-  'course-3-gate/gates-in-practice': { label: '决策关卡的实际应用' },
-  'course-3-gate/gate-practice': { label: '决策关卡实战' },
-  'course-4-harness/the-office': { label: '模型的工作环境' },
-  'course-4-harness/the-four-rings': { label: '四层防护' },
-  'course-4-harness/harness-practice': { label: '运行框架实战' },
-  'course-5-evals/two-kinds-of-checks': { label: '两类检查' },
-  'course-5-evals/judges-and-golden-sets': { label: '评审器与基准集' },
-  'course-5-evals/evals-practice': { label: '评估实战' },
-  'course-6-production/from-prototype': { label: '从原型到生产环境' },
-  'course-6-production/operating-agents': { label: '智能体运维' },
-  'course-6-production/day-one-plan': { label: '首日行动计划' },
+  'course-0-map/what-an-agent-is': { label: '에이전트란 무엇인가' },
+  'course-0-map/five-layers': { label: '다섯 계층, 하나의 시스템' },
+  'course-0-map/agents-or-workflows': { label: '에이전트인가 워크플로인가' },
+  'course-1-context/how-models-read': { label: '모델은 컨텍스트를 어떻게 읽는가' },
+  'course-1-context/the-four-places': { label: '네 곳' },
+  'course-1-context/context-practice': { label: '컨텍스트 실습' },
+  'course-2-loop/loops-vs-workflows': { label: '루프 대 워크플로' },
+  'course-2-loop/the-four-parts': { label: '루프의 네 부분' },
+  'course-2-loop/loop-practice': { label: '루프 실습: 필터, 루프, 폴백' },
+  'course-3-gate/cheap-decisions': { label: '값싼 결정' },
+  'course-3-gate/gates-in-practice': { label: '실전 게이트' },
+  'course-3-gate/gate-practice': { label: '게이트 실습' },
+  'course-4-harness/the-office': { label: '사무실' },
+  'course-4-harness/the-four-rings': { label: '네 개의 고리' },
+  'course-4-harness/harness-practice': { label: '하네스 실습' },
+  'course-5-evals/two-kinds-of-checks': { label: '두 가지 점검' },
+  'course-5-evals/judges-and-golden-sets': { label: '판정자와 골든 세트' },
+  'course-5-evals/evals-practice': { label: '평가 실습' },
+  'course-6-production/from-prototype': { label: '프로토타입에서 프로덕션으로' },
+  'course-6-production/operating-agents': { label: '에이전트 운영' },
+  'course-6-production/day-one-plan': { label: '첫날 계획' },
 
-  'track-graph/why-graphs': { label: '为什么使用知识图谱' },
+  'track-graph/why-graphs': { label: '지식 그래프가 필요한 이유' },
   'track-graph/graphrag': { label: 'GraphRAG' },
-  'track-graph/building-graphs-with-llms': { label: '用大语言模型构建图谱' },
-  'track-graph/graph-stores': { label: '图谱存储' },
-  'track-graph/tools': { label: '工具' },
-  'track-graph/build-extract': { label: '实战：提取图谱' },
-  'track-graph/build-query': { label: '实战：查询图谱' },
-  'track-graph/build-use': { label: '实战：将图谱接入循环' },
-  'track-graph/resources': { label: '资源' },
-  'track-jev/system-one-models': { label: '系统一模型' },
-  'track-jev/what-jev-is-good-for': { label: 'Jev 的适用场景' },
-  'track-jev/jev-in-an-agent-stack': { label: '智能体技术栈中的 Jev' },
-  'track-jev/getting-started': { label: 'Jev 入门' },
-  'track-jev/build-decision-endpoint': { label: '实战：类型化决策接口' },
-  'track-jev/build-router': { label: '实战：基于置信度的路由器' },
-  'track-jev/build-swap-in-jev': { label: '实战：切换到 Jev' },
-  'track-jev/resources': { label: 'Jev 资源' },
-  'track-harness/what-a-harness-is': { label: '什么是运行框架' },
-  'track-harness/claude-code-as-harness': { label: '用 Claude Code 作为运行框架' },
-  'track-harness/context-engineering': { label: '上下文工程' },
-  'track-harness/tools-and-mcp': { label: '工具与 MCP' },
-  'track-harness/harness-landscape': { label: '运行框架全览' },
-  'track-harness/build-the-loop': { label: '实战：搭建循环' },
-  'track-harness/build-guardrails': { label: '实战：权限与上下文' },
-  'track-harness/build-graduate': { label: '实战：何时升级运行框架' },
-  'track-harness/resources': { label: '资源' },
-  'track-loop/what-loop-engineering-is': { label: '什么是循环工程' },
-  'track-loop/stop-conditions': { label: '停止条件' },
-  'track-loop/critics-and-verification': { label: '评审器与验证' },
-  'track-loop/context-hygiene': { label: '上下文整理' },
-  'track-loop/patterns': { label: '循环模式' },
-  'track-loop/build-goal-test': { label: '实战：目标完成检查' },
-  'track-loop/build-critic': { label: '实战：评审器' },
-  'track-loop/build-overnight': { label: '实战：通宵运行的循环' },
-  'track-loop/resources': { label: '资源' },
-  'track-evals/why-evals': { label: '为什么需要评估' },
-  'track-evals/designing-evals': { label: '设计评估' },
-  'track-evals/llm-as-judge': { label: '用大语言模型担任评审器' },
-  'track-evals/agent-evals': { label: '智能体评估' },
-  'track-evals/tooling': { label: '评估工具' },
-  'track-evals/build-traces': { label: '实战：阅读运行轨迹' },
-  'track-evals/build-suite': { label: '实战：评估套件' },
-  'track-evals/build-ci': { label: '实战：评估关卡' },
-  'track-evals/resources': { label: '评估资源' },
+  'track-graph/building-graphs-with-llms': { label: 'LLM으로 그래프 만들기' },
+  'track-graph/graph-stores': { label: '그래프 저장소' },
+  'track-graph/tools': { label: '도구' },
+  'track-graph/build-extract': { label: '실습: 그래프 추출' },
+  'track-graph/build-query': { label: '실습: 그래프 질의' },
+  'track-graph/build-use': { label: '실습: 루프에 넣기' },
+  'track-graph/resources': { label: '자료' },
+  'track-jev/system-one-models': { label: '시스템 1 모델' },
+  'track-jev/what-jev-is-good-for': { label: 'Jev가 잘하는 일' },
+  'track-jev/jev-in-an-agent-stack': { label: '에이전트 스택 속의 Jev' },
+  'track-jev/getting-started': { label: 'Jev 시작하기' },
+  'track-jev/build-decision-endpoint': { label: '실습: 타입 있는 결정 엔드포인트' },
+  'track-jev/build-router': { label: '실습: 신뢰도 게이트 라우터' },
+  'track-jev/build-swap-in-jev': { label: '실습: Jev로 교체하기' },
+  'track-jev/resources': { label: 'Jev 자료' },
+  'track-harness/what-a-harness-is': { label: '하네스란 무엇인가' },
+  'track-harness/claude-code-as-harness': { label: '하네스로서의 Claude Code' },
+  'track-harness/context-engineering': { label: '컨텍스트 엔지니어링' },
+  'track-harness/tools-and-mcp': { label: '도구와 MCP' },
+  'track-harness/harness-landscape': { label: '하네스 지형' },
+  'track-harness/build-the-loop': { label: '실습: 루프' },
+  'track-harness/build-guardrails': { label: '실습: 권한과 컨텍스트' },
+  'track-harness/build-graduate': { label: '실습: 졸업 시점 알기' },
+  'track-harness/resources': { label: '자료' },
+  'track-loop/what-loop-engineering-is': { label: '루프 엔지니어링이란' },
+  'track-loop/stop-conditions': { label: '종료 조건' },
+  'track-loop/critics-and-verification': { label: '크리틱과 검증' },
+  'track-loop/context-hygiene': { label: '컨텍스트 위생' },
+  'track-loop/patterns': { label: '패턴' },
+  'track-loop/build-goal-test': { label: '실습: 목표 테스트' },
+  'track-loop/build-critic': { label: '실습: 크리틱' },
+  'track-loop/build-overnight': { label: '실습: 야간 루프' },
+  'track-loop/resources': { label: '자료' },
+  'track-evals/why-evals': { label: '평가가 필요한 이유' },
+  'track-evals/designing-evals': { label: '평가 설계' },
+  'track-evals/llm-as-judge': { label: 'LLM 판정자' },
+  'track-evals/agent-evals': { label: '에이전트 평가' },
+  'track-evals/tooling': { label: '평가 도구' },
+  'track-evals/build-traces': { label: '실습: 트레이스 읽기' },
+  'track-evals/build-suite': { label: '실습: 평가 스위트' },
+  'track-evals/build-ci': { label: '실습: 게이트' },
+  'track-evals/resources': { label: '평가 자료' },
 
-  '01-concepts/what-is-a-second-brain': { label: '第二大脑究竟是什么' },
-  '01-concepts/the-save-for-later-paradox': { label: '稍后再看的悖论' },
-  '01-concepts/llm-wiki-pattern': { label: 'LLM Wiki 模式' },
-  '01-concepts/two-layers': { label: '两个层次' },
-  '01-concepts/why-markdown-and-plain-text': { label: '为什么使用 Markdown 与纯文本' },
-  '01-concepts/pkm-lineage': { label: '卡片盒、PARA 与常青笔记' },
-  '01-concepts/wiki-vs-rag': { label: 'Wiki 与 RAG' },
-  '01-concepts/what-good-looks-like': { label: '运行良好的知识库是什么样' },
-  '02-setup/obsidian-install-and-vault': { label: 'Obsidian 与你的第一个知识库' },
-  '02-setup/claude-code-setup': { label: '在知识库中使用 Claude Code' },
-  '02-setup/mcp-obsidian': { label: 'Obsidian 的 MCP 接入' },
-  '02-setup/claude-md': { label: '编写 CLAUDE.md' },
-  '02-setup/vault-structure': { label: '知识库结构' },
-  '02-setup/project-scoping': { label: '限定项目范围' },
-  '02-setup/live-data': { label: '实时数据连接器' },
-  '02-setup/obsidian-plugins': { label: '值得安装的插件' },
-  '02-setup/git-and-sync': { label: 'Git、同步与备份' },
-  '03-ingestion/web-clipper': { label: '网页文章' },
-  '03-ingestion/youtube-transcripts': { label: 'YouTube 与播客' },
-  '03-ingestion/pdfs-and-books': { label: 'PDF、论文与书籍' },
-  '03-ingestion/chat-exports': { label: '聊天记录导出' },
-  '03-ingestion/voice-and-meetings': { label: '语音笔记与会议' },
-  '03-ingestion/newsletters-and-email': { label: '电子简报与邮件' },
-  '03-ingestion/bulk-backfill': { label: '批量导入多年积累的资料' },
-  '04-structuring/atomic-pages': { label: '一页一个想法' },
-  '04-structuring/page-types': { label: '四种页面类型' },
-  '04-structuring/linking-rules': { label: '链接规则' },
-  '04-structuring/frontmatter-schema': { label: 'Frontmatter 元数据结构' },
-  '04-structuring/naming-and-aliases': { label: '命名与别名' },
-  '04-structuring/dedupe-and-merge': { label: '去重与合并' },
-  '04-structuring/contradictions-and-supersession': { label: '矛盾与观点更替' },
-  '04-structuring/index-and-log': { label: 'index.md 与 log.md' },
-  '05-graphs/graph-basics': { label: '知识库的图谱基础' },
-  '05-graphs/obsidian-graph-view': { label: '读懂 Obsidian 图谱视图' },
-  '05-graphs/typed-links': { label: '带类型的链接' },
-  '05-graphs/graph-vs-vectors': { label: '图谱与向量嵌入' },
-  '05-graphs/graphrag': { label: 'GraphRAG 及其适用场景' },
-  '05-graphs/exporting-your-graph': { label: '导出图谱' },
-  '05-graphs/metrics': { label: '值得追踪的图谱指标' },
-  '06-agents/agent-roles': { label: '智能体角色' },
-  '06-agents/scheduled-maintenance': { label: '定时调度' },
-  '06-agents/subagents': { label: '子智能体与并行工作' },
-  '06-agents/hooks': { label: '钩子' },
-  '06-agents/skills-and-commands': { label: '技能与斜杠命令' },
-  '06-agents/safety-and-guardrails': { label: '安全防护' },
-  '07-retrieval/asking-questions': { label: '向知识库提问' },
-  '07-retrieval/query-patterns': { label: '查询模式' },
-  '07-retrieval/search-tools': { label: '搜索工具' },
-  '07-retrieval/rag-on-top': { label: '按需添加 RAG' },
-  '07-retrieval/context-budget': { label: '上下文预算' },
-  '08-outputs/writing-from-the-vault': { label: '基于知识库写作' },
-  '08-outputs/research-reports': { label: '研究报告' },
-  '08-outputs/publishing-and-export': { label: '发布与导出' },
-  '08-outputs/teaching-yourself': { label: '从自己的知识库中学习' },
-  '09-maintenance/lint-and-health': { label: '知识库检查' },
-  '09-maintenance/review-cadence': { label: '定期回顾' },
-  '09-maintenance/versioning-with-git': { label: '版本管理' },
-  '09-maintenance/backups-and-portability': { label: '备份与可迁移性' },
-  '09-maintenance/privacy-and-secrets': { label: '隐私' },
-  '09-maintenance/scaling': { label: '扩展到上千个页面' },
-  '10-troubleshooting/common-failures': { label: '常见问题' },
-  '10-troubleshooting/agent-writes-garbage': { label: '智能体写出的内容质量差' },
-  '10-troubleshooting/broken-links': { label: '失效链接与孤立页面' },
-  '10-troubleshooting/vault-too-big': { label: '知识库过于庞大' },
-  '10-troubleshooting/faq': { label: '常见问答' },
+  '01-concepts/what-is-a-second-brain': { label: '세컨드 브레인이란 실제로 무엇인가' },
+  '01-concepts/the-save-for-later-paradox': { label: '저장해 두기의 역설' },
+  '01-concepts/llm-wiki-pattern': { label: 'LLM 위키 패턴' },
+  '01-concepts/two-layers': { label: '두 계층' },
+  '01-concepts/why-markdown-and-plain-text': { label: '왜 마크다운과 일반 텍스트인가' },
+  '01-concepts/pkm-lineage': { label: '제텔카스텐, PARA, 에버그린 노트' },
+  '01-concepts/wiki-vs-rag': { label: '위키 대 RAG' },
+  '01-concepts/what-good-looks-like': { label: '좋은 상태란 어떤 모습인가' },
+  '02-setup/obsidian-install-and-vault': { label: 'Obsidian과 첫 볼트' },
+  '02-setup/claude-code-setup': { label: '볼트 안의 Claude Code' },
+  '02-setup/mcp-obsidian': { label: 'Obsidian용 MCP' },
+  '02-setup/claude-md': { label: 'CLAUDE.md 작성하기' },
+  '02-setup/vault-structure': { label: '볼트 구조' },
+  '02-setup/project-scoping': { label: '프로젝트 범위 지정' },
+  '02-setup/live-data': { label: '실시간 데이터 커넥터' },
+  '02-setup/obsidian-plugins': { label: '설치할 만한 플러그인' },
+  '02-setup/git-and-sync': { label: 'Git, 동기화, 백업' },
+  '03-ingestion/web-clipper': { label: '웹 글' },
+  '03-ingestion/youtube-transcripts': { label: 'YouTube와 팟캐스트' },
+  '03-ingestion/pdfs-and-books': { label: 'PDF, 논문, 책' },
+  '03-ingestion/chat-exports': { label: '채팅 내보내기' },
+  '03-ingestion/voice-and-meetings': { label: '음성 메모와 회의' },
+  '03-ingestion/newsletters-and-email': { label: '뉴스레터와 이메일' },
+  '03-ingestion/bulk-backfill': { label: '수년 치 자료 백필' },
+  '04-structuring/atomic-pages': { label: '한 페이지, 한 아이디어' },
+  '04-structuring/page-types': { label: '네 가지 페이지 유형' },
+  '04-structuring/linking-rules': { label: '링크 규칙' },
+  '04-structuring/frontmatter-schema': { label: '프론트매터 스키마' },
+  '04-structuring/naming-and-aliases': { label: '이름 짓기와 별칭' },
+  '04-structuring/dedupe-and-merge': { label: '중복 제거와 병합' },
+  '04-structuring/contradictions-and-supersession': { label: '모순과 대체' },
+  '04-structuring/index-and-log': { label: 'index.md와 log.md' },
+  '05-graphs/graph-basics': { label: '지식 베이스를 위한 그래프 기초' },
+  '05-graphs/obsidian-graph-view': { label: 'Obsidian 그래프 뷰 읽는 법' },
+  '05-graphs/typed-links': { label: '타입 링크' },
+  '05-graphs/graph-vs-vectors': { label: '그래프와 임베딩' },
+  '05-graphs/graphrag': { label: 'GraphRAG와 그 자리' },
+  '05-graphs/exporting-your-graph': { label: '그래프 내보내기' },
+  '05-graphs/metrics': { label: '추적할 가치가 있는 그래프 지표' },
+  '06-agents/agent-roles': { label: '에이전트 역할' },
+  '06-agents/scheduled-maintenance': { label: '스케줄링' },
+  '06-agents/subagents': { label: '서브에이전트와 병렬 작업' },
+  '06-agents/hooks': { label: '훅' },
+  '06-agents/skills-and-commands': { label: '스킬과 슬래시 커맨드' },
+  '06-agents/safety-and-guardrails': { label: '가드레일' },
+  '07-retrieval/asking-questions': { label: '볼트에 질문하기' },
+  '07-retrieval/query-patterns': { label: '질의 패턴' },
+  '07-retrieval/search-tools': { label: '검색 도구' },
+  '07-retrieval/rag-on-top': { label: '필요할 때 RAG 더하기' },
+  '07-retrieval/context-budget': { label: '컨텍스트 예산' },
+  '08-outputs/writing-from-the-vault': { label: '볼트로 글쓰기' },
+  '08-outputs/research-reports': { label: '리서치 보고서' },
+  '08-outputs/publishing-and-export': { label: '게시와 내보내기' },
+  '08-outputs/teaching-yourself': { label: '내 볼트에서 배우기' },
+  '09-maintenance/lint-and-health': { label: '볼트 린트' },
+  '09-maintenance/review-cadence': { label: '검토 주기' },
+  '09-maintenance/versioning-with-git': { label: '버전 관리' },
+  '09-maintenance/backups-and-portability': { label: '백업과 이식성' },
+  '09-maintenance/privacy-and-secrets': { label: '개인정보' },
+  '09-maintenance/scaling': { label: '천 페이지를 넘어 확장하기' },
+  '10-troubleshooting/common-failures': { label: '누구나 겪는 실패' },
+  '10-troubleshooting/agent-writes-garbage': { label: '엉터리 글을 쓰는 에이전트' },
+  '10-troubleshooting/broken-links': { label: '깨진 링크와 고아 페이지' },
+  '10-troubleshooting/vault-too-big': { label: '볼트가 너무 커졌을 때' },
+  '10-troubleshooting/faq': { label: 'FAQ' },
 
-  'hub:skills': { label: '技能', desc: '第二大脑项目中的每个工作流对应一个技能。智能体只在任务匹配时加载对应技能。' },
-  'hub:commands': { label: '斜杠命令', desc: '通过 /name 输入，进入限定范围的技能操作。' },
-  'hub:agents': { label: '子智能体', desc: '六个子智能体，其中四个按设计仅允许读取。' },
-  'hub:scripts': { label: '脚本', desc: '无需第三方依赖的 Python 脚本，用于链接检查、统计、图谱导出与聊天记录导入。' },
-  'hub:plugin': { label: 'agents-course 插件', desc: '智能体开发课程的配套工具：审计上下文、用脚本定义完成条件、搭建评估套件，以及评审循环结果的智能体。' },
-  'hub:vault': { label: '知识库入门模板', desc: 'vault-template/：包含 Wiki 结构、项目流程、CLAUDE.md 与页面模板，可直接复制使用。' },
-  'rcat:papers': { label: '论文', desc: '与知识库检索和推理相关的研究。阅读这些论文，自己判断是否需要向量数据库。' },
-  'rcat:tools': { label: '工具', desc: 'Obsidian 插件目录以外的工具。插件请参阅 plugins.md。Star 数来自 2026 年 9 月的 GitHub 数据。' },
-  'rcat:plugins': { label: 'Obsidian 插件', desc: '按 Obsidian 官方社区统计的安装量排序，数据截至 2026 年 9 月。从超过 7,400 个插件中，筛选适合由智能体维护的知识库的插件。' },
-  'rcat:repositories': { label: '代码仓库', desc: '值得了解的图谱、检索与记忆项目。Star 数来自 2026 年 9 月的 GitHub API。智能体技能见 skills.md，Obsidian 插件见 plugins.md。' },
-  'rcat:skills': { label: '技能目录', desc: '按单个技能计数：包含十六个技能的仓库计为十六项，因为实际安装的就是这些技能。统计来自对 2026 年 9 月各仓库文件树的检查。' },
-  'rcat:reading': { label: '阅读资料', desc: 'Karpathy 于 2026 年 4 月 4 日发布的 llm-wiki gist。本仓库以其中的模式为基础。' },
+  'hub:skills': { label: '스킬', desc: '세컨드 브레인 프로젝트의 워크플로마다 스킬이 하나씩 있습니다. 에이전트는 작업이 맞을 때만 스킬을 불러옵니다.' },
+  'hub:commands': { label: '슬래시 커맨드', desc: '스킬로 들어가는, 범위가 정해진 진입점입니다. /name 형태로 입력합니다.' },
+  'hub:agents': { label: '서브에이전트', desc: '서브에이전트 여섯 개 가운데 네 개는 설계상 읽기 전용입니다.' },
+  'hub:scripts': { label: '스크립트', desc: '링크 검사, 통계, 그래프 내보내기, 채팅 가져오기를 위한 의존성 없는 Python 스크립트입니다.' },
+  'hub:plugin': { label: 'agents-course 플러그인', desc: '에이전트 강좌의 도구 모음입니다. 컨텍스트 감사, 완료 조건을 스크립트로 쓰기, 평가 스위트 부트스트랩, 루프 크리틱 에이전트가 있습니다.' },
+  'hub:vault': { label: '스타터 볼트', desc: 'vault-template/: 위키 구조, 프로젝트 파이프라인, CLAUDE.md, 페이지 템플릿이 들어 있어 그대로 복사해 쓸 수 있습니다.' },
+  'rcat:papers': { label: '논문', desc: '지식 베이스가 검색하고 추론하는 방식과 관련된 연구입니다. 벡터 데이터베이스가 필요한지 직접 판단하고 싶다면 읽어 보십시오.' },
+  'rcat:tools': { label: '도구', desc: 'Obsidian 플러그인 카탈로그 밖의 모든 도구입니다. 플러그인은 plugins.md를 보십시오. Star 수는 2026년 9월 GitHub 기준입니다.' },
+  'rcat:plugins': { label: 'Obsidian 플러그인', desc: 'Obsidian 공식 커뮤니티 통계의 설치 수 순서이며, 2026년 9월 기준입니다. 카탈로그에는 플러그인이 7,400개 넘게 있고, 여기에는 에이전트가 관리하는 볼트에 중요한 것만 골랐습니다.' },
+  'rcat:repositories': { label: '저장소', desc: '알아 둘 만한 그래프, 검색, 메모리 프로젝트입니다. Star 수는 GitHub API 기준(2026년 9월)입니다. 에이전트 스킬은 skills.md, Obsidian 플러그인은 plugins.md를 보십시오.' },
+  'rcat:skills': { label: '스킬 카탈로그', desc: '하나씩 센 수치입니다. 스킬 열여섯 개를 담은 저장소는 열여섯 개로 셉니다. 실제로 설치하는 단위가 그것이기 때문입니다. 2026년 9월에 각 저장소의 파일 트리를 읽어 집계했습니다.' },
+  'rcat:reading': { label: '읽을거리', desc: 'Karpathy가 2026년 4월 4일에 공개한 llm-wiki gist입니다. 이 저장소의 모든 것이 이 패턴 위에 서 있습니다.' },
 
-  'term:second-brain': { label: '第二大脑', desc: '一个由智能体读写的本地纯文本文件夹，保存你阅读和理解过的知识，并能回答你的问题。' },
-  'term:llm-wiki': { label: 'LLM Wiki', desc: 'Karpathy 提出的模式：模型将来源资料整理成相互链接的 Wiki，后续提问时直接使用这些成果。' },
-  'term:vault': { label: '知识库', desc: '智能体维护的 Markdown 文件夹。Obsidian 称它为仓库（Vault），对智能体来说它就是一组文件。' },
-  'term:obsidian': { label: 'Obsidian', desc: '用于阅读知识库、浏览图谱和剪藏来源资料的 Markdown 编辑器。智能体工作时无需运行它。' },
-  'term:claude-code': { label: 'Claude Code', desc: '负责整理资料的智能体：读取原始来源、编写并链接页面、执行维护。' },
-  'term:claude-md': { label: 'CLAUDE.md', desc: '智能体在每次会话开始时读取的常驻指令：你是谁、页面规范，以及知识库规则。' },
-  'term:mcp': { label: 'MCP', desc: '模型上下文协议（Model Context Protocol）：连接智能体与工具、数据的标准接口，例如从不同环境访问你的知识库。' },
-  'term:raw': { label: 'raw/', desc: '收件箱与原始档案：剪藏文章、转录文本和 PDF。只写入一次，之后不再修改，也很少重新阅读。' },
-  'term:two-layers': { label: '两个层次', desc: 'Wiki 保存已知的知识，项目层承载正在做的事情。分开管理，让两者都保持有用。' },
-  'term:ingest': { label: '资料导入', desc: '将一份原始来源转化为带链接的 Wiki 页面。只有新页面与已有知识建立连接，导入才算完成。' },
-  'term:wikilink': { label: 'Wiki 链接', desc: '笔记之间的 [[页面名称]] 链接。它是最简单的图谱边，也是知识库不断积累价值的基础。' },
-  'term:backlinks': { label: '反向链接', desc: '指向某个页面的链接。无需搜索，就能找到所有引用这个想法的页面。' },
-  'term:atomic-pages': { label: '原子化页面', desc: '每页只讲一个想法，让链接的含义明确，并让页面能够在各种相关场景中复用。' },
-  'term:page-types': { label: '页面类型', desc: '来源、概念、实体与综合：每种类型都有自己的内容要求和链接规则。' },
-  'term:frontmatter': { label: 'Frontmatter 元数据', desc: '页面顶部的 YAML 区块：类型、来源、日期与状态。它让知识库无需数据库也能被查询。' },
-  'term:aliases': { label: '别名', desc: '同一页面的其他名称，让链接和搜索指向已有页面，避免重复创建。' },
-  'term:contradictions': { label: '矛盾', desc: '当新来源提出不同观点时，保留双方立场、日期与来源，记录你曾经相信什么以及原因。' },
-  'term:index-log': { label: 'index.md 与 log.md', desc: '智能体首先读取的目录，以及每次运行记录一行的日志，让知识库的每次改动都可审计。' },
-  'term:knowledge-graph': { label: '知识图谱', desc: '页面是节点，链接是边。在这套方案中，图谱就是文件系统，无需服务器或独立存储。' },
-  'term:typed-links': { label: '带类型的链接', desc: '明确两个页面如何关联的链接，例如支持、矛盾或扩展。只有来源明确表达了关系，才标注类型。' },
-  'term:orphans': { label: '孤立页面', desc: '没有任何页面链接到的页面。它们很快会被遗忘，也是观察知识库衰退时首先要关注的指标。' },
-  'term:hubs': { label: '枢纽与桥梁', desc: '枢纽是大量页面共同链接的页面；桥梁连接原本分离的群组。两者都能揭示知识结构中的关键位置。' },
-  'term:clusters': { label: '群组', desc: '链接密集的页面集合。未经刻意规划而自然形成的群组，往往能带来新的发现。' },
-  'term:graphrag': { label: 'GraphRAG', desc: '基于提取的实体图谱与社区摘要进行检索，适合回答关于整个语料库的全局问题。' },
-  'term:rag': { label: 'RAG', desc: '检索增强生成：提问时按相似度检索文本片段。不同问题之间不会自动积累成果。' },
-  'term:vectors': { label: '向量嵌入', desc: '基于文本片段嵌入的相似度搜索。当结构化、相互链接的知识库已无法满足检索需求时，再考虑加入。' },
-  'term:context-window': { label: '上下文窗口', desc: '模型一次能够看到的内容范围。智能体在当前会话中掌握的一切都要占用这份预算。' },
-  'term:lost-in-middle': { label: '中间信息丢失', desc: '模型对长上下文开头和结尾的记忆远好于中间部分。这也是把所有信息塞进上下文容易失败的原因。' },
-  'term:skills': { label: '技能', desc: '包含 SKILL.md 的文件夹，提供智能体仅在任务匹配时加载的指令。每个工作流对应一个技能。' },
-  'term:slash-commands': { label: '斜杠命令', desc: '以 /name 输入的简短命令，进入限定范围的技能操作，是日常使用的直接入口。' },
-  'term:subagents': { label: '子智能体', desc: '拥有独立上下文与有限工具集的智能体。本项目中的多数子智能体按设计仅允许读取。' },
-  'term:hooks': { label: '钩子', desc: '运行框架在特定事件发生时执行的代码，例如工具调用前或编辑后，用于落实模型无法遗漏的规则。' },
-  'term:scheduled': { label: '定时维护', desc: '定时执行检查、链接整理与回顾，让知识库在你休息时自行归档。' },
-  'term:lint': { label: '检查与健康状态', desc: '自动检查失效链接、孤立页面、缺失的元数据与过期页面，相当于知识库的测试套件。' },
-  'term:git': { label: 'Git', desc: '知识库的版本历史。每次智能体运行都可以审查，出错的改动都可以撤销。' },
-  'term:privacy': { label: '隐私与敏感信息', desc: '哪些内容绝不能进入页面、提示词或公开导出，以及防止这些内容泄露的检查。' },
-  'term:web-clipper': { label: 'Web Clipper', desc: 'Obsidian 的浏览器扩展，一键将文章保存为 raw/ 中的 Markdown 文件。' },
-  'term:transcripts': { label: '转录文本', desc: '将视频、语音与会议转换成文本，便于像其他资料一样导入知识库。' },
-  'term:agent': { label: '智能体', desc: '具备工具、在循环中运行的模型，自行决定下一步，直到达成目标或触发停止规则。' },
-  'term:five-layers': { label: '五个层次', desc: '课程对模型周围系统的划分：上下文、循环、决策关卡、运行框架与评估。' },
-  'term:workflows': { label: '工作流与智能体', desc: '工作流由代码决定下一步，智能体由模型决定下一步。大多数生产系统会结合两者。' },
-  'term:context-engineering': { label: '上下文工程', desc: '决定哪些内容进入系统提示词、工具、历史与末尾，以及它们的排列顺序，让模型看到正确的信息。' },
-  'term:caching': { label: '提示词缓存', desc: '在多次调用间复用提示词的稳定前缀。合理组织上下文，可以降低成本并加快响应。' },
-  'term:memory': { label: '记忆', desc: '跨会话保留的信息。在本项目中，它是智能体重新读取的文件，不是模型的隐藏功能。' },
-  'term:loop': { label: '智能体循环', desc: '目标、行动、检查、重复。循环是模型周围的控制系统，也是多数失败发生的位置。' },
-  'term:stop-conditions': { label: '停止条件', desc: '循环必须结束的情况：目标达成、预算耗尽或没有进展。缺少停止条件，循环可能持续到造成损害。' },
-  'term:critics': { label: '评审器与检查器', desc: '在模型之外判断结果的检查机制，例如测试、编译器或独立评审者。模型自我审查不属于这类检查。' },
-  'term:gate': { label: '决策关卡', desc: '在高成本模型之前执行的低成本、范围明确的决策：对每一项提出一个有界问题，根据答案选择处理路径。' },
-  'term:system-one': { label: '系统一模型', desc: '小型快速模型，返回带置信度的类型化决策而非自由文本。Jev 是实现决策关卡的一种方式。' },
-  'term:harness': { label: '运行框架', desc: '模型周围的工作环境：由外向内搭建的隔离、指南、监测与权限机制。' },
-  'term:guardrails': { label: '安全防护与权限', desc: '规定智能体可以操作什么、哪些操作必须征求批准，以及它犯错时仍然有效的边界。' },
-  'term:tools-tool-use': { label: '工具使用', desc: '模型请求运行框架代为执行操作。智能体的各种能力都通过这种方式实现。' },
-  'term:evals': { label: '评估', desc: '每月运行同一套测试，检查真实行为，避免提示词或模型的变更悄悄破坏功能。' },
-  'term:golden-set': { label: '基准集', desc: '每次评估都会使用的固定案例集合，其中包括已经遇到过的失败案例。' },
-  'term:llm-judge': { label: '大语言模型评审器', desc: '根据评分标准对输出打分的模型。先用人工标注验证评审器本身，再用它进行评估。' },
-  'term:traces': { label: '运行轨迹', desc: '逐步记录智能体全部行为的完整日志，是行为评估与调试共同使用的依据。' },
-  'term:production': { label: '生产环境', desc: '从偶尔成功的演示，走向具备追踪、成本控制、安全措施与明确负责人的系统。' },
+  'term:second-brain': { label: '세컨드 브레인', desc: '에이전트가 읽고 쓰는 로컬 일반 텍스트 폴더 하나입니다. 내가 읽고 이해한 내용이 담겨 있고, 질문을 던질 수 있습니다.' },
+  'term:llm-wiki': { label: 'LLM 위키', desc: 'Karpathy가 제안한 패턴입니다. 질문할 때마다 청크에서 다시 찾아내는 대신, 모델이 원본 자료를 한 번 컴파일해 서로 연결된 위키로 만듭니다.' },
+  'term:vault': { label: '볼트', desc: '에이전트가 관리하는 마크다운 폴더입니다. Obsidian은 이것을 볼트라고 부르지만, 에이전트에게는 그저 파일 모음입니다.' },
+  'term:obsidian': { label: 'Obsidian', desc: '볼트를 읽고, 그래프를 둘러보고, 원본 자료를 클리핑하는 데 쓰는 마크다운 편집기입니다. 에이전트는 이 앱이 실행 중일 필요가 없습니다.' },
+  'term:claude-code': { label: 'Claude Code', desc: '정리를 맡는 에이전트입니다. 원본 자료를 읽고, 페이지를 쓰고 연결하며, 유지보수를 실행합니다.' },
+  'term:claude-md': { label: 'CLAUDE.md', desc: '에이전트가 세션을 시작할 때마다 읽는 상시 지침입니다. 내가 누구인지, 페이지 규약, 볼트의 규칙이 담깁니다.' },
+  'term:mcp': { label: 'MCP', desc: 'Model Context Protocol: 에이전트가 도구와 데이터(예를 들어 어디서든 내 볼트)에 닿게 해 주는 표준 연결 규격입니다.' },
+  'term:raw': { label: 'raw/', desc: '수신함이자 보관소입니다. 클리핑한 글, 트랜스크립트, PDF가 들어갑니다. 한 번 쓰고 다시 수정하지 않으며, 다시 읽는 일도 드뭅니다.' },
+  'term:two-layers': { label: '두 계층', desc: '아는 것을 담는 위키와 하는 일을 담는 프로젝트 계층을 분리해, 각각이 계속 쓸모 있게 유지합니다.' },
+  'term:ingest': { label: '인제스트', desc: '원본 자료 하나를 서로 연결된 위키 페이지로 바꾸는 일입니다. 새 페이지가 기존 내용과 연결되어야 끝난 것입니다.' },
+  'term:wikilink': { label: '위키링크', desc: '노트 사이를 잇는 [[페이지 이름]] 링크입니다. 가장 값싼 그래프 엣지이며, 볼트가 복리로 쌓이는 이유입니다.' },
+  'term:backlinks': { label: '백링크', desc: '한 페이지를 가리키는 링크입니다. 검색하지 않고도 그 아이디어에 기대는 모든 것을 찾을 수 있습니다.' },
+  'term:atomic-pages': { label: '원자 페이지', desc: '페이지 하나에 아이디어 하나만 담습니다. 그래서 링크의 의미가 하나로 정해지고, 페이지를 쓰일 수 있는 모든 곳에서 재사용할 수 있습니다.' },
+  'term:page-types': { label: '페이지 유형', desc: '원본 자료, 개념, 엔티티, 종합입니다. 유형마다 무엇을 담고 어떻게 링크할지에 대한 고유한 규약이 있습니다.' },
+  'term:frontmatter': { label: '프론트매터', desc: '페이지 맨 위의 YAML 블록으로, 유형, 출처, 날짜, 상태가 들어 있습니다. 데이터베이스 없이도 볼트를 질의할 수 있게 해 주는 것입니다.' },
+  'term:aliases': { label: '별칭', desc: '한 페이지가 응답하는 다른 이름들입니다. 링크와 검색이 중복 페이지를 만들지 않고 하나의 페이지에 닿게 합니다.' },
+  'term:contradictions': { label: '모순', desc: '새 원본 자료가 기존 내용과 어긋나면 두 입장을 날짜와 출처를 달아 모두 남깁니다. 내가 무엇을 왜 믿었는지의 기록입니다.' },
+  'term:index-log': { label: 'index.md와 log.md', desc: '에이전트가 가장 먼저 읽는 목록과, 실행마다 한 줄씩 남기는 로그입니다. 덕분에 볼트의 모든 변경을 감사할 수 있습니다.' },
+  'term:knowledge-graph': { label: '지식 그래프', desc: '페이지는 노드, 링크는 엣지입니다. 이 구성에서는 파일 시스템이 곧 그래프이므로 서버도, 별도 저장소도 필요 없습니다.' },
+  'term:typed-links': { label: '타입 링크', desc: '두 페이지가 어떤 관계인지(지지, 모순, 확장 등) 알려 주는 링크입니다. 원본 자료가 그렇게 말할 때만 타입을 붙입니다.' },
+  'term:orphans': { label: '고아 페이지', desc: '어떤 페이지도 링크하지 않는 페이지입니다. 일주일이면 보이지 않게 되며, 볼트가 쇠퇴할 때 가장 먼저 살펴볼 수치입니다.' },
+  'term:hubs': { label: '허브와 브리지', desc: '허브는 모든 것이 링크하는 페이지이고, 브리지는 그렇지 않으면 닿지 않을 클러스터를 이어 줍니다. 둘 다 생각이 어디에 있는지 알려 줍니다.' },
+  'term:clusters': { label: '클러스터', desc: '촘촘하게 링크된 페이지 묶음입니다. 계획하지 않았는데 생긴 클러스터에서 볼트가 무언가를 말해 줍니다.' },
+  'term:graphrag': { label: 'GraphRAG', desc: '추출한 엔티티 그래프와 커뮤니티 요약을 대상으로 하는 검색입니다. 코퍼스 전체에 대한 전역적 질문을 위해 만들어졌습니다.' },
+  'term:rag': { label: 'RAG', desc: '검색 증강 생성(Retrieval-Augmented Generation)입니다. 질문하는 시점에 유사도로 청크를 가져오며, 질문 사이에 쌓이는 것은 없습니다.' },
+  'term:vectors': { label: '임베딩과 벡터', desc: '청크 임베딩에 대한 유사도 검색입니다. 구조화되고 링크된 볼트가 더는 답하지 못할 때에야 추가할 가치가 있습니다.' },
+  'term:context-window': { label: '컨텍스트 윈도', desc: '모델이 한 번에 볼 수 있는 범위입니다. 에이전트가 세션에서 아는 모든 것이 이 예산을 두고 경쟁합니다.' },
+  'term:lost-in-middle': { label: 'Lost in the middle', desc: '모델은 긴 컨텍스트의 처음과 끝은 훨씬 잘 기억하고 중간은 놓칩니다(중간 내용 소실). 전부 밀어 넣는 방식이 실패하는 이유입니다.' },
+  'term:skills': { label: '스킬', desc: 'SKILL.md가 들어 있는 폴더로, 작업이 맞을 때만 에이전트가 불러오는 지침입니다. 워크플로마다 하나씩 있습니다.' },
+  'term:slash-commands': { label: '슬래시 커맨드', desc: '스킬로 들어가는 짧고 범위가 정해진 진입점으로, /name 형태로 입력합니다. 날마다 실제로 쓰는 손잡이입니다.' },
+  'term:subagents': { label: '서브에이전트', desc: '자체 컨텍스트와 좁은 도구 목록을 가진 별도의 에이전트입니다. 여기 있는 대부분은 설계상 읽기 전용입니다.' },
+  'term:hooks': { label: '훅', desc: '도구 호출 전이나 편집 후 같은 이벤트에서 하네스가 실행하는 코드입니다. 모델이 잊을 수 없는 규칙입니다.' },
+  'term:scheduled': { label: '예약 유지보수', desc: '린트, 링크 정리, 리뷰를 타이머로 실행해 자는 동안 볼트가 스스로 정리되게 합니다.' },
+  'term:lint': { label: '린트와 상태 점검', desc: '깨진 링크, 고아 페이지, 누락된 프론트매터, 오래된 페이지에 대한 기계적 점검입니다. 볼트의 테스트 스위트입니다.' },
+  'term:git': { label: 'Git', desc: '볼트의 버전 이력입니다. 에이전트가 실행할 때마다 검토할 수 있고, 잘못된 실행은 모두 되돌릴 수 있습니다.' },
+  'term:privacy': { label: '개인정보와 시크릿', desc: '페이지, 프롬프트, 공개 내보내기에 절대 들어가면 안 되는 것과, 그것을 막아 주는 점검입니다.' },
+  'term:web-clipper': { label: 'Web Clipper', desc: 'Obsidian의 브라우저 확장입니다. 클릭 한 번으로 글이 raw/의 마크다운 파일이 됩니다.' },
+  'term:transcripts': { label: '트랜스크립트', desc: '영상, 음성, 회의를 텍스트로 바꿔 다른 자료처럼 인제스트할 수 있게 한 것입니다.' },
+  'term:agent': { label: '에이전트', desc: '도구를 쥐고 루프를 도는 모델입니다. 목표를 달성하거나 종료 규칙이 작동할 때까지 다음 단계를 스스로 정합니다.' },
+  'term:five-layers': { label: '다섯 계층', desc: '모델을 둘러싼 모든 것에 대한 강좌의 틀입니다. 컨텍스트, 루프, 게이트, 하네스, 평가입니다.' },
+  'term:workflows': { label: '워크플로 대 에이전트', desc: '워크플로에서는 코드가 다음 단계를 정하고, 에이전트에서는 모델이 정합니다. 대부분의 프로덕션 시스템은 둘을 섞은 하이브리드입니다.' },
+  'term:context-engineering': { label: '컨텍스트 엔지니어링', desc: '시스템 프롬프트, 도구, 히스토리, 끝부분에 무엇을 어떤 순서로 넣을지 정해 모델이 올바른 것을 보게 하는 일입니다.' },
+  'term:caching': { label: '프롬프트 캐싱', desc: '호출 사이에 프롬프트의 안정된 앞부분을 재사용합니다. 컨텍스트를 그에 맞게 배치하면 더 싸고 빠릅니다.' },
+  'term:memory': { label: '메모리', desc: '세션 사이에 남는 것입니다. 여기서는 모델의 숨은 기능이 아니라 에이전트가 다시 읽는 파일입니다.' },
+  'term:loop': { label: '에이전트 루프', desc: '목표, 행동, 점검, 반복입니다. 루프는 모델을 둘러싼 제어 시스템이며, 실패 대부분이 여기서 일어납니다.' },
+  'term:stop-conditions': { label: '종료 조건', desc: '루프가 끝나야 하는 때는 목표 달성, 예산 소진, 진전 없음입니다. 종료 조건이 없는 루프는 피해를 낼 때까지 계속 돕니다.' },
+  'term:critics': { label: '크리틱과 체커', desc: '모델 밖에서 결과를 판단하는 검사로, 테스트, 컴파일러, 별도의 리뷰어가 해당합니다. 스스로 하는 리뷰는 여기 포함되지 않습니다.' },
+  'term:gate': { label: '게이트', desc: '값비싼 모델 앞에 두는 값싸고 좁은 결정입니다. 항목마다 범위가 정해진 질문 하나를 던지고, 답에 따라 경로를 나눕니다.' },
+  'term:system-one': { label: '시스템 1 모델', desc: '텍스트 대신 신뢰도가 붙은 타입 결정을 돌려주는 작고 빠른 모델입니다. Jev는 게이트를 만드는 한 가지 방법입니다.' },
+  'term:harness': { label: '하네스', desc: '모델을 둘러싼 사무실입니다. 격리, 가이드, 센서, 권한을 바깥에서 안쪽으로 차례대로 세웁니다.' },
+  'term:guardrails': { label: '가드레일과 권한', desc: '에이전트가 건드려도 되는 것, 반드시 물어봐야 하는 것, 에이전트가 틀렸을 때도 버티는 벽입니다.' },
+  'term:tools-tool-use': { label: '도구 사용', desc: '모델이 하네스에 대신 무언가를 실행해 달라고 요청하는 것입니다. 에이전트가 가진 모든 능력은 이렇게 들어옵니다.' },
+  'term:evals': { label: '평가', desc: '매달 같은 시험을 칩니다. 실제 행동을 점검하므로 프롬프트나 모델을 바꿔도 조용히 무언가가 깨지지 않습니다.' },
+  'term:golden-set': { label: '골든 세트', desc: '모든 평가가 대상으로 삼는 고정된 사례 모음으로, 이미 본 실패도 포함합니다.' },
+  'term:llm-judge': { label: 'LLM 판정자', desc: '루브릭에 따라 출력을 채점하는 모델입니다. 판정자 자체를 사람의 라벨과 대조해 검증한 뒤에야 쓸모가 있습니다.' },
+  'term:traces': { label: '트레이스', desc: '에이전트가 한 모든 일을 단계별로 남긴 전체 기록입니다. 행동 평가와 디버깅이 모두 이것을 읽습니다.' },
+  'term:production': { label: '프로덕션', desc: '한 번 돌아가는 데모에서 트레이싱, 비용 관리, 보안, 책임자가 있는 시스템으로 넘어가는 단계입니다.' },
 };
 
 // Keep executable tool names intact; translate their descriptions.
-Object.assign(window.SBOS_NODE_ZH, {
+Object.assign(window.SBOS_NODE_KO, {
   "skill:second-brain-backfill": {
     "label": "second-brain-backfill",
-    "desc": "分批、可控地将大型资料归档导入知识库：筛选值得导入的内容，优先处理较早的资料，每批结束后保存检查点，并让费用可见。适用于导入多年书签、其他笔记应用的导出文件、下载文件夹或聊天记录等情况……"
+    "desc": "대용량 아카이브를 통제된 배치로 볼트에 가져옵니다. 인제스트할 만한 것을 선별하고, 오래된 것부터 처리하며, 배치마다 체크포인트를 남기고, 비용이 계속 보이게 합니다. 사용자가 수년 치 북마크, 다른 노트 앱의 내보내기 파일, 다운로드 폴더, 채팅 기록 덤프를 가져오려 할 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-changed-my-mind": {
     "label": "second-brain-changed-my-mind",
-    "desc": "追踪用户记录的观点如何变化：被新观点替代的主张、不同日期来源之间的矛盾，以及促成改变的证据。适用于询问自己在哪些事情上改变了看法、某个主题的思考如何发展，或过去相信什么等情况……"
+    "desc": "사용자가 기록한 입장이 어디서 바뀌었는지 추적합니다. 대체된 주장, 날짜가 다른 원본 자료 사이의 모순, 입장을 움직인 근거를 살핍니다. 사용자가 무엇에 대해 생각을 바꿨는지, 한 주제에 대한 생각이 어떻게 발전했는지, 예전에는 무엇을 믿었는지 물을 때 이 스킬을 사용합니다…"
   },
   "skill:second-brain-chat-import": {
     "label": "second-brain-chat-import",
-    "desc": "先检查隐私，再将导出的聊天记录分为需要导入、归档和删除的内容。适用于导入 Claude 或 ChatGPT 历史记录、旧对话，或判断聊天归档中哪些内容值得保留。不用于导入单次粘贴的对话……"
+    "desc": "내보낸 채팅 기록을 인제스트할 것, 보관할 것, 삭제할 것으로 분류하되 개인정보 점검을 먼저 거칩니다. 사용자가 Claude나 ChatGPT 기록을 내보냈거나, 오래된 대화를 가져오고 싶어 하거나, 채팅 아카이브에서 간직할 만한 것이 무엇인지 물을 때 이 스킬을 사용합니다. 붙여 넣은 대화 하나를 인제스트하는 데는 사용하지 않습니다…"
   },
   "skill:second-brain-graph": {
     "label": "second-brain-graph",
-    "desc": "分析知识库的链接图谱，报告孤立率、平均度、连通分量、枢纽、桥接节点和聚类，并解释各指标对检索的意义。适用于检查图谱健康状况或结构、获取指标，以及寻找连接最多或最孤立的页面……"
+    "desc": "볼트의 링크 그래프를 분석해 형태를 보고합니다. 고아 페이지 비율, 평균 차수, 연결 요소, 허브, 브리지, 클러스터를 다루고 각 수치가 검색에 갖는 의미를 설명합니다. 사용자가 그래프의 상태나 구조를 묻거나, 지표를 원하거나, 가장 많이 연결된 페이지나 가장 고립된 페이지가 무엇인지 물을 때 이 스킬을 사용합니다…"
   },
   "skill:second-brain-ingest": {
     "label": "second-brain-ingest",
-    "desc": "将第二大脑知识库中的原始资料转化为相互链接的 wiki 页面：阅读来源，拆分概念与实体，创建或更新页面，连接已有页面，并记录运行日志。适用于将文件放入 raw/，或粘贴文章、转录文本、PDF 后请求导入的情况……"
+    "desc": "second-brain 볼트의 원본 자료를 서로 연결된 위키 페이지로 바꿉니다. 원본을 읽고, 개념과 엔티티로 나누고, 페이지를 쓰거나 갱신하고, 기존 페이지와 연결하고, 실행 내용을 로그에 기록합니다. 사용자가 raw/에 파일을 넣거나 글, 트랜스크립트, PDF를 붙여 넣고 요청할 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-lint": {
     "label": "second-brain-lint",
-    "desc": "审查并修复第二大脑知识库的结构问题：失效 wiki 链接、孤立页面、空白占位页、不符合规范的 frontmatter、近似重复页面和过期索引。适用于结构检查、清理、审计或健康检查等需求……"
+    "desc": "second-brain 볼트의 구조적 문제를 점검하고 고칩니다. 깨진 위키링크, 고아 페이지, 비어 있는 스텁, 스키마를 어긴 프론트매터, 거의 중복된 페이지, 오래된 인덱스 항목이 대상입니다. 사용자가 볼트를 린트, 정리, 감사하거나 상태를 점검해 달라고 하거나, 페이지가 어수선하다고 말할 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-merge": {
     "label": "second-brain-merge",
-    "desc": "合并描述同一事物的两个页面，保留每条不同的主张，重定向入站链接，并记录合并过程。适用于用户批准合并重复页面、要求“将 X 合入 Y”，或清理结构检查提出的近似重复页面。不用于合并……"
+    "desc": "같은 대상을 설명하는 두 페이지를 합칩니다. 서로 다른 주장은 모두 보존하고, 들어오는 링크를 리다이렉트하며, 병합 내용을 기록합니다. 사용자가 중복 병합을 승인하거나 '이 둘은 같은 페이지야', 'X를 Y로 합쳐 줘'라고 말하거나, 린트가 제안한 거의 중복된 페이지를 정리해 달라고 할 때 이 스킬을 사용합니다. 다음을 병합하는 데는 사용하지 않습니다…"
   },
   "skill:second-brain-metrics": {
     "label": "second-brain-metrics",
-    "desc": "记录带日期的知识库健康指标快照，并与历史快照比较，让趋势可见。适用于月度或季度检查、判断知识库是否在改善，或持续跟踪指标。不用于一次性的图谱分析……"
+    "desc": "볼트의 상태 수치를 날짜가 붙은 스냅샷으로 기록하고 이전 스냅샷과 비교해 추세가 보이게 합니다. 월간이나 분기별 점검, 사용자가 볼트가 나아지고 있는지 물을 때, 수치를 시간에 따라 추적해 달라고 할 때 이 스킬을 사용합니다. 일회성 그래프 분석에는 사용하지 않습니다. 그것은…"
   },
   "skill:second-brain-privacy": {
     "label": "second-brain-privacy",
-    "desc": "审查知识库中不应存在的内容：凭据、他人的隐私信息、工作机密，以及用户不希望同步或备份的资料。适用于隐私检查、分享或同步前检查，以及刚导入聊天记录或会议笔记的情况……"
+    "desc": "볼트에 있어서는 안 되는 자료를 점검합니다. 자격 증명, 다른 사람의 사적인 정보, 기밀 업무 내용, 사용자가 동기화하거나 백업하고 싶지 않을 모든 것이 대상입니다. 사용자가 개인정보를 묻거나, 볼트를 공유하거나 동기화하려 하거나, 채팅 기록이나 회의 노트를 막 가져온 경우 이 스킬을 사용합니다…"
   },
   "skill:second-brain-project": {
     "label": "second-brain-project",
-    "desc": "创建或更新知识库中的项目：搭建四阶段文件夹流程，为项目编写只有一个目标的 CLAUDE.md，并链接到所依赖的概念页。适用于开始需要持续推进的新工作、创建项目文件夹或定义项目目标……"
+    "desc": "볼트에서 프로젝트를 만들거나 갱신합니다. 4단계 폴더 파이프라인, 목표가 하나뿐인 프로젝트 전용 CLAUDE.md, 의존하는 개념 페이지로 가는 링크를 갖춥니다. 사용자가 시간을 들여 진행할 새 일을 시작하거나, '프로젝트 만들어 줘', 'X용 폴더 설정해 줘'라고 말하거나, 목표 정의를 요청할 때 이 스킬을 사용합니다…"
   },
   "skill:second-brain-publish": {
     "label": "second-brain-publish",
-    "desc": "准备发布知识库中的一部分内容：检查主动公开标记，查找私密资料，在导出前报告链接可能泄露的内容。适用于将笔记发布为网站或数字花园、检查哪些内容可以公开，或设置导出流程。不用于……"
+    "desc": "볼트의 일부를 게시할 수 있게 준비합니다. 공개 동의(opt-in) 플래그를 확인하고, 비공개 자료를 찾고, 내보내기 전에 링크를 통해 무엇이 새어 나갈지 보고합니다. 사용자가 노트를 사이트나 디지털 가든으로 게시하려 하거나, 공개해도 안전한 것이 무엇인지 묻거나, 내보내기를 설정할 때 이 스킬을 사용합니다. 다음 용도에는 사용하지 않습니다…"
   },
   "skill:second-brain-query": {
     "label": "second-brain-query",
-    "desc": "阅读第二大脑知识库自身的页面来回答问题，引用所用页面，并在知识库没有答案时明确说明。适用于询问自己对某主题知道什么、读过什么、两个想法有什么联系，或在哪些事情上改变了看法……"
+    "desc": "second-brain 볼트에 있는 자체 페이지를 읽고 질문에 답합니다. 사용한 페이지를 인용하고, 볼트에 답이 없으면 분명하게 말합니다. 사용자가 어떤 주제에 대해 무엇을 아는지, 무엇을 읽었는지, 두 아이디어를 잇는 것이 무엇인지, 무엇에 대해 생각을 바꿨는지 물을 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-quiz": {
     "label": "second-brain-quiz",
-    "desc": "根据用户自己的概念页生成问题，找出保存过却没有学会的内容，并将答案与页面内容比较。适用于自测、复习、从笔记制作记忆卡片，或检查遗忘内容。不用于通用的……"
+    "desc": "사용자 자신의 개념 페이지에서 문제를 만들어, 저장만 하고 배우지는 못한 것이 무엇인지 알아내고 답을 페이지 내용과 비교합니다. 사용자가 스스로 시험해 보거나, 복습하거나, 노트로 플래시카드를 만들거나, 무엇을 잊었는지 물을 때 이 스킬을 사용합니다. 사용하지 않는 경우는 일반적인…"
   },
   "skill:second-brain-rename": {
     "label": "second-brain-rename",
-    "desc": "安全重命名页面：更新文件，修复所有入站 wiki 链接，将旧名加入别名，并记录日志。适用于更改规范标题、修正不一致的标题，或处理结构检查发现的命名问题。不用于合并两个页面……"
+    "desc": "페이지 이름을 안전하게 바꿉니다. 파일을 갱신하고, 들어오는 위키링크를 모두 고치고, 이전 이름을 별칭으로 추가하고, 로그에 남깁니다. 페이지에 다른 정식 제목이 필요하거나, 사용자가 'X를 Y로 이름 바꿔 줘'라고 말하거나, 일관되지 않은 제목을 고쳐 달라고 하거나, 린트가 이름 문제를 지적한 뒤에 이 스킬을 사용합니다. 두 페이지를 합치는 데는 사용하지 않습니다…"
   },
   "skill:second-brain-report": {
     "label": "second-brain-report",
-    "desc": "根据知识库撰写研究报告：对照现有页面界定问题范围，列出空白，并写出包含引用、分歧和局限的发现。适用于研究报告、某主题的深入文章，或利用已收集资料全面理解一个问题……"
+    "desc": "볼트에서 리서치 보고서를 만듭니다. 기존 페이지를 기준으로 질문의 범위를 정하고, 빈틈을 짚고, 인용, 이견, 한계를 갖춘 결과를 씁니다. 사용자가 리서치 보고서나 한 주제에 대한 심층 정리를 요청하거나, 지금까지 모은 자료로 주제를 철저히 이해하고 싶을 때 이 스킬을 사용합니다…"
   },
   "skill:second-brain-review": {
     "label": "second-brain-review",
-    "desc": "定期复盘第二大脑知识库：新增了什么，哪些主题正在增长，存在哪些矛盾，哪些问题仍未解决，以及接下来值得阅读什么。适用于周度或月度复盘、查看知识库变化，或回顾最近学习的主题……"
+    "desc": "second-brain 볼트의 정기 리뷰를 만듭니다. 무엇이 추가되었는지, 어떤 주제가 자라고 있는지, 무엇이 무엇과 모순되는지, 어떤 질문이 아직 열려 있는지, 다음에 읽을 만한 것이 무엇인지를 다룹니다. 사용자가 주간이나 월간 리뷰를 요청하거나, 볼트에서 무엇이 바뀌었는지, 무엇을 배워 왔는지 물을 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-transcript": {
     "label": "second-brain-transcript",
-    "desc": "在资料导入前清理原始转录文本：添加标点和段落、标记说话者、修正技术术语的误识别，并按主题拆分长录音。适用于自动生成的转录稿、字幕、播客或讲座记录、会议录音文本，以及视频处理请求……"
+    "desc": "인제스트하기 전에 원본 트랜스크립트를 정리합니다. 문장 부호를 넣고, 문단을 나누고, 화자를 표시하고, 잘못 받아쓴 기술 용어를 고치고, 긴 녹음을 주제별로 나눕니다. 사용자가 자동 생성 트랜스크립트, 자막 파일, 팟캐스트나 강의 트랜스크립트, 회의 녹음 텍스트를 넣거나 영상 처리를 요청할 때 이 스킬을 사용합니다…"
   },
   "skill:second-brain-write": {
     "label": "second-brain-write",
-    "desc": "基于知识库起草文章：从概念页构建提纲，保留用户自身来源的引用，并指出材料中的分歧。适用于根据已收集内容撰写文章、帖子、随笔或通讯，或探讨某个主题可以写什么。不用于……"
+    "desc": "볼트를 바탕으로 초안을 씁니다. 개념 페이지에서 개요를 짜고, 사용자 자신의 출처에 대한 인용을 유지하며, 자료들이 서로 어긋나는 지점을 드러냅니다. 사용자가 모아 둔 내용을 바탕으로 글, 게시물, 에세이, 뉴스레터를 쓰려 하거나 한 주제로 무엇을 쓸 수 있는지 물을 때 이 스킬을 사용합니다. 다음 용도에는 사용하지 않습니다…"
   },
   "cmd:aliases": {
     "label": "/aliases",
-    "desc": "查找缺失的别名"
+    "desc": "누락된 별칭 찾기"
   },
   "cmd:archive": {
     "label": "/archive",
-    "desc": "将不常用资料移出 wiki"
+    "desc": "잘 쓰지 않는 자료를 위키 밖으로 옮기기"
   },
   "cmd:ask": {
     "label": "/ask",
-    "desc": "仅根据知识库回答问题"
+    "desc": "볼트만 근거로 답하는 질문"
   },
   "cmd:audit": {
     "label": "/audit",
-    "desc": "审查智能体执行过的操作"
+    "desc": "에이전트가 한 일 감사하기"
   },
   "cmd:backfill": {
     "label": "/backfill",
-    "desc": "分批批量导入历史资料"
+    "desc": "아카이브를 배치로 나눠 일괄 가져오기"
   },
   "cmd:bridges": {
     "label": "/bridges",
-    "desc": "查找维系图谱连通性的页面"
+    "desc": "그래프를 지탱하는 페이지 찾기"
   },
   "cmd:changed-my-mind": {
     "label": "/changed-my-mind",
-    "desc": "查看自己修正过的观点"
+    "desc": "내가 수정한 입장"
   },
   "cmd:claude-md": {
     "label": "/claude-md",
-    "desc": "创建或更新 CLAUDE.md"
+    "desc": "CLAUDE.md 만들기 또는 갱신하기"
   },
   "cmd:clusters": {
     "label": "/clusters",
-    "desc": "查看知识库实际关注的主题"
+    "desc": "볼트가 실제로 무엇에 관한 것인지 보여 주기"
   },
   "cmd:commit": {
     "label": "/commit",
-    "desc": "提交当前状态，并附上有意义的提交说明"
+    "desc": "현재 상태를 의미 있는 메시지와 함께 커밋하기"
   },
   "cmd:commitments": {
     "label": "/commitments",
-    "desc": "列出尚未履行的承诺"
+    "desc": "열려 있는 약속 목록"
   },
   "cmd:compare": {
     "label": "/compare",
-    "desc": "根据自己的资料比较两件事"
+    "desc": "내 자료를 바탕으로 두 가지 비교하기"
   },
   "cmd:connect": {
     "label": "/connect",
-    "desc": "寻找两个想法之间的路径"
+    "desc": "두 아이디어 사이의 경로 찾기"
   },
   "cmd:contradictions": {
     "label": "/contradictions",
-    "desc": "列出尚未解决的矛盾"
+    "desc": "해결되지 않은 모순 목록"
   },
   "cmd:contradicts": {
     "label": "/contradicts",
-    "desc": "提出反对自己观点的论据"
+    "desc": "내 주장에 반박하기"
   },
   "cmd:decisions": {
     "label": "/decisions",
-    "desc": "列出已经作出的决定"
+    "desc": "내린 결정 목록"
   },
   "cmd:dedupe": {
     "label": "/dedupe",
-    "desc": "查找近似重复页面"
+    "desc": "거의 중복된 페이지 찾기"
   },
   "cmd:doctor": {
     "label": "/doctor",
-    "desc": "检查配置是否正常工作"
+    "desc": "설정이 제대로 작동하는지 확인하기"
   },
   "cmd:draft": {
     "label": "/draft",
-    "desc": "基于知识库起草内容"
+    "desc": "볼트를 바탕으로 초안 쓰기"
   },
   "cmd:dry-run": {
     "label": "/dry-run",
-    "desc": "预览运行结果而不写入"
+    "desc": "쓰지 않고 실행 결과 미리 보기"
   },
   "cmd:explain": {
     "label": "/explain",
-    "desc": "用自己的话解释，并找出理解空白"
+    "desc": "되짚어 설명하고 빈틈 찾기"
   },
   "cmd:export": {
     "label": "/export",
-    "desc": "导出一个或一组页面"
+    "desc": "페이지 하나 또는 여러 페이지 내보내기"
   },
   "cmd:gaps": {
     "label": "/gaps",
-    "desc": "查找自己理解中缺失的部分"
+    "desc": "내 이해에서 빠진 것"
   },
   "cmd:graph-export": {
     "label": "/graph-export",
-    "desc": "导出图谱供外部分析"
+    "desc": "외부 분석용으로 그래프 내보내기"
   },
   "cmd:graph": {
     "label": "/graph",
-    "desc": "报告图谱的结构"
+    "desc": "그래프의 형태 보고하기"
   },
   "cmd:handoff": {
     "label": "/handoff",
-    "desc": "准备交接简报"
+    "desc": "인수인계 업무 지시서 준비하기"
   },
   "cmd:health": {
     "label": "/health",
-    "desc": "快速检查健康状况"
+    "desc": "빠른 상태 점검"
   },
   "cmd:hubs": {
     "label": "/hubs",
-    "desc": "查找吞并了过多图谱连接的页面"
+    "desc": "그래프를 삼켜 버린 페이지 찾기"
   },
   "cmd:index": {
     "label": "/index",
-    "desc": "重建索引"
+    "desc": "인덱스 다시 만들기"
   },
   "cmd:ingest-chats": {
     "label": "/ingest-chats",
-    "desc": "导入导出的聊天记录"
+    "desc": "내보낸 채팅 기록 가져오기"
   },
   "cmd:ingest-highlights": {
     "label": "/ingest-highlights",
-    "desc": "导入书籍或文章中的高亮"
+    "desc": "책이나 글의 하이라이트 인제스트하기"
   },
   "cmd:ingest-mine": {
     "label": "/ingest-mine",
-    "desc": "导入自己完成的作品"
+    "desc": "내가 끝낸 작업물 인제스트하기"
   },
   "cmd:ingest-newsletter": {
     "label": "/ingest-newsletter",
-    "desc": "导入通讯，并避免重复"
+    "desc": "중복 없이 뉴스레터 인제스트하기"
   },
   "cmd:ingest-paper": {
     "label": "/ingest-paper",
-    "desc": "导入学术论文"
+    "desc": "학술 논문 인제스트하기"
   },
   "cmd:ingest-pdf": {
     "label": "/ingest-pdf",
-    "desc": "导入 PDF"
+    "desc": "PDF 인제스트하기"
   },
   "cmd:ingest-url": {
     "label": "/ingest-url",
-    "desc": "剪藏并导入网页"
+    "desc": "웹 페이지를 클리핑해 인제스트하기"
   },
   "cmd:ingest-voice": {
     "label": "/ingest-voice",
-    "desc": "导入语音笔记"
+    "desc": "음성 노트 인제스트하기"
   },
   "cmd:ingest-youtube": {
     "label": "/ingest-youtube",
-    "desc": "导入视频或播客的转录文本"
+    "desc": "영상이나 팟캐스트 트랜스크립트 인제스트하기"
   },
   "cmd:ingest": {
     "label": "/ingest",
-    "desc": "将 raw/ 中的新资料导入 wiki"
+    "desc": "raw/의 새 자료를 위키로 인제스트하기"
   },
   "cmd:init": {
     "label": "/init",
-    "desc": "搭建新知识库的初始结构"
+    "desc": "새 볼트의 뼈대 만들기"
   },
   "cmd:install": {
     "label": "/install",
-    "desc": "安装技能、命令和智能体"
+    "desc": "스킬, 커맨드, 에이전트 설치하기"
   },
   "cmd:know": {
     "label": "/know",
-    "desc": "查看自己对某个主题知道什么"
+    "desc": "한 주제에 대해 내가 아는 것"
   },
   "cmd:link": {
     "label": "/link",
-    "desc": "发现并补充缺失的关联"
+    "desc": "누락된 연결 찾아 추가하기"
   },
   "cmd:lint": {
     "label": "/lint",
-    "desc": "审查结构并执行可机械完成的修复"
+    "desc": "구조를 점검하고 기계적으로 고칠 수 있는 것 수정하기"
   },
   "cmd:merge": {
     "label": "/merge",
-    "desc": "合并两个页面"
+    "desc": "두 페이지 합치기"
   },
   "cmd:metrics": {
     "label": "/metrics",
-    "desc": "记录带日期的指标快照"
+    "desc": "날짜가 붙은 지표 스냅샷 기록하기"
   },
   "cmd:monthly": {
     "label": "/monthly",
-    "desc": "月度结构复盘"
+    "desc": "월간 구조 리뷰"
   },
   "cmd:orphans": {
     "label": "/orphans",
-    "desc": "查找无法通过链接到达的页面"
+    "desc": "도달할 수 없는 페이지 찾기"
   },
   "cmd:outline": {
     "label": "/outline",
-    "desc": "根据概念页拟定文章提纲"
+    "desc": "개념 페이지로 글의 개요 짜기"
   },
   "cmd:privacy": {
     "label": "/privacy",
-    "desc": "审查知识库中不应存在的内容"
+    "desc": "볼트에 있어서는 안 될 것 점검하기"
   },
   "cmd:project-status": {
     "label": "/project-status",
-    "desc": "查看项目进展"
+    "desc": "프로젝트의 현재 상태"
   },
   "cmd:project": {
     "label": "/project",
-    "desc": "创建项目"
+    "desc": "프로젝트 만들기"
   },
   "cmd:prune": {
     "label": "/prune",
-    "desc": "查找可以安全移除的内容"
+    "desc": "안전하게 지울 수 있는 것 찾기"
   },
   "cmd:publish": {
     "label": "/publish",
-    "desc": "检查哪些内容可以安全发布"
+    "desc": "게시해도 안전한 것 확인하기"
   },
   "cmd:quiz": {
     "label": "/quiz",
-    "desc": "用自己的页面进行自测"
+    "desc": "내 페이지로 스스로 시험하기"
   },
   "cmd:rename": {
     "label": "/rename",
-    "desc": "重命名页面并修复所有链接"
+    "desc": "페이지 이름을 바꾸고 모든 링크 고치기"
   },
   "cmd:report": {
     "label": "/report",
-    "desc": "撰写研究报告"
+    "desc": "리서치 보고서 쓰기"
   },
   "cmd:retype": {
     "label": "/retype",
-    "desc": "修正页面类型"
+    "desc": "페이지 유형 고치기"
   },
   "cmd:review": {
     "label": "/review",
-    "desc": "定期复盘知识库学到了什么"
+    "desc": "볼트가 배운 것의 정기 리뷰"
   },
   "cmd:rollback": {
     "label": "/rollback",
-    "desc": "撤销上一次运行"
+    "desc": "직전 실행 되돌리기"
   },
   "cmd:schedule": {
     "label": "/schedule",
-    "desc": "设置定时维护"
+    "desc": "예약 유지보수 설정하기"
   },
   "cmd:schema": {
     "label": "/schema",
-    "desc": "检查 frontmatter 是否符合结构规范"
+    "desc": "스키마에 맞는지 프론트매터 점검하기"
   },
   "cmd:scope": {
     "label": "/scope",
-    "desc": "将相关知识引入项目"
+    "desc": "프로젝트로 지식 끌어오기"
   },
   "cmd:secrets": {
     "label": "/secrets",
-    "desc": "扫描凭据"
+    "desc": "자격 증명 스캔하기"
   },
   "cmd:sources": {
     "label": "/sources",
-    "desc": "查看某条主张的依据"
+    "desc": "주장의 근거 보여 주기"
   },
   "cmd:split": {
     "label": "/split",
-    "desc": "拆分承载过多内容的页面"
+    "desc": "너무 많은 것을 담은 페이지 나누기"
   },
   "cmd:stale": {
     "label": "/stale",
-    "desc": "查找长期无人维护的概念页"
+    "desc": "아무도 손대지 않은 개념 페이지 찾기"
   },
   "cmd:tags": {
     "label": "/tags",
-    "desc": "审查标签词汇"
+    "desc": "태그 어휘 점검하기"
   },
   "cmd:timeline": {
     "label": "/timeline",
-    "desc": "查看资料来源随时间如何发展"
+    "desc": "원본 자료가 시간에 따라 어떻게 발전했는지"
   },
   "cmd:trace": {
     "label": "/trace",
-    "desc": "显示答案使用了哪些页面"
+    "desc": "답에 쓰인 페이지 보여 주기"
   },
   "cmd:typed-links": {
     "label": "/typed-links",
-    "desc": "在重要关系上添加链接类型"
+    "desc": "중요한 곳에 관계 유형 추가하기"
   },
   "cmd:weekly": {
     "label": "/weekly",
-    "desc": "周度复盘"
+    "desc": "주간 리뷰"
   },
   "agent:curator": {
     "label": "curator",
-    "desc": "建议修剪、归档或合并哪些内容。只读，只提出建议，不执行操作。适合季度复盘，或知识库已超出用户能够掌握的规模时使用。"
+    "desc": "무엇을 정리하고, 보관하고, 합칠지 제안합니다. 읽기 전용이며 제안만 하고 실행은 하지 않습니다. 분기마다, 또는 볼트가 사용자가 감당할 수 있는 범위를 넘어 커졌을 때 사용합니다."
   },
   "agent:graph-analyst": {
     "label": "graph-analyst",
-    "desc": "分析链接图谱，报告指标、枢纽、桥接节点和聚类。只读。适合月度检查，或知识库变得难以导航时使用。"
+    "desc": "링크 그래프를 분석해 지표, 허브, 브리지, 클러스터를 보고합니다. 읽기 전용입니다. 월간 점검 때, 또는 볼트가 탐색하기 어렵게 느껴질 때 사용합니다."
   },
   "agent:ingestor": {
     "label": "ingestor",
-    "desc": "将 raw/ 中的新资料处理为相互链接的 wiki 页面。存在待处理来源时使用。"
+    "desc": "raw/의 새 자료를 서로 연결된 위키 페이지로 처리합니다. 처리하지 않은 원본 자료가 대기 중일 때 사용합니다."
   },
   "agent:linker": {
     "label": "linker",
-    "desc": "发现并补充现有 wiki 页面之间缺失的关联。适合批量导入后或按计划运行。"
+    "desc": "기존 위키 페이지 사이에 빠진 연결을 찾아 추가합니다. 일괄 가져오기 후나 일정에 따라 사용합니다."
   },
   "agent:researcher": {
     "label": "researcher",
-    "desc": "根据知识库回答研究问题，并指出缺失的信息。适用于涉及多个页面的问题。"
+    "desc": "볼트를 바탕으로 리서치 질문에 답하고 빠진 것을 짚어 줍니다. 여러 페이지에 걸친 질문에 사용합니다."
   },
   "agent:reviewer": {
     "label": "reviewer",
-    "desc": "定期复盘知识库学到了什么。适合每周运行，或在用户询问变化时使用。"
+    "desc": "볼트가 배운 것에 대한 정기 리뷰를 만듭니다. 매주, 또는 무엇이 바뀌었는지 물을 때 사용합니다."
   },
   "script:chat_export_to_md.py": {
     "label": "chat_export_to_md.py",
-    "desc": "将导出的聊天记录 JSON 转换为每个对话一个 Markdown 文件。"
+    "desc": "내보낸 채팅 기록 JSON을 대화마다 마크다운 파일 하나로 변환합니다."
   },
   "script:graph_export.py": {
     "label": "graph_export.py",
-    "desc": "将知识库的 wiki 链接图谱导出为 CSV 边列表或 GraphML。"
+    "desc": "볼트의 위키링크 그래프를 CSV 엣지 목록이나 GraphML로 내보냅니다."
   },
   "script:link_check.py": {
     "label": "link_check.py",
-    "desc": "检查第二大脑知识库中的失效 wiki 链接、孤立页面和占位页。"
+    "desc": "second-brain 볼트의 깨진 위키링크, 고아 페이지, 스텁을 점검합니다."
   },
   "script:vault_stats.py": {
     "label": "vault_stats.py",
-    "desc": "输出第二大脑知识库的健康指标。"
+    "desc": "second-brain 볼트의 상태 지표를 출력합니다."
   },
   "plug:context-audit": {
     "label": "context-audit",
-    "desc": "按四个位置审查智能体的上下文布局：系统提示词、工具、历史记录和末尾。适用于检查或修复上下文、提示词缓存、每轮 token 开销，或 CLAUDE.md / AGENTS.md 布局。只读，仅报告发现和修复清单，不修改内容。不用于编写……"
+    "desc": "에이전트의 컨텍스트 배치를 네 곳(시스템 프롬프트, 도구, 히스토리, 끝부분)에 맞춰 점검합니다. 사용자가 에이전트의 컨텍스트, 프롬프트 캐싱, 턴당 토큰 사용량, CLAUDE.md / AGENTS.md 배치를 감사, 검토, 수정해 달라고 할 때 사용합니다. 읽기 전용이며 결과와 수정 목록만 보고하고 아무것도 바꾸지 않습니다. 작성하는 데는 사용하지 않습니다…"
   },
   "plug:evals-bootstrap": {
     "label": "evals-bootstrap",
-    "desc": "为智能体搭建第一套评估：从真实失败中提取案例，编写轨迹行为检查，并生成运行器。适用于评估、回归测试、黄金集，以及确认提示词或模型变更没有破坏行为。不用于单个任务的完成检查……"
+    "desc": "에이전트의 첫 평가 스위트를 만듭니다. 실제 실패에서 사례를 뽑아내고, 트레이스에 대한 행동 점검을 작성하고, 러너를 생성합니다. 사용자가 에이전트의 평가, 회귀 테스트, 골든 세트를 원하거나, 프롬프트나 모델 변경이 동작을 깨뜨리지 않았는지 어떻게 아는지 물을 때 사용합니다. 단일 작업의 완료 점검에는 사용하지 않습니다…"
   },
   "plug:gate-check": {
     "label": "gate-check",
-    "desc": "找出流程中无需昂贵模型处理的决策，为其建议规则、传统分类器或小模型，并采用失败时关闭的路由。适用于降低模型成本或延迟、解决所有任务都交给大模型的问题，或增加前置分流、路由与过滤层……"
+    "desc": "비싼 모델이 필요 없는 파이프라인 속 결정을 찾아, 각각에 맞는 게이트(규칙, 고전적 분류기, 소형 모델)를 실패 시 닫히는(fail-closed) 라우팅과 함께 제안합니다. 사용자가 모델 비용이나 지연 시간을 줄이고 싶다고 하거나, 큰 모델이 모든 것을 처리한다고 말하거나, 앞단에 분류, 라우팅, 필터 계층을 두고 싶을 때 사용합니다…"
   },
   "plug:goal-test": {
     "label": "goal-test",
-    "desc": "将模糊任务转化为可测试的完成定义，并生成可执行的目标测试脚本；可选地，在无界面智能体外添加有次数上限的重试循环。适用于循环运行智能体、判断任务何时结束，或将“改进 X”之类的目标变为……"
+    "desc": "모호한 작업을 테스트할 수 있는 완료 정의로 바꾸고, 그에 대한 실행 가능한 목표 테스트 스크립트를 생성합니다. 원하면 헤드리스 에이전트 주위에 횟수가 제한된 재시도 루프도 붙입니다. 사용자가 에이전트를 루프로 실행하려 하거나, 에이전트 작업이 끝났는지 어떻게 아는지 묻거나, 'X 개선' 같은 목표를 구체화해야 한다고 말할 때 사용합니다…"
   },
   "plug:harness-audit": {
     "label": "harness-audit",
-    "desc": "按四层防线审查智能体运行框架：隔离、指南、传感器和权限。适用于检查配置是否安全、审查沙箱、权限、钩子与 AGENTS.md 防护，或评估一次糟糕运行可能破坏什么。只读，报告影响范围和加固建议……"
+    "desc": "에이전트의 하네스를 네 개의 고리(격리, 가이드, 센서, 권한)에 맞춰 점검합니다. 사용자가 에이전트 설정이 안전한지 묻거나, 샌드박스, 권한, 훅, AGENTS.md 가드레일의 검토를 원하거나, 나쁜 세션이 무엇을 망가뜨릴 수 있는지 물을 때 사용합니다. 읽기 전용이며 영향 범위와 보강 목록을 보고합니다…"
   },
   "plug:loop-critic": {
     "label": "loop-critic",
-    "desc": "在全新上下文中审查智能体循环某一轮的结果：对照目标检查声称完成的工作，寻找投机捷径与未测试的路径，并给出包含具体缺陷的结论。在工作会话或循环尝试结束后、接受结果前使用。"
+    "desc": "에이전트 루프 한 번의 결과를 깨끗한 컨텍스트에서 검토합니다. 주장된 작업을 목표와 대조하고, 지름길과 테스트되지 않은 경로를 찾아내고, 구체적인 결함이 담긴 판정을 돌려줍니다. 작업 세션이나 루프 시도가 끝난 뒤, 결과를 받아들이기 전에 사용합니다."
   }
 });

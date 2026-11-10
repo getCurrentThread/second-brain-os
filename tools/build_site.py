@@ -7,7 +7,7 @@ for reference but never written.
 """
 import hashlib, html, json, os, re
 
-D = json.load(open("site_data.json"))
+D = json.load(open("site_data.json", encoding="utf-8"))
 OUT = "."
 os.makedirs(OUT, exist_ok=True)
 REPO = "https://github.com/undefined-ui/second-brain-os"
@@ -201,7 +201,7 @@ def header(active):
   <button class="theme" id="theme" data-i18n-aria-label="Switch between light and dark theme" aria-label="Switch between light and dark theme">&#9790;</button>
   {'<button class="toc-btn" id="toc">Index</button>' if active=='guide' else ''}
   {SEARCHBOX if active=='guide' else ''}
-  <button class="language-toggle" type="button" data-language-toggle>中文</button>
+  <button class="language-toggle" type="button" data-language-toggle>한국어</button>
 </div></header>"""
 
 # ---------------- graph: sections on a ring in reading order, links as chords
@@ -267,7 +267,7 @@ for sec, meta in D["sections"].items():
                 f'<p>{inline(meta["blurb"])}</p>'
                 f'<div class="pg">{len(D["order"][sec])} pages</div></article>')
 
-GUIDE = f"""<!DOCTYPE html><html lang="en" data-default-language="zh-CN"><head>
+GUIDE = f"""<!DOCTYPE html><html lang="en" data-default-language="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Second Brain OS - the guide</title>
 <meta name="description" content="A {s['pages']}-page guide to building a knowledge base your AI agent maintains, in plain markdown you own.">
@@ -397,7 +397,7 @@ kinds = []
 for r in R:
     if r["kind"] not in kinds: kinds.append(r["kind"])
 
-RES = f"""<!DOCTYPE html><html lang="en" data-default-language="zh-CN"><head>
+RES = f"""<!DOCTYPE html><html lang="en" data-default-language="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <script>try{{var t=JSON.parse(localStorage.getItem('sbos:theme'));if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}}catch(e){{}}</script>{ICON}<title data-i18n="Second Brain OS - resources">Second Brain OS - resources</title>
 <meta name="description" content="{len(R)} checked links: Obsidian plugins by installs, repositories by stars, papers, tools and reading.">
@@ -426,22 +426,22 @@ RES = f"""<!DOCTYPE html><html lang="en" data-default-language="zh-CN"><head>
 (function(){{
 const R=JSON.parse(document.getElementById('rdata').textContent);
 const t=(key,params,language)=>window.SBOS_I18N.t(key,params,language);
-const chineseDescription=r=>window.SBOS_RESOURCE_ZH?.[r.name.replace(/\\s+/g,' ').trim()];
+const koreanDescription=r=>window.SBOS_RESOURCE_KO?.[r.name.replace(/\\s+/g,' ').trim()];
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]));
 let kind='all', term='';
 function draw(){{
   const f=R.filter(r=>(kind==='all'||r.kind===kind) &&
-    (!term || (r.name+' '+r.desc+' '+(chineseDescription(r)||'')+' '+r.group+' '+r.kind+' '+t(r.group,{{}},'zh-CN')+' '+t(r.kind,{{}},'zh-CN')).toLowerCase().includes(term)));
+    (!term || (r.name+' '+r.desc+' '+(koreanDescription(r)||'')+' '+r.group+' '+r.kind+' '+t(r.group,{{}},'ko')+' '+t(r.kind,{{}},'ko')).toLowerCase().includes(term)));
   document.getElementById('count').textContent=t('{{count}} of {{total}} shown',{{count:f.length,total:R.length}});
   let h='', g=null;
   f.forEach(r=>{{
-    const zh=window.SBOS_I18N.locale==='zh-CN' && chineseDescription(r);
+    const ko=window.SBOS_I18N.locale==='ko' && koreanDescription(r);
     const key=r.kind+' / '+r.group;
     if(key!==g){{g=key; h+=`<div class="grp-h">${{esc(t(r.group||r.kind))}}</div>`;}}
     h+=`<div class="row">
       <div><a class="nm" lang="en" href="${{esc(r.url)}}">${{esc(r.name)}}</a><span class="kd">${{esc(t(r.kind))}}</span></div>
       <div class="mt">${{esc(t(r.metric||''))}}</div>
-      <div class="ds" lang="${{zh?'zh-CN':'en'}}">${{esc(zh||r.desc||'')}}</div></div>`;
+      <div class="ds" lang="${{ko?'ko':'en'}}">${{esc(ko||r.desc||'')}}</div></div>`;
   }});
   document.getElementById('rows').innerHTML=h||`<div class="count">${{esc(t('nothing matches that filter'))}}</div>`;
 }}
@@ -464,5 +464,5 @@ def stamp_asset(match):
 
 
 RES = re.sub(r"(assets/site/[a-z0-9-]+\.(?:css|js))(?:\?v=[0-9a-f]+)?", stamp_asset, RES)
-open(f"{OUT}/resources.html","w").write(RES)
+open(f"{OUT}/resources.html","w",encoding="utf-8",newline="\n").write(RES)
 print("resources.html", os.path.getsize(f"{OUT}/resources.html")//1024, "KB")

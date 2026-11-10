@@ -80,43 +80,43 @@ function environment({ saved, languages = ['en-US'], language = 'en-US', siteDef
 }
 
 test('saved language takes precedence over browser language', () => {
-  assert.equal(environment({ saved: '"en"', languages: ['zh-CN'] }).i18n.locale, 'en');
-  assert.equal(environment({ saved: '"zh-CN"', languages: ['en-US'] }).i18n.locale, 'zh-CN');
+  assert.equal(environment({ saved: '"en"', languages: ['ko'] }).i18n.locale, 'en');
+  assert.equal(environment({ saved: '"ko"', languages: ['en-US'] }).i18n.locale, 'ko');
 });
 
-test('the Chinese learning site defaults to Chinese while honoring an explicit saved choice', () => {
-  assert.equal(environment({ siteDefault: 'zh-CN', languages: ['en-US'] }).i18n.locale, 'zh-CN');
-  assert.equal(environment({ siteDefault: 'zh-CN', saved: '"en"' }).i18n.locale, 'en');
+test('the Korean learning site defaults to Korean while honoring an explicit saved choice', () => {
+  assert.equal(environment({ siteDefault: 'ko', languages: ['en-US'] }).i18n.locale, 'ko');
+  assert.equal(environment({ siteDefault: 'ko', saved: '"en"' }).i18n.locale, 'en');
 });
 
-test('first browser preference chooses Chinese, with English as the fallback', () => {
-  for (const language of ['zh', 'zh-CN', 'zh-TW', 'zh-Hans-CN']) {
-    assert.equal(environment({ languages: [language] }).i18n.locale, 'zh-CN');
+test('first browser preference chooses Korean, with English as the fallback', () => {
+  for (const language of ['ko', 'ko-KR', 'ko-Kore-KR']) {
+    assert.equal(environment({ languages: [language] }).i18n.locale, 'ko');
   }
-  assert.equal(environment({ languages: ['en-US', 'zh-CN'] }).i18n.locale, 'en');
+  assert.equal(environment({ languages: ['en-US', 'ko'] }).i18n.locale, 'en');
   assert.equal(environment({ languages: ['fr-FR'] }).i18n.locale, 'en');
-  assert.equal(environment({ languages: [], language: 'zh-CN' }).i18n.locale, 'zh-CN');
+  assert.equal(environment({ languages: [], language: 'ko' }).i18n.locale, 'ko');
 });
 
 test('malformed or unsupported stored choices fall back to the browser', () => {
   for (const saved of ['broken json', '"fr"', 'null', '42', '{}']) {
-    assert.equal(environment({ saved, languages: ['zh-CN'] }).i18n.locale, 'zh-CN');
+    assert.equal(environment({ saved, languages: ['ko'] }).i18n.locale, 'ko');
   }
 });
 
 test('unavailable storage does not prevent choosing or switching languages', () => {
-  const { i18n } = environment({ blockedStorage: true, languages: ['zh-CN'] });
-  assert.equal(i18n.locale, 'zh-CN');
+  const { i18n } = environment({ blockedStorage: true, languages: ['ko'] });
+  assert.equal(i18n.locale, 'ko');
   assert.doesNotThrow(() => i18n.setLocale('en'));
   assert.equal(i18n.locale, 'en');
 });
 
 test('catalog translations interpolate values and preserve English fallbacks', () => {
   const { i18n } = environment();
-  i18n.register('zh-CN', { 'Found {count} pages': '找到 {count} 个页面' });
+  i18n.register('ko', { 'Found {count} pages': '{count}개 페이지를 찾음' });
   assert.equal(i18n.t('Found {count} pages', { count: 0 }), 'Found 0 pages');
-  i18n.setLocale('zh-CN');
-  assert.equal(i18n.t('Found {count} pages', { count: 12 }), '找到 12 个页面');
+  i18n.setLocale('ko');
+  assert.equal(i18n.t('Found {count} pages', { count: 12 }), '12개 페이지를 찾음');
   assert.equal(i18n.t('New upstream message {count}', { count: 3 }), 'New upstream message 3');
 });
 
@@ -124,14 +124,14 @@ test('language changes persist and notify page renderers', () => {
   const { i18n, context, document, storage } = environment();
   const changes = [];
   context.addEventListener('sbos:languagechange', event => changes.push(event.detail.locale));
-  i18n.setLocale('zh-CN');
-  assert.equal(document.documentElement.lang, 'zh-CN');
-  assert.equal(storage.get('sbos:language'), '"zh-CN"');
-  assert.deepEqual(changes, ['zh-CN']);
+  i18n.setLocale('ko');
+  assert.equal(document.documentElement.lang, 'ko');
+  assert.equal(storage.get('sbos:language'), '"ko"');
+  assert.deepEqual(changes, ['ko']);
   i18n.setLocale('en');
   assert.equal(document.documentElement.lang, 'en');
   assert.equal(storage.get('sbos:language'), '"en"');
-  assert.deepEqual(changes, ['zh-CN', 'en']);
+  assert.deepEqual(changes, ['ko', 'en']);
 });
 
 test('static text, attributes and graph labels can round-trip between languages', () => {
@@ -144,17 +144,17 @@ test('static text, attributes and graph labels can round-trip between languages'
   const node = new Element({ 'data-node-label': 'example-node' }, 'Original label');
   const description = new Element({ 'data-node-description': 'example-node' }, 'Original description');
   const { i18n, context } = environment({ elements: [title, search, node, description] });
-  context.SBOS_NODE_ZH = { 'example-node': { label: '示例节点', desc: '示例说明' } };
-  i18n.register('zh-CN', {
-    'Example heading': '示例标题', 'Find a page': '查找页面', 'Search help': '搜索帮助',
+  context.SBOS_NODE_KO = { 'example-node': { label: '예시 노드', desc: '예시 설명' } };
+  i18n.register('ko', {
+    'Example heading': '예시 제목', 'Find a page': '페이지 찾기', 'Search help': '검색 도움말',
   });
-  i18n.setLocale('zh-CN');
-  assert.equal(title.textContent, '示例标题');
-  assert.equal(search.getAttribute('placeholder'), '查找页面');
-  assert.equal(search.getAttribute('aria-label'), '查找页面');
-  assert.equal(search.getAttribute('title'), '搜索帮助');
-  assert.equal(node.textContent, '示例节点');
-  assert.equal(description.textContent, '示例说明');
+  i18n.setLocale('ko');
+  assert.equal(title.textContent, '예시 제목');
+  assert.equal(search.getAttribute('placeholder'), '페이지 찾기');
+  assert.equal(search.getAttribute('aria-label'), '페이지 찾기');
+  assert.equal(search.getAttribute('title'), '검색 도움말');
+  assert.equal(node.textContent, '예시 노드');
+  assert.equal(description.textContent, '예시 설명');
   i18n.setLocale('en');
   assert.equal(title.textContent, 'Example heading');
   assert.equal(search.getAttribute('placeholder'), 'Find a page');
@@ -167,31 +167,31 @@ test('localized text remains plain text and counts support zero', () => {
   const count = new Element({ 'data-i18n': '{count} matches', 'data-i18n-params': '{"count":0}' });
   const label = new Element({ 'data-i18n': 'Example label' });
   const { i18n } = environment({ elements: [count, label] });
-  i18n.register('zh-CN', { '{count} matches': '{count} 条结果', 'Example label': '<strong>示例</strong>' });
-  i18n.setLocale('zh-CN');
-  assert.equal(count.textContent, '0 条结果');
-  assert.equal(label.textContent, '<strong>示例</strong>');
+  i18n.register('ko', { '{count} matches': '결과 {count}건', 'Example label': '<strong>예시</strong>' });
+  i18n.setLocale('ko');
+  assert.equal(count.textContent, '결과 0건');
+  assert.equal(label.textContent, '<strong>예시</strong>');
   assert.equal(label.children.length, 0);
 });
 
 test('the shared language switch updates its target language on click', () => {
   const button = new Element({ 'data-language-toggle': '' });
   const { i18n, document } = environment({ elements: [button] });
-  assert.equal(button.textContent, '中文');
+  assert.equal(button.textContent, '한국어');
   document.dispatchEvent({ type: 'click', target: button });
-  assert.equal(i18n.locale, 'zh-CN');
+  assert.equal(i18n.locale, 'ko');
   assert.equal(button.textContent, 'English');
   assert.ok(button.getAttribute('aria-label'));
   document.dispatchEvent({ type: 'click', target: button });
   assert.equal(i18n.locale, 'en');
-  assert.equal(button.textContent, '中文');
+  assert.equal(button.textContent, '한국어');
 });
 
 test('invalid language choices cannot corrupt the saved preference', () => {
-  const { i18n, storage } = environment({ saved: '"zh-CN"' });
+  const { i18n, storage } = environment({ saved: '"ko"' });
   for (const locale of ['fr', '', null, undefined]) i18n.setLocale(locale);
-  assert.equal(i18n.locale, 'zh-CN');
-  assert.equal(storage.get('sbos:language'), '"zh-CN"');
+  assert.equal(i18n.locale, 'ko');
+  assert.equal(storage.get('sbos:language'), '"ko"');
 });
 
 test('graph translations reference existing nodes and only override display metadata', () => {
@@ -200,8 +200,8 @@ test('graph translations reference existing nodes and only override display meta
     vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../assets/site', filename), 'utf8'), context);
   }
   const ids = new Set(context.window.SBOS_GRAPH.nodes.map(node => node.id));
-  const translations = Object.entries(context.window.SBOS_NODE_ZH);
-  assert.ok(translations.length > 0, 'The Chinese graph catalog must not be empty');
+  const translations = Object.entries(context.window.SBOS_NODE_KO);
+  assert.ok(translations.length > 0, 'The Korean graph catalog must not be empty');
   for (const [id, fields] of translations) {
     assert.ok(ids.has(id), `Translation references an unknown graph node: ${id}`);
     assert.equal(typeof fields.label, 'string', `${id} needs a display label`);
@@ -222,7 +222,7 @@ test('catalog translations retain the source message placeholders', () => {
   assert.ok(catalogs.length > 0, 'The catalog script must register its translations');
   const placeholders = text => [...new Set([...text.matchAll(/\{(\w+)\}/g)].map(match => match[1]))].sort();
   for (const { locale, catalog } of catalogs) {
-    assert.equal(locale, 'zh-CN');
+    assert.equal(locale, 'ko');
     for (const [source, translation] of Object.entries(catalog)) {
       assert.equal(typeof translation, 'string', `${source} needs a string translation`);
       assert.deepEqual(placeholders(translation), placeholders(source), `Placeholder mismatch: ${source}`);
@@ -230,13 +230,13 @@ test('catalog translations retain the source message placeholders', () => {
   }
 });
 
-test('every catalog resource has a Chinese description without changing its URL or name', () => {
+test('every catalog resource has a Korean description without changing its URL or name', () => {
   const context = { window: {} };
   vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../assets/site/resource-i18n.js'), 'utf8'), context);
   const page = fs.readFileSync(path.join(__dirname, '../resources.html'), 'utf8');
   const resources = JSON.parse(page.match(/<script id="rdata" type="application\/json">([\s\S]*?)<\/script>/)[1]);
-  const catalog = context.window.SBOS_RESOURCE_ZH;
+  const catalog = context.window.SBOS_RESOURCE_KO;
   const names = resources.map(resource => resource.name.replace(/\s+/g, ' ').trim());
   assert.deepEqual(Object.keys(catalog).sort(), [...new Set(names)].sort());
-  for (const name of names) assert.match(catalog[name], /[\u4e00-\u9fff]/u, name);
+  for (const name of names) assert.match(catalog[name], /[\uac00-\ud7a3]/u, name);
 });

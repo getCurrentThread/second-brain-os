@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-default-language="zh-CN"><head>
+<!DOCTYPE html><html lang="en" data-default-language="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <script>try{var t=JSON.parse(localStorage.getItem('sbos:theme'));if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F7F9F6'/%3E%3Crect x='.5' y='.5' width='31' height='31' rx='6.5' fill='none' stroke='%23D2DACF'/%3E%3Cpath d='M10 21 L16 11 L22 19 M16 11 L23 9' stroke='%231F6B52' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='10' cy='21' r='3' fill='%23F7F9F6' stroke='%231F6B52' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='11' r='3' fill='%23F7F9F6' stroke='%231F6B52' stroke-width='1.6'/%3E%3Ccircle cx='22' cy='19' r='3' fill='%23F7F9F6' stroke='%231F6B52' stroke-width='1.6'/%3E%3Ccircle cx='24' cy='8' r='2' fill='%231F6B52'/%3E%3C/svg%3E"><title data-i18n="Second Brain OS - resources">Second Brain OS - resources</title>
 <meta name="description" content="114 checked links: Obsidian plugins by installs, repositories by stars, papers, tools and reading.">
@@ -170,10 +170,10 @@ footer{border-top:1px solid var(--rule);padding:22px;text-align:center;
   font:12px ui-monospace,Menlo,monospace;color:var(--faint)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
-<link rel="stylesheet" href="assets/site/i18n.css?v=58b5bbe4c1">
-<script src="assets/site/i18n.js?v=8f6f5fe261"></script>
-<script src="assets/site/catalog-i18n.js?v=b2e3de8277"></script>
-<script src="assets/site/resource-i18n.js?v=f47309fda3"></script>
+<link rel="stylesheet" href="assets/site/i18n.css?v=1b79eda4a1">
+<script src="assets/site/i18n.js?v=a68fd5bff0"></script>
+<script src="assets/site/catalog-i18n.js?v=67f5b20a2f"></script>
+<script src="assets/site/resource-i18n.js?v=dd9fad5ed0"></script>
 </head><body>
 <header><div class="bar">
   <a class="brand" href="index.html">[[ second<span>brain</span>os ]]</a>
@@ -186,7 +186,7 @@ footer{border-top:1px solid var(--rule);padding:22px;text-align:center;
   <button class="theme" id="theme" data-i18n-aria-label="Switch between light and dark theme" aria-label="Switch between light and dark theme">&#9790;</button>
   
   
-  <button class="language-toggle" type="button" data-language-toggle>中文</button>
+  <button class="language-toggle" type="button" data-language-toggle>한국어</button>
 </div></header>
 <div class="rwrap">
   <h1 data-i18n="Everything worth opening">Everything worth opening</h1>
@@ -206,22 +206,22 @@ footer{border-top:1px solid var(--rule);padding:22px;text-align:center;
 (function(){
 const R=JSON.parse(document.getElementById('rdata').textContent);
 const t=(key,params,language)=>window.SBOS_I18N.t(key,params,language);
-const chineseDescription=r=>window.SBOS_RESOURCE_ZH?.[r.name.replace(/\s+/g,' ').trim()];
+const koreanDescription=r=>window.SBOS_RESOURCE_KO?.[r.name.replace(/\s+/g,' ').trim()];
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let kind='all', term='';
 function draw(){
   const f=R.filter(r=>(kind==='all'||r.kind===kind) &&
-    (!term || (r.name+' '+r.desc+' '+(chineseDescription(r)||'')+' '+r.group+' '+r.kind+' '+t(r.group,{},'zh-CN')+' '+t(r.kind,{},'zh-CN')).toLowerCase().includes(term)));
+    (!term || (r.name+' '+r.desc+' '+(koreanDescription(r)||'')+' '+r.group+' '+r.kind+' '+t(r.group,{},'ko')+' '+t(r.kind,{},'ko')).toLowerCase().includes(term)));
   document.getElementById('count').textContent=t('{count} of {total} shown',{count:f.length,total:R.length});
   let h='', g=null;
   f.forEach(r=>{
-    const zh=window.SBOS_I18N.locale==='zh-CN' && chineseDescription(r);
+    const ko=window.SBOS_I18N.locale==='ko' && koreanDescription(r);
     const key=r.kind+' / '+r.group;
     if(key!==g){g=key; h+=`<div class="grp-h">${esc(t(r.group||r.kind))}</div>`;}
     h+=`<div class="row">
       <div><a class="nm" lang="en" href="${esc(r.url)}">${esc(r.name)}</a><span class="kd">${esc(t(r.kind))}</span></div>
       <div class="mt">${esc(t(r.metric||''))}</div>
-      <div class="ds" lang="${zh?'zh-CN':'en'}">${esc(zh||r.desc||'')}</div></div>`;
+      <div class="ds" lang="${ko?'ko':'en'}">${esc(ko||r.desc||'')}</div></div>`;
   });
   document.getElementById('rows').innerHTML=h||`<div class="count">${esc(t('nothing matches that filter'))}</div>`;
 }

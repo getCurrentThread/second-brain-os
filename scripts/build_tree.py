@@ -323,7 +323,7 @@ def main():
     print("tree.html written")
 
 
-TEMPLATE = """<!DOCTYPE html><html lang="en" data-default-language="zh-CN"><head>
+TEMPLATE = """<!DOCTYPE html><html lang="en" data-default-language="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <script>try{var t=JSON.parse(localStorage.getItem('sbos:theme'));if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script><title data-i18n="The full component tree - Second Brain OS">The full component tree - Second Brain OS</title>
 <meta name="description" content="Every component in second-brain-os on one page: the agents course, five handbooks, the second-brain project, skills, commands, agents, scripts and resources, each line a link.">
@@ -388,7 +388,7 @@ footer{border-top:1px solid var(--rule);padding:22px;text-align:center;color:var
     <a href="https://github.com/undefined-ui/second-brain-os" data-i18n="Repo">Repo</a>
   </nav>
   <button class="theme" id="theme" data-i18n-aria-label="Switch between light and dark theme" aria-label="Switch between light and dark theme">&#9790;</button>
-  <button class="language-toggle" type="button" data-language-toggle>中文</button>
+  <button class="language-toggle" type="button" data-language-toggle>한국어</button>
 </div></header>
 <div class="wrap">
   <h1 data-i18n="The full component tree">The full component tree</h1>

@@ -13,8 +13,8 @@ const I18N = window.SBOS_I18N;
 const { t } = I18N;
 const G = window.SBOS_GRAPH;
 const PAGES = window.SBOS_PAGES || {};
-const CHINESE_PAGES = window.SBOS_PAGES_ZH || {};
-const pageFor = id => I18N.locale === 'zh-CN' && CHINESE_PAGES[id] ? CHINESE_PAGES[id] : PAGES[id];
+const KOREAN_PAGES = window.SBOS_PAGES_KO || {};
+const pageFor = id => I18N.locale === 'ko' && KOREAN_PAGES[id] ? KOREAN_PAGES[id] : PAGES[id];
 const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const clip = (s, n) => (s = String(s || '')).length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s;
@@ -61,14 +61,14 @@ const originalNodes = new Map(nodes.map(n => [n.id, { label: n.label, desc: n.de
 function localizeNodes() {
   for (const n of nodes) {
     const original = originalNodes.get(n.id);
-    const translated = I18N.locale === 'zh-CN' ? window.SBOS_NODE_ZH?.[n.id] : null;
+    const translated = I18N.locale === 'ko' ? window.SBOS_NODE_KO?.[n.id] : null;
     for (const field of ['label', 'desc', 'sub']) n[field] = translated?.[field] ?? original[field];
-    if (n.type === 'page' && I18N.locale === 'zh-CN' && CHINESE_PAGES[n.id]) {
-      n.label = CHINESE_PAGES[n.id].title;
-      n.desc = CHINESE_PAGES[n.id].desc;
+    if (n.type === 'page' && I18N.locale === 'ko' && KOREAN_PAGES[n.id]) {
+      n.label = KOREAN_PAGES[n.id].title;
+      n.desc = KOREAN_PAGES[n.id].desc;
     }
-    if (n.type === 'resource' && I18N.locale === 'zh-CN') {
-      n.desc = window.SBOS_RESOURCE_ZH?.[original.label.replace(/\s+/g, ' ').trim()] || original.desc;
+    if (n.type === 'resource' && I18N.locale === 'ko') {
+      n.desc = window.SBOS_RESOURCE_KO?.[original.label.replace(/\s+/g, ' ').trim()] || original.desc;
     }
   }
 }
@@ -698,7 +698,7 @@ function renderInfo(n) {
     h += kicker(n, `${esc(sec.badge)} ${esc(sec.label)} · ${n.pos}/${n.of}`) +
       `<h2>${esc(n.label)}</h2><p class="desc">${esc(n.desc)}</p>` +
       `<div class="meta"><span><b>${n.words?.toLocaleString(I18N.locale)}</b> ${t('words')}</span><span>~${mins(n.words)} ${t('min')}</span><span><b>${out.length}</b> ${t('links out')}</span><span><b>${inn.length}</b> ${t('linked from')}</span></div>` +
-      `<div class="acts"><button class="btn primary" data-read="${esc(n.id)}">${t('Read the page')} &rarr;</button>${ghBtn('https://github.com/fuyundev/second-brain-os/blob/codex/zh-cn-pages/' + (P?.path || n.path), 'Source')}</div>` +
+      `<div class="acts"><button class="btn primary" data-read="${esc(n.id)}">${t('Read the page')} &rarr;</button>${ghBtn('https://github.com/getCurrentThread/second-brain-os/blob/ko-pages/' + (P?.path || n.path), 'Source')}</div>` +
       group('On this page', P && P.heads.length ? P.heads.map((x, k) => `<button class="li" data-read="${esc(n.id)}" data-anchor="${esc(x.id)}" style="--dot:var(--rule)"><span class="n">${String(k + 1).padStart(2, '0')}</span><span>${esc(x.t)}</span></button>`).join('') : '') +
       group('Links to', listOf(out, id => byId.get(id).sec ? esc(byId.get(byId.get(id).sec).badge) : ''), out.length) +
       group('Linked from', listOf(inn, id => byId.get(id).sec ? esc(byId.get(byId.get(id).sec).badge) : ''), inn.length) +
@@ -811,11 +811,11 @@ function renderReader(n) {
   const i = FLAT.indexOf(n.id), prev = FLAT[i - 1], next = FLAT[i + 1];
   rCrumb.innerHTML = `<b style="color:${cssDot(n)}">${esc(sec.badge)}</b><button data-go="${esc(sec.id)}">${esc(sec.label)}</button> · ${t('page {position} of {count}', { position: n.pos, count: n.of })}`;
   rBody.innerHTML = !P ? `<p>${t('This page did not load. Try reloading.')}</p>` :
-    `<h1>${esc(n.label)}</h1>${I18N.locale === 'zh-CN' && contentLanguage !== 'zh-CN' ? `<p class="content-language">${t('This article is available in English.')}</p>` : ''}<div data-article-body lang="${contentLanguage}">${P.html}</div>` +
+    `<h1>${esc(n.label)}</h1>${I18N.locale === 'ko' && contentLanguage !== 'ko' ? `<p class="content-language">${t('This article is available in English.')}</p>` : ''}<div data-article-body lang="${contentLanguage}">${P.html}</div>` +
     ((n.terms || []).length ? `<div class="rterms"><h4>${t('terms on this page')}</h4><div class="chips">${n.terms.slice(0, 18).map(chip).join('')}</div></div>` : '') +
     `<nav class="pager">${prev ? `<a href="#/read/${esc(prev)}" data-node="${esc(prev)}"><span class="lbl">&larr; ${t('previous')}</span>${esc(byId.get(prev).label)}</a>` : '<span></span>'}` +
     `${next ? `<a href="#/read/${esc(next)}" data-node="${esc(next)}" style="text-align:right"><span class="lbl">${t('next')} &rarr;</span>${esc(byId.get(next).label)}</a>` : '<span></span>'}</nav>` +
-    `<div class="src">${t('source:')} <a class="ext" href="https://github.com/fuyundev/second-brain-os/blob/codex/zh-cn-pages/${esc(sourcePath)}" target="_blank" rel="noopener">${esc(sourcePath)}</a></div>`;
+    `<div class="src">${t('source:')} <a class="ext" href="https://github.com/getCurrentThread/second-brain-os/blob/ko-pages/${esc(sourcePath)}" target="_blank" rel="noopener">${esc(sourcePath)}</a></div>`;
   rScroll.style.scrollBehavior = 'auto';
   rScroll.scrollTop = 0;
   if (pendingAnchor) { const el = rBody.querySelector('#' + CSS.escape(pendingAnchor)); if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 450); pendingAnchor = null; }
@@ -907,20 +907,20 @@ function search(v) {
   for (const n of nodes) {
     if (n.type === 'root') continue;
     const l = n.label.toLowerCase();
-    // Keep original English names searchable in Chinese, and vice versa.
-    const names = [l, originalNodes.get(n.id).label.toLowerCase(), (CHINESE_PAGES[n.id]?.title || window.SBOS_NODE_ZH?.[n.id]?.label || '').toLowerCase()];
+    // Keep original English names searchable in Korean, and vice versa.
+    const names = [l, originalNodes.get(n.id).label.toLowerCase(), (KOREAN_PAGES[n.id]?.title || window.SBOS_NODE_KO?.[n.id]?.label || '').toLowerCase()];
     let sc = Math.max(...names.map(name => name === v ? 120 : name.startsWith(v) ? 70 : name.includes(v) ? 45 : 0));
     let snip = '';
     if (n.type === 'page') {
-      const texts = I18N.locale === 'zh-CN' ? [CHINESE_PAGES[n.id]?.text, PAGES[n.id]?.text] : [PAGES[n.id]?.text, CHINESE_PAGES[n.id]?.text];
+      const texts = I18N.locale === 'ko' ? [KOREAN_PAGES[n.id]?.text, PAGES[n.id]?.text] : [PAGES[n.id]?.text, KOREAN_PAGES[n.id]?.text];
       const text = texts.find(text => text && text.toLowerCase().includes(v));
       if (text) {
         const lower = text.toLowerCase(), at = lower.indexOf(v);
         sc += 10 + Math.min(lower.split(v).length - 1, 8) * 2;
         if (!l.includes(v)) snip = (at > 40 ? '…' : '') + esc(text.slice(Math.max(0, at - 40), at)) + '<mark>' + esc(text.slice(at, at + v.length)) + '</mark>' + esc(text.slice(at + v.length, at + v.length + 70)) + '…';
       }
-    } else if (sc === 0 && [n.desc, originalNodes.get(n.id).desc, window.SBOS_NODE_ZH?.[n.id]?.desc,
-      window.SBOS_RESOURCE_ZH?.[originalNodes.get(n.id).label.replace(/\s+/g, ' ').trim()]]
+    } else if (sc === 0 && [n.desc, originalNodes.get(n.id).desc, window.SBOS_NODE_KO?.[n.id]?.desc,
+      window.SBOS_RESOURCE_KO?.[originalNodes.get(n.id).label.replace(/\s+/g, ' ').trim()]]
       .some(desc => (desc || '').toLowerCase().includes(v))) sc = 8;
     if (!sc) continue;
     sc += { section: 8, term: 7, page: 4, collection: 6, hub: 2, skill: 1, agent: 1, command: -2, resource: -4 }[n.type] || 0;
