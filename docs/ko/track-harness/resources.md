@@ -22,9 +22,9 @@
 - [The lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) — Simon Willison. 신뢰할 수 없는 콘텐츠를 읽는 모든 에이전트를 위한 보안 틀. 그가 계속 쓰는 블로그는 에이전트 전반에 대한 가장 좋은 연속 논평입니다.
 - [The 2026-07-28 MCP specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/) — MCP가 상태 없는 방식으로 바뀔 때 무엇이 달라졌는지, 프로토콜 팀이 설명합니다.
 
-- [Improved token efficiency](https://cursor.com/blog/improved-token-efficiency) — Cursor. 여섯 단계로 슬림해진 프로덕션 하네스: 모델이 나아지면서 시스템 프롬프트의 3분의 2 삭제, 도구를 필요할 때 로드(정적 도구 토큰의 60% 제거), 명시적 캐시 중단점, 더 성긴 줄 번호, 서브에이전트 규율. 변경마다 숫자가 붙은 드문 글입니다. [이 재현 프롬프트](https://x.com/undefinedKi/status/2103219508605555033)는 같은 감사를 자신의 환경에 적용합니다.
+- [Improved token efficiency](https://cursor.com/blog/improved-token-efficiency) — Cursor. 여섯 단계로 슬림해진 프로덕션 하네스: 모델이 나아지면서 시스템 프롬프트의 3분의 2 삭제, 도구를 필요할 때 로드(정적 도구 토큰의 60% 제거), 명시적 캐시 브레이크포인트, 더 성긴 줄 번호, 서브에이전트 규율. 변경마다 숫자가 붙은 드문 글입니다. [이 재현 프롬프트](https://x.com/undefinedKi/status/2103219508605555033)는 같은 감사를 자신의 환경에 적용합니다.
 
-- [Palantir AIP architecture](https://www.palantir.com/docs/foundry/architecture-center/aip-architecture) — 철저히 잠긴 조직 안에서 돌아가는 플랫폼의 에이전트 스택으로, 대부분은 작은 프로젝트에도 그대로 옮길 수 있습니다. 원시 데이터 접근 대신 타입이 있는 객체와 허용된 행동으로 이뤄진 온톨로지, 모든 모델 호출 앞의 단일 게이트웨이(마스킹, 캐싱, 재시도, 토큰 집계), 설정 뒤에서 바꿔 끼울 수 있는 모델, 세 가지 트리거(스케줄, 이벤트, API), 릴리스 주기 안에 든 평가(eval), 모든 행동의 트레이스. [이 분석](https://x.com/undefinedKi/status/2103883647501652057)은 각 요소를 집에서 쓸 만한 도구에 대응시킵니다.
+- [Palantir AIP architecture](https://www.palantir.com/docs/foundry/architecture-center/aip-architecture) — 실제로 엄격히 통제된 조직 안에서 돌아가는 플랫폼의 에이전트 스택으로, 대부분은 작은 프로젝트에도 그대로 옮길 수 있습니다. 원시 데이터 접근 대신 타입이 있는 객체와 허용된 행동으로 이뤄진 온톨로지, 모든 모델 호출 앞의 단일 게이트웨이(마스킹, 캐싱, 재시도, 토큰 집계), 설정 뒤에서 바꿔 끼울 수 있는 모델, 세 가지 트리거(스케줄, 이벤트, API), 릴리스 주기 안에 든 평가(eval), 모든 행동의 트레이스. [이 분석](https://x.com/undefinedKi/status/2103883647501652057)은 각 요소를 집에서 쓸 만한 도구에 대응시킵니다.
 
 <a id="repos-worth-reading"></a>
 

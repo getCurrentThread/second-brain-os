@@ -55,7 +55,7 @@ WHERE contains(contradicts, this.file.link)
 
 <a id="do-not-type-everything"></a>
 
-## 모든 링크에 타입을 달지 마십시오
+## 모든 링크에 타입을 달지 않기
 
 대부분의 링크는 단순한 언급이므로 평범하게 두어야 합니다. 모든 링크에 타입을 달면 어휘가 의미를 잃고, 인제스트가 느려지고 오류가 늘어납니다.
 

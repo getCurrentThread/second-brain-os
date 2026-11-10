@@ -8,7 +8,7 @@
 2. [하네스로서의 Claude Code](claude-code-as-harness.md)
 3. [컨텍스트 엔지니어링](context-engineering.md)
 4. [도구와 MCP](tools-and-mcp.md)
-5. [하네스 지형](harness-landscape.md)
+5. [하네스 지형도](harness-landscape.md)
 6. [실습: 루프](build-the-loop.md)
 7. [실습: 권한과 컨텍스트](build-guardrails.md)
 8. [실습: 졸업 시점 알기](build-graduate.md)

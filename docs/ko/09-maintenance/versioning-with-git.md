@@ -15,7 +15,7 @@ lint 2026-09-07: 3 broken links, 1 merge
 
 파일마다 커밋 하나는 아니고, 주마다 커밋 하나도 아닙니다. 전자는 이력을 묻어 버리고, 후자는 좋은 실행을 잃지 않고서는 나쁜 실행 하나만 되돌리는 것을 불가능하게 만듭니다.
 
-예약된 작업은 실행의 일부로 자기 작업을 직접 커밋합니다. [예약 유지보수](../06-agents/scheduled-maintenance.md)를 보십시오.
+예약 작업은 실행의 일부로 자기 작업을 직접 커밋합니다. [스케줄링](../06-agents/scheduled-maintenance.md)을 보십시오.
 
 <a id="reading-diffs-of-generated-pages"></a>
 

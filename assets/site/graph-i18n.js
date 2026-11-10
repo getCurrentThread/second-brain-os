@@ -17,7 +17,7 @@ window.SBOS_NODE_KO = {
   'sec:course-4-harness': { label: '4 · 하네스', desc: '모델을 둘러싼 사무실입니다. 격리, 가이드, 센서, 권한을 바깥에서 안쪽으로 차례대로 세웁니다.' },
   'sec:course-5-evals': { label: '5 · 평가', desc: '매달 같은 시험을 칩니다. 트레이스에 대한 행동 점검, 판정을 받는 판정자, 실패를 포함한 골든 세트입니다.' },
   'sec:course-6-production': { label: '6 · 프로덕션', desc: '데모에서 배포까지 다룹니다. 게이트웨이, 트레이싱, 비용, 보안, 그리고 다섯 계층 전체에 걸친 첫날 계획입니다.' },
-  'sec:track-graph': { label: '지식 그래프', desc: '에이전트 메모리로서의 그래프: GraphRAG, 추출 파이프라인, 저장소, 그리고 자신의 볼트 위에 그래프 계층을 얹는 저녁 한나절의 실습.' },
+  'sec:track-graph': { label: '지식 그래프', desc: '에이전트 메모리로서의 그래프: GraphRAG, 추출 파이프라인, 저장소, 그리고 자신의 볼트 위에 그래프 계층을 얹는, 저녁 한 번이면 되는 실습.' },
   'sec:track-jev': { label: 'Jev 엔지니어링', desc: '게이트는 하나의 계층이고, Jev는 그 계층을 만드는 한 가지 방법입니다. 생성한 텍스트 대신 신뢰도 점수가 붙은 타입 있는 결정을 쓰며, Jev 접근 권한이 나오기 전에도 돌려 볼 수 있는 실습이 있습니다.' },
   'sec:track-harness': { label: '에이전트 하네스', desc: '모델을 둘러싼 장치들, 곧 루프, 도구, 컨텍스트 엔지니어링, 생태계 지형을 다루고, 저녁 한 번에 만들 수 있는 약 150줄짜리 동작하는 하네스까지 갖췄습니다.' },
   'sec:track-loop': { label: '루프 엔지니어링', desc: '에이전트를 둘러싼 제어 시스템: 종료 조건, 크리틱, 컨텍스트 위생, 그리고 아침에 믿고 확인할 수 있는 야간 루프.' },
@@ -76,7 +76,7 @@ window.SBOS_NODE_KO = {
   'track-harness/claude-code-as-harness': { label: '하네스로서의 Claude Code' },
   'track-harness/context-engineering': { label: '컨텍스트 엔지니어링' },
   'track-harness/tools-and-mcp': { label: '도구와 MCP' },
-  'track-harness/harness-landscape': { label: '하네스 지형' },
+  'track-harness/harness-landscape': { label: '하네스 지형도' },
   'track-harness/build-the-loop': { label: '실습: 루프' },
   'track-harness/build-guardrails': { label: '실습: 권한과 컨텍스트' },
   'track-harness/build-graduate': { label: '실습: 졸업 시점 알기' },
@@ -136,7 +136,7 @@ window.SBOS_NODE_KO = {
   '05-graphs/obsidian-graph-view': { label: 'Obsidian 그래프 뷰 읽는 법' },
   '05-graphs/typed-links': { label: '타입 링크' },
   '05-graphs/graph-vs-vectors': { label: '그래프와 임베딩' },
-  '05-graphs/graphrag': { label: 'GraphRAG와 그 자리' },
+  '05-graphs/graphrag': { label: 'GraphRAG가 들어맞는 곳' },
   '05-graphs/exporting-your-graph': { label: '그래프 내보내기' },
   '05-graphs/metrics': { label: '추적할 가치가 있는 그래프 지표' },
   '06-agents/agent-roles': { label: '에이전트 역할' },
@@ -186,13 +186,13 @@ window.SBOS_NODE_KO = {
   'term:claude-code': { label: 'Claude Code', desc: '정리를 맡는 에이전트입니다. 원본 자료를 읽고, 페이지를 쓰고 연결하며, 유지보수를 실행합니다.' },
   'term:claude-md': { label: 'CLAUDE.md', desc: '에이전트가 세션을 시작할 때마다 읽는 상시 지침입니다. 내가 누구인지, 페이지 규약, 볼트의 규칙이 담깁니다.' },
   'term:mcp': { label: 'MCP', desc: 'Model Context Protocol: 에이전트가 도구와 데이터(예를 들어 어디서든 내 볼트)에 닿게 해 주는 표준 연결 규격입니다.' },
-  'term:raw': { label: 'raw/', desc: '수신함이자 보관소입니다. 클리핑한 글, 트랜스크립트, PDF가 들어갑니다. 한 번 쓰고 다시 수정하지 않으며, 다시 읽는 일도 드뭅니다.' },
+  'term:raw': { label: 'raw/', desc: '받은편지함이자 보관소입니다. 클리핑한 글, 트랜스크립트, PDF가 들어갑니다. 한 번 쓰고 다시 수정하지 않으며, 다시 읽는 일도 드뭅니다.' },
   'term:two-layers': { label: '두 계층', desc: '아는 것을 담는 위키와 하는 일을 담는 프로젝트 계층을 분리해, 각각이 계속 쓸모 있게 유지합니다.' },
   'term:ingest': { label: '인제스트', desc: '원본 자료 하나를 서로 연결된 위키 페이지로 바꾸는 일입니다. 새 페이지가 기존 내용과 연결되어야 끝난 것입니다.' },
   'term:wikilink': { label: '위키링크', desc: '노트 사이를 잇는 [[페이지 이름]] 링크입니다. 가장 값싼 그래프 엣지이며, 볼트가 복리로 쌓이는 이유입니다.' },
   'term:backlinks': { label: '백링크', desc: '한 페이지를 가리키는 링크입니다. 검색하지 않고도 그 아이디어에 기대는 모든 것을 찾을 수 있습니다.' },
   'term:atomic-pages': { label: '원자 페이지', desc: '페이지 하나에 아이디어 하나만 담습니다. 그래서 링크의 의미가 하나로 정해지고, 페이지를 쓰일 수 있는 모든 곳에서 재사용할 수 있습니다.' },
-  'term:page-types': { label: '페이지 유형', desc: '원본 자료, 개념, 엔티티, 종합입니다. 유형마다 무엇을 담고 어떻게 링크할지에 대한 고유한 규약이 있습니다.' },
+  'term:page-types': { label: '페이지 유형', desc: '자료, 개념, 엔티티, 종합입니다. 유형마다 무엇을 담고 어떻게 링크할지에 대한 고유한 규약이 있습니다.' },
   'term:frontmatter': { label: '프론트매터', desc: '페이지 맨 위의 YAML 블록으로, 유형, 출처, 날짜, 상태가 들어 있습니다. 데이터베이스 없이도 볼트를 질의할 수 있게 해 주는 것입니다.' },
   'term:aliases': { label: '별칭', desc: '한 페이지가 응답하는 다른 이름들입니다. 링크와 검색이 중복 페이지를 만들지 않고 하나의 페이지에 닿게 합니다.' },
   'term:contradictions': { label: '모순', desc: '새 원본 자료가 기존 내용과 어긋나면 두 입장을 날짜와 출처를 달아 모두 남깁니다. 내가 무엇을 왜 믿었는지의 기록입니다.' },
@@ -217,11 +217,11 @@ window.SBOS_NODE_KO = {
   'term:privacy': { label: '개인정보와 시크릿', desc: '페이지, 프롬프트, 공개 내보내기에 절대 들어가면 안 되는 것과, 그것을 막아 주는 점검입니다.' },
   'term:web-clipper': { label: 'Web Clipper', desc: 'Obsidian의 브라우저 확장입니다. 클릭 한 번으로 글이 raw/의 마크다운 파일이 됩니다.' },
   'term:transcripts': { label: '트랜스크립트', desc: '영상, 음성, 회의를 텍스트로 바꿔 다른 자료처럼 인제스트할 수 있게 한 것입니다.' },
-  'term:agent': { label: '에이전트', desc: '도구를 쥐고 루프를 도는 모델입니다. 목표를 달성하거나 종료 규칙이 작동할 때까지 다음 단계를 스스로 정합니다.' },
+  'term:agent': { label: '에이전트', desc: '도구를 쥐고 루프를 도는 모델입니다. 목표를 달성하거나 종료 조건에 걸릴 때까지 다음 단계를 스스로 정합니다.' },
   'term:five-layers': { label: '다섯 계층', desc: '모델을 둘러싼 모든 것에 대한 강좌의 틀입니다. 컨텍스트, 루프, 게이트, 하네스, 평가입니다.' },
   'term:workflows': { label: '워크플로 대 에이전트', desc: '워크플로에서는 코드가 다음 단계를 정하고, 에이전트에서는 모델이 정합니다. 대부분의 프로덕션 시스템은 둘을 섞은 하이브리드입니다.' },
   'term:context-engineering': { label: '컨텍스트 엔지니어링', desc: '시스템 프롬프트, 도구, 히스토리, 끝부분에 무엇을 어떤 순서로 넣을지 정해 모델이 올바른 것을 보게 하는 일입니다.' },
-  'term:caching': { label: '프롬프트 캐싱', desc: '호출 사이에 프롬프트의 안정된 앞부분을 재사용합니다. 컨텍스트를 그에 맞게 배치하면 더 싸고 빠릅니다.' },
+  'term:caching': { label: '프롬프트 캐싱', desc: '호출 사이에 프롬프트의 안정된 프리픽스를 재사용합니다. 컨텍스트를 그에 맞게 배치하면 더 싸고 빠릅니다.' },
   'term:memory': { label: '메모리', desc: '세션 사이에 남는 것입니다. 여기서는 모델의 숨은 기능이 아니라 에이전트가 다시 읽는 파일입니다.' },
   'term:loop': { label: '에이전트 루프', desc: '목표, 행동, 점검, 반복입니다. 루프는 모델을 둘러싼 제어 시스템이며, 실패 대부분이 여기서 일어납니다.' },
   'term:stop-conditions': { label: '종료 조건', desc: '루프가 끝나야 하는 때는 목표 달성, 예산 소진, 진전 없음입니다. 종료 조건이 없는 루프는 피해를 낼 때까지 계속 돕니다.' },
@@ -231,9 +231,9 @@ window.SBOS_NODE_KO = {
   'term:harness': { label: '하네스', desc: '모델을 둘러싼 사무실입니다. 격리, 가이드, 센서, 권한을 바깥에서 안쪽으로 차례대로 세웁니다.' },
   'term:guardrails': { label: '가드레일과 권한', desc: '에이전트가 건드려도 되는 것, 반드시 물어봐야 하는 것, 에이전트가 틀렸을 때도 버티는 벽입니다.' },
   'term:tools-tool-use': { label: '도구 사용', desc: '모델이 하네스에 대신 무언가를 실행해 달라고 요청하는 것입니다. 에이전트가 가진 모든 능력은 이렇게 들어옵니다.' },
-  'term:evals': { label: '평가', desc: '매달 같은 시험을 칩니다. 실제 행동을 점검하므로 프롬프트나 모델을 바꿔도 조용히 무언가가 깨지지 않습니다.' },
+  'term:evals': { label: '평가', desc: '매달 같은 시험을 칩니다. 실제 행동을 점검하므로 프롬프트나 모델을 바꿔도 조용히 망가지는 것이 없습니다.' },
   'term:golden-set': { label: '골든 세트', desc: '모든 평가가 대상으로 삼는 고정된 사례 모음으로, 이미 본 실패도 포함합니다.' },
-  'term:llm-judge': { label: 'LLM 판정자', desc: '루브릭에 따라 출력을 채점하는 모델입니다. 판정자 자체를 사람의 라벨과 대조해 검증한 뒤에야 쓸모가 있습니다.' },
+  'term:llm-judge': { label: 'LLM 판정자', desc: '루브릭에 따라 출력을 채점하는 모델입니다. 판정자 자체를 사람의 레이블과 대조해 검증한 뒤에야 쓸모가 있습니다.' },
   'term:traces': { label: '트레이스', desc: '에이전트가 한 모든 일을 단계별로 남긴 전체 기록입니다. 행동 평가와 디버깅이 모두 이것을 읽습니다.' },
   'term:production': { label: '프로덕션', desc: '한 번 돌아가는 데모에서 트레이싱, 비용 관리, 보안, 책임자가 있는 시스템으로 넘어가는 단계입니다.' },
 };
@@ -250,7 +250,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "skill:second-brain-chat-import": {
     "label": "second-brain-chat-import",
-    "desc": "내보낸 채팅 기록을 인제스트할 것, 보관할 것, 삭제할 것으로 분류하되 개인정보 점검을 먼저 거칩니다. 사용자가 Claude나 ChatGPT 기록을 내보냈거나, 오래된 대화를 가져오고 싶어 하거나, 채팅 아카이브에서 간직할 만한 것이 무엇인지 물을 때 이 스킬을 사용합니다. 붙여 넣은 대화 하나를 인제스트하는 데는 사용하지 않습니다…"
+    "desc": "내보낸 채팅 기록을 인제스트할 것, 보관할 것, 삭제할 것으로 선별하되 개인정보 점검을 먼저 거칩니다. 사용자가 Claude나 ChatGPT 기록을 내보냈거나, 오래된 대화를 가져오고 싶어 하거나, 채팅 아카이브에서 간직할 만한 것이 무엇인지 물을 때 이 스킬을 사용합니다. 붙여 넣은 대화 하나를 인제스트하는 데는 사용하지 않습니다…"
   },
   "skill:second-brain-graph": {
     "label": "second-brain-graph",
@@ -258,15 +258,15 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "skill:second-brain-ingest": {
     "label": "second-brain-ingest",
-    "desc": "second-brain 볼트의 원본 자료를 서로 연결된 위키 페이지로 바꿉니다. 원본을 읽고, 개념과 엔티티로 나누고, 페이지를 쓰거나 갱신하고, 기존 페이지와 연결하고, 실행 내용을 로그에 기록합니다. 사용자가 raw/에 파일을 넣거나 글, 트랜스크립트, PDF를 붙여 넣고 요청할 때마다 이 스킬을 사용합니다…"
+    "desc": "세컨드 브레인 볼트의 원본 자료를 서로 연결된 위키 페이지로 바꿉니다. 원본을 읽고, 개념과 엔티티로 나누고, 페이지를 쓰거나 갱신하고, 기존 페이지와 연결하고, 실행 내용을 로그에 기록합니다. 사용자가 raw/에 파일을 넣거나 글, 트랜스크립트, PDF를 붙여 넣고 요청할 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-lint": {
     "label": "second-brain-lint",
-    "desc": "second-brain 볼트의 구조적 문제를 점검하고 고칩니다. 깨진 위키링크, 고아 페이지, 비어 있는 스텁, 스키마를 어긴 프론트매터, 거의 중복된 페이지, 오래된 인덱스 항목이 대상입니다. 사용자가 볼트를 린트, 정리, 감사하거나 상태를 점검해 달라고 하거나, 페이지가 어수선하다고 말할 때마다 이 스킬을 사용합니다…"
+    "desc": "세컨드 브레인 볼트의 구조적 문제를 점검하고 고칩니다. 깨진 위키링크, 고아 페이지, 비어 있는 스텁, 스키마를 어긴 프론트매터, 거의 중복된 페이지, 오래된 인덱스 항목이 대상입니다. 사용자가 볼트를 린트, 정리, 감사하거나 상태를 점검해 달라고 하거나, 페이지가 어수선하다고 말할 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-merge": {
     "label": "second-brain-merge",
-    "desc": "같은 대상을 설명하는 두 페이지를 합칩니다. 서로 다른 주장은 모두 보존하고, 들어오는 링크를 리다이렉트하며, 병합 내용을 기록합니다. 사용자가 중복 병합을 승인하거나 '이 둘은 같은 페이지야', 'X를 Y로 합쳐 줘'라고 말하거나, 린트가 제안한 거의 중복된 페이지를 정리해 달라고 할 때 이 스킬을 사용합니다. 다음을 병합하는 데는 사용하지 않습니다…"
+    "desc": "같은 대상을 설명하는 두 페이지를 병합합니다. 서로 다른 주장은 모두 보존하고, 들어오는 링크를 리다이렉트하며, 병합 내용을 기록합니다. 사용자가 중복 병합을 승인하거나 '이 둘은 같은 페이지야', 'X를 Y로 병합해 줘'라고 말하거나, 린트가 제안한 거의 중복된 페이지를 정리해 달라고 할 때 이 스킬을 사용합니다. 다음을 병합하는 데는 사용하지 않습니다…"
   },
   "skill:second-brain-metrics": {
     "label": "second-brain-metrics",
@@ -286,7 +286,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "skill:second-brain-query": {
     "label": "second-brain-query",
-    "desc": "second-brain 볼트에 있는 자체 페이지를 읽고 질문에 답합니다. 사용한 페이지를 인용하고, 볼트에 답이 없으면 분명하게 말합니다. 사용자가 어떤 주제에 대해 무엇을 아는지, 무엇을 읽었는지, 두 아이디어를 잇는 것이 무엇인지, 무엇에 대해 생각을 바꿨는지 물을 때마다 이 스킬을 사용합니다…"
+    "desc": "세컨드 브레인 볼트에 있는 자체 페이지를 읽고 질문에 답합니다. 사용한 페이지를 인용하고, 볼트에 답이 없으면 분명하게 말합니다. 사용자가 어떤 주제에 대해 무엇을 아는지, 무엇을 읽었는지, 두 아이디어를 잇는 것이 무엇인지, 무엇에 대해 생각을 바꿨는지 물을 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-quiz": {
     "label": "second-brain-quiz",
@@ -294,7 +294,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "skill:second-brain-rename": {
     "label": "second-brain-rename",
-    "desc": "페이지 이름을 안전하게 바꿉니다. 파일을 갱신하고, 들어오는 위키링크를 모두 고치고, 이전 이름을 별칭으로 추가하고, 로그에 남깁니다. 페이지에 다른 정식 제목이 필요하거나, 사용자가 'X를 Y로 이름 바꿔 줘'라고 말하거나, 일관되지 않은 제목을 고쳐 달라고 하거나, 린트가 이름 문제를 지적한 뒤에 이 스킬을 사용합니다. 두 페이지를 합치는 데는 사용하지 않습니다…"
+    "desc": "페이지 이름을 안전하게 바꿉니다. 파일을 갱신하고, 들어오는 위키링크를 모두 고치고, 이전 이름을 별칭으로 추가하고, 로그에 남깁니다. 페이지에 다른 정식 제목이 필요하거나, 사용자가 'X를 Y로 이름 바꿔 줘'라고 말하거나, 일관되지 않은 제목을 고쳐 달라고 하거나, 린트가 이름 문제를 지적한 뒤에 이 스킬을 사용합니다. 두 페이지를 병합하는 데는 사용하지 않습니다…"
   },
   "skill:second-brain-report": {
     "label": "second-brain-report",
@@ -302,11 +302,11 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "skill:second-brain-review": {
     "label": "second-brain-review",
-    "desc": "second-brain 볼트의 정기 리뷰를 만듭니다. 무엇이 추가되었는지, 어떤 주제가 자라고 있는지, 무엇이 무엇과 모순되는지, 어떤 질문이 아직 열려 있는지, 다음에 읽을 만한 것이 무엇인지를 다룹니다. 사용자가 주간이나 월간 리뷰를 요청하거나, 볼트에서 무엇이 바뀌었는지, 무엇을 배워 왔는지 물을 때마다 이 스킬을 사용합니다…"
+    "desc": "세컨드 브레인 볼트의 정기 리뷰를 만듭니다. 무엇이 추가되었는지, 어떤 주제가 자라고 있는지, 무엇이 무엇과 모순되는지, 어떤 질문이 아직 열려 있는지, 다음에 읽을 만한 것이 무엇인지를 다룹니다. 사용자가 주간이나 월간 리뷰를 요청하거나, 볼트에서 무엇이 바뀌었는지, 무엇을 배워 왔는지 물을 때마다 이 스킬을 사용합니다…"
   },
   "skill:second-brain-transcript": {
     "label": "second-brain-transcript",
-    "desc": "인제스트하기 전에 원본 트랜스크립트를 정리합니다. 문장 부호를 넣고, 문단을 나누고, 화자를 표시하고, 잘못 받아쓴 기술 용어를 고치고, 긴 녹음을 주제별로 나눕니다. 사용자가 자동 생성 트랜스크립트, 자막 파일, 팟캐스트나 강의 트랜스크립트, 회의 녹음 텍스트를 넣거나 영상 처리를 요청할 때 이 스킬을 사용합니다…"
+    "desc": "인제스트하기 전에 원본 트랜스크립트를 정리합니다. 문장 부호를 넣고, 문단을 나누고, 화자에 레이블을 달고, 잘못 받아쓴 기술 용어를 고치고, 긴 녹음을 주제별로 나눕니다. 사용자가 자동 생성 트랜스크립트, 자막 파일, 팟캐스트나 강의 트랜스크립트, 회의 녹음 텍스트를 넣거나 영상 처리를 요청할 때 이 스킬을 사용합니다…"
   },
   "skill:second-brain-write": {
     "label": "second-brain-write",
@@ -458,7 +458,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "cmd:ingest-voice": {
     "label": "/ingest-voice",
-    "desc": "음성 노트 인제스트하기"
+    "desc": "음성 메모 인제스트하기"
   },
   "cmd:ingest-youtube": {
     "label": "/ingest-youtube",
@@ -470,7 +470,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "cmd:init": {
     "label": "/init",
-    "desc": "새 볼트의 뼈대 만들기"
+    "desc": "새 볼트 스캐폴딩하기"
   },
   "cmd:install": {
     "label": "/install",
@@ -490,7 +490,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "cmd:merge": {
     "label": "/merge",
-    "desc": "두 페이지 합치기"
+    "desc": "두 페이지 병합하기"
   },
   "cmd:metrics": {
     "label": "/metrics",
@@ -602,7 +602,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "agent:curator": {
     "label": "curator",
-    "desc": "무엇을 정리하고, 보관하고, 합칠지 제안합니다. 읽기 전용이며 제안만 하고 실행은 하지 않습니다. 분기마다, 또는 볼트가 사용자가 감당할 수 있는 범위를 넘어 커졌을 때 사용합니다."
+    "desc": "무엇을 정리하고, 보관하고, 병합할지 제안합니다. 읽기 전용이며 제안만 하고 실행은 하지 않습니다. 분기마다, 또는 볼트가 사용자가 감당할 수 있는 범위를 넘어 커졌을 때 사용합니다."
   },
   "agent:graph-analyst": {
     "label": "graph-analyst",
@@ -634,11 +634,11 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "script:link_check.py": {
     "label": "link_check.py",
-    "desc": "second-brain 볼트의 깨진 위키링크, 고아 페이지, 스텁을 점검합니다."
+    "desc": "세컨드 브레인 볼트의 깨진 위키링크, 고아 페이지, 스텁을 점검합니다."
   },
   "script:vault_stats.py": {
     "label": "vault_stats.py",
-    "desc": "second-brain 볼트의 상태 지표를 출력합니다."
+    "desc": "세컨드 브레인 볼트의 상태 지표를 출력합니다."
   },
   "plug:context-audit": {
     "label": "context-audit",
@@ -650,7 +650,7 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "plug:gate-check": {
     "label": "gate-check",
-    "desc": "비싼 모델이 필요 없는 파이프라인 속 결정을 찾아, 각각에 맞는 게이트(규칙, 고전적 분류기, 소형 모델)를 실패 시 닫히는(fail-closed) 라우팅과 함께 제안합니다. 사용자가 모델 비용이나 지연 시간을 줄이고 싶다고 하거나, 큰 모델이 모든 것을 처리한다고 말하거나, 앞단에 분류, 라우팅, 필터 계층을 두고 싶을 때 사용합니다…"
+    "desc": "비싼 모델이 필요 없는 파이프라인 속 결정을 찾아, 각각에 맞는 게이트(규칙, 고전적 분류기, 소형 모델)를 실패 시 닫히는(fail-closed) 라우팅과 함께 제안합니다. 사용자가 모델 비용이나 지연 시간을 줄이고 싶다고 하거나, 큰 모델이 모든 것을 처리한다고 말하거나, 앞단에 선별, 라우팅, 필터 계층을 두고 싶을 때 사용합니다…"
   },
   "plug:goal-test": {
     "label": "goal-test",
@@ -662,6 +662,6 @@ Object.assign(window.SBOS_NODE_KO, {
   },
   "plug:loop-critic": {
     "label": "loop-critic",
-    "desc": "에이전트 루프 한 번의 결과를 깨끗한 컨텍스트에서 검토합니다. 주장된 작업을 목표와 대조하고, 지름길과 테스트되지 않은 경로를 찾아내고, 구체적인 결함이 담긴 판정을 돌려줍니다. 작업 세션이나 루프 시도가 끝난 뒤, 결과를 받아들이기 전에 사용합니다."
+    "desc": "에이전트 루프 한 번의 결과를 깨끗한 컨텍스트에서 검토합니다. 했다고 주장하는 작업을 목표와 대조하고, 지름길과 테스트되지 않은 경로를 찾아내고, 구체적인 결함이 담긴 판정을 돌려줍니다. 작업 세션이나 루프 시도가 끝난 뒤, 결과를 받아들이기 전에 사용합니다."
   }
 });

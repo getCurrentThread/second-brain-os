@@ -16,7 +16,7 @@ Niklas Luhmann의 슬립박스로, Sönke Ahrens가 "How to Take Smart Notes"로
 
 ## PARA
 
-Tiago Forte가 "Building a Second Brain"에서 제시한 체계입니다. Projects, Areas, Resources, Archive의 약자이며, 주제가 아니라 실행 가능성을 기준으로 정리합니다.
+Tiago Forte가 "Building a Second Brain"에서 제시한 체계입니다. Projects, Areas, Resources, Archive 네 범주로 구성되며, 주제가 아니라 실행 가능성을 기준으로 정리합니다.
 
 **여전히 옳은 점:** 프로젝트 자료와 참고 자료는 서로 다른 구조를 원한다는 통찰입니다. 이는 다른 방향에서 같은 곳에 도달한 [두 계층](two-layers.md)과 정확히 같습니다.
 
@@ -30,7 +30,7 @@ Andy Matuschak의 접근입니다. 노트를 여러 해에 걸쳐 다시 읽고 
 
 **여전히 옳은 점:** 좋은 개념 페이지의 기준입니다. 노트는 무언가를 읽었다는 기록이 아니라 미래의 자신을 위해 써야 한다는 Matuschak의 주장이 이 가이드의 개념 페이지가 겨냥하는 수준입니다.
 
-**반대편의 무게:** 그의 입장은 글쓰기가 곧 생각이며, 글쓰기를 위임하면 생각을 하지 않는 것이라는 것입니다. 이는 이 접근 전체에 대한 실질적인 반론이므로 묵살하지 말고 곰곰이 생각해 볼 만합니다.
+**반대 견해:** 그의 입장은 글쓰기가 곧 생각이며, 글쓰기를 위임하면 생각을 하지 않는 것이라는 것입니다. 이는 이 접근 전체에 대한 실질적인 반론이므로 묵살하지 말고 곰곰이 생각해 볼 만합니다.
 
 <a id="what-changed"></a>
 

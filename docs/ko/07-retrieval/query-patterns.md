@@ -50,7 +50,7 @@ Look at my concept pages on prediction markets. What questions do they raise
 that no source in my vault answers?
 ```
 
-이렇게 하면 볼트는 알고리즘이 클릭할 것이라고 짐작하는 글이 아니라, 자신의 빈틈에서 만들어진 읽기 목록이 됩니다.
+이렇게 하면 볼트는 내가 클릭할 것이라고 알고리즘이 짐작하는 글이 아니라, 자신의 빈틈에서 만들어진 읽기 목록이 됩니다.
 
 <a id="what-did-i-say-about-this-before"></a>
 
@@ -71,7 +71,7 @@ wrong?
 I am about to argue that X. What in my vault argues against it?
 ```
 
-이 묶음에서 가장 가치 있으면서 가장 적게 쓰이는 질의입니다. 반박당하겠다고 자원하는 사람은 없기 때문입니다. 나를 확인해 주기만 하는 볼트는 잘못 만든 볼트입니다.
+이 묶음에서 가장 가치 있으면서 가장 적게 쓰이는 질의입니다. 반박당하겠다고 자원하는 사람은 없기 때문입니다. 내 생각을 확인해 주기만 하는 볼트는 잘못 만든 볼트입니다.
 
 <a id="questions-to-ask-elsewhere"></a>
 

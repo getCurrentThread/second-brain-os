@@ -1,14 +1,14 @@
 # 자료
 
-먼저 주의 사항이 있습니다. "loop engineering"이라는 말은 2026년 6월에 만들어졌고, 이 페이지를 쓰는 지금 석 달밖에 되지 않았습니다. 밑바탕의 실천은 이름보다 단단합니다. Steinberger 본인도 7월 중순에 이미 대화가 루프에서 그래프로 옮겨 갔는지를 묻고 있었습니다. 원리를 얻으려고 읽고, 용어는 느슨하게 쥐십시오.
+먼저 주의 사항이 있습니다. "루프 엔지니어링(loop engineering)"이라는 말은 2026년 6월에 만들어졌고, 이 페이지를 쓰는 지금 석 달밖에 되지 않았습니다. 밑바탕의 실천은 이름보다 단단합니다. Steinberger 본인도 7월 중순에 이미 대화가 루프에서 그래프로 옮겨 갔는지를 묻고 있었습니다. 원리를 얻으려고 읽고, 용어는 느슨하게 쥐십시오.
 
 <a id="the-naming"></a>
 
 ## 이름이 붙기까지
 
-- [Peter Steinberger's post](https://x.com/steipete/status/2063697162748260627) — 2026년 6월에 퍼진 문장: "You shouldn't be prompting coding agents anymore. You should be designing loops that prompt your agents."
+- [Peter Steinberger's post](https://x.com/steipete/status/2063697162748260627) — 2026년 6월에 퍼진 문장: "You shouldn't be prompting coding agents anymore. You should be designing loops that prompt your agents."(이제 코딩 에이전트에 프롬프트를 쓰지 마십시오. 에이전트에 프롬프트를 던지는 루프를 설계하십시오.)
 - [Loop Engineering](https://www.oreilly.com/radar/loop-engineering/) — O'Reilly Radar에 전재된 Addy Osmani의 에세이. 자동화, 워크트리, 스킬, 커넥터, 서브에이전트, 외부 상태라는 해부도를 그리고, 검증 부담과 이해 부채에 대한 솔직한 경고로 마무리합니다.
-- [Code review in the age of AI](https://addyosmani.com/blog/code-review-ai/) — Osmani의 짝이 되는 글. "your job is to ship code you confirmed works"는 영어로 아홉 단어에 이 핸드북을 담았습니다.
+- [Code review in the age of AI](https://addyosmani.com/blog/code-review-ai/) — Osmani의 짝이 되는 글. "your job is to ship code you confirmed works"(당신의 일은 동작함을 확인한 코드를 내보내는 것입니다)는 영어로 아홉 단어에 이 핸드북을 담았습니다.
 - [What is loop engineering?](https://www.ibm.com/think/topics/loop-engineering) — IBM의 주제 페이지. 차분한 기관의 정의로서 쓸모 있고, 위험(이해 부채, 의도 부채, 인지적 항복)에 강합니다.
 
 <a id="papers"></a>
@@ -22,7 +22,7 @@
 
 ## Anthropic 자료
 
-- [Managing context on the Claude Developer Platform](https://claude.com/blog/context-management) — 컨텍스트 편집과 메모리 도구, 그리고 이 핸드북이 인용한 수치. 100턴 평가에서 토큰 84% 절감, 편집만으로 29%, 결합하면 39%.
+- [Managing context on the Claude Developer Platform](https://claude.com/blog/context-management) — 컨텍스트 편집과 메모리 도구, 그리고 이 핸드북이 인용한 수치. 100턴 평가에서 토큰 84% 절감, 편집만으로 성능 29% 향상, 메모리 도구와 결합하면 39% 향상.
 - 하네스 핸드북의 [자료 페이지](../track-harness/resources.md)에는 나머지 Anthropic 정전(building effective agents, effective context engineering)이 있으며, 이 핸드북은 이를 되풀이하지 않고 전제로 삼습니다.
 
 <a id="practice"></a>
@@ -30,7 +30,7 @@
 ## 실천
 
 - [Ralph Wiggum as a "software engineer"](https://ghuntley.com/ralph/) — Geoffrey Huntley. 모든 것의 시작이 된 bash 루프이며, 드물게 솔직한 실패 기록이 있습니다.
-- [Designing agentic loops](https://simonwillison.net/2025/Sep/30/designing-agentic-loops/) — Simon Willison, 2025년 9월. 어떤 작업이 루프에 잘 맞는지, 그리고 루프를 돌려 둘 때의 보안 자세.
+- [Designing agentic loops](https://simonwillison.net/2025/Sep/30/designing-agentic-loops/) — Simon Willison, 2025년 9월. 어떤 작업이 루프에 잘 맞는지, 그리고 루프를 돌려 둘 때의 보안 태세.
 
 <a id="repos-worth-reading"></a>
 

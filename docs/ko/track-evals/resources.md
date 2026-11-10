@@ -6,10 +6,10 @@
 
 ## 핵심 자료
 
-- [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/): Hamel Husain. 평가를 하나의 규율로 만든 에세이입니다. 단위 테스트, 사람의 검토, A/B 테스트를 세 수준으로 나누고, 자기 데이터를 직접 들여다봐야 하는 이유를 설명합니다. 여기서 시작하십시오.
+- [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/): Hamel Husain. 평가(eval)를 하나의 규율로 만든 에세이입니다. 단위 테스트, 사람의 검토, A/B 테스트를 세 수준으로 나누고, 자기 데이터를 직접 들여다봐야 하는 이유를 설명합니다. 여기서 시작하십시오.
 - [AI Evals FAQ](https://hamel.dev/blog/posts/evals-faq/): Husain과 Shreya Shankar가 모든 팀이 묻는 질문에 계속 덧붙여 가는 답변입니다. 이진 판정 대 리커트 척도, 레이블이 몇 개 필요한가, 누가 주석을 달아야 하는가, 만들 것인가 살 것인가. 밀도가 높고 무료입니다.
 - [AI Evals for Engineers & PMs](https://maven.com/parlance-labs/evals): 위 FAQ 뒤에 있는 Maven 강좌입니다. 수천 명의 엔지니어와 PM이 거쳐 갔고 2026년에도 기수가 이어지고 있습니다. 유료이며, 이 분야에서 돈을 낼 만한 유일한 강좌입니다.
-- [Who Validates the Validators?](https://arxiv.org/abs/2404.12272): Shankar 외. LLM 판정자를 사람 레이블에 맞추는 작업의 연구적 토대입니다. 사람이 더 많은 출력을 채점할수록 채점 기준이 왜 표류하는지 설명합니다.
+- [Who Validates the Validators?](https://arxiv.org/abs/2404.12272): Shankar 외. LLM 판정자(LLM-as-judge)를 사람 레이블에 맞추는 작업의 연구적 토대입니다. 사람이 더 많은 출력을 채점할수록 루브릭 기준이 왜 표류하는지 설명합니다.
 - [Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents): Anthropic의 엔지니어링 가이드(2026년 1월). 작업 선정, 궤적 채점 대 결과 채점, 판정자 보정, CI로서의 평가를 다룹니다. [에이전트 평가](agent-evals.md)에 관한 공식 플레이북에 가장 가까운 문서입니다.
 - [Evaluation Best Practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices): OpenAI의 가이드입니다. 위 자료를 보완하며, 판정자의 완성된 예시를 보려면 [평가 쿡북 섹션](https://developers.openai.com/cookbook/topic/evals)과 함께 읽으십시오.
 
