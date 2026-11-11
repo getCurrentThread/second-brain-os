@@ -1,21 +1,21 @@
 # 자료
 
-먼저 주의 사항이 있습니다. "루프 엔지니어링(loop engineering)"이라는 말은 2026년 6월에 만들어졌고, 이 페이지를 쓰는 지금 석 달밖에 되지 않았습니다. 밑바탕의 실무 관행은 이름보다 단단합니다. Steinberger 본인도 7월 중순에 이미 대화가 루프에서 그래프로 옮겨 갔는지를 묻고 있었습니다. 원리를 얻으려고 읽고, 용어는 느슨하게 쥐십시오.
+먼저 주의 사항이 있습니다. "루프 엔지니어링(loop engineering)"이라는 말은 2026년 6월에 만들어졌고, 이 페이지를 쓰는 지금 석 달밖에 되지 않았습니다. 밑바탕의 실무 관행은 이름보다 단단합니다. Steinberger 본인도 7월 중순에 이미 대화가 루프에서 그래프로 옮겨 갔는지를 묻고 있었습니다. 원리를 얻으려고 읽고, 용어에는 너무 얽매이지 마십시오.
 
 <a id="the-naming"></a>
 
 ## 이름이 붙기까지
 
 - [Peter Steinberger's post](https://x.com/steipete/status/2063697162748260627) — 2026년 6월에 퍼진 문장: "You shouldn't be prompting coding agents anymore. You should be designing loops that prompt your agents."(이제 코딩 에이전트에 프롬프트를 쓰지 마십시오. 에이전트에 프롬프트를 던지는 루프를 설계하십시오.)
-- [Loop Engineering](https://www.oreilly.com/radar/loop-engineering/) — O'Reilly Radar에 전재된 Addy Osmani의 에세이. 자동화, 워크트리, 스킬, 커넥터, 서브에이전트, 외부 상태라는 해부도를 그리고, 검증 부담과 이해 부채에 대한 솔직한 경고로 마무리합니다.
+- [Loop Engineering](https://www.oreilly.com/radar/loop-engineering/) — O'Reilly Radar에 전재된 Addy Osmani의 에세이. 자동화, 워크트리, 스킬, 커넥터, 서브에이전트, 외부 상태라는 구성도를 그리고, 검증 부담과 이해 부채에 대한 솔직한 경고로 마무리합니다.
 - [Code review in the age of AI](https://addyosmani.com/blog/code-review-ai/) — Osmani의 짝이 되는 글. "your job is to ship code you confirmed works"(당신의 일은 동작함을 확인한 코드를 출시하는 것입니다)는 영어로 아홉 단어에 이 핸드북을 담았습니다.
-- [What is loop engineering?](https://www.ibm.com/think/topics/loop-engineering) — IBM의 주제 페이지. 차분한 기관의 정의로서 쓸모 있고, 위험(이해 부채, 의도 부채, 인지적 항복)에 강합니다.
+- [What is loop engineering?](https://www.ibm.com/think/topics/loop-engineering) — IBM의 주제 페이지. 기관의 절제된 정의로서 쓸모 있고, 위험(이해 부채, 의도 부채, 인지적 항복)을 잘 짚습니다.
 
 <a id="papers"></a>
 
 ## 논문
 
-- [Stop Hand-Holding Your Coding Agent](https://arxiv.org/pdf/2607.00038) — Sandeco Macedo. 학술적 논의로, 종료 조건과 검증, 크리틱 구성 요소를 루프의 1급 인프라로 다룹니다.
+- [Stop Hand-Holding Your Coding Agent](https://arxiv.org/pdf/2607.00038) — Sandeco Macedo. 학술적 논의로, 종료 조건과 검증, 크리틱 구성 요소를 루프의 핵심 인프라로 다룹니다.
 - [Less Context, Better Agents](https://arxiv.org/pdf/2606.10209) — 장기 작업을 하는 도구 사용 에이전트를 위한 효율적인 컨텍스트 엔지니어링. [컨텍스트 위생](context-hygiene.md)이 주장하는 솎아 내기를 측정으로 뒷받침합니다.
 
 <a id="anthropic-material"></a>
@@ -37,7 +37,7 @@
 ## 읽어 볼 만한 저장소
 
 - [humanlayer/12-factor-agents](https://github.com/humanlayer/12-factor-agents) — 프로덕션에서 살아남는 에이전트를 위한 원칙. 여러 요소가 이름만 다른 루프 규율입니다.
-- [anthropics/claude-code](https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md) — `ralph-wiggum` 플러그인: 루프로 계속 돌리기 패턴을 관리되고 들여다볼 수 있는 코드로 만든 것.
+- [anthropics/claude-code](https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md) — `ralph-wiggum` 플러그인: 루프로 계속 돌리기 패턴을 유지보수되고 직접 열어 볼 수 있는 코드로 만든 것.
 - [vercel-labs/ralph-loop-agent](https://github.com/vercel-labs/ralph-loop-agent) — 같은 패턴을 AI SDK 위에 다시 만든 것으로, 검증과 반복을 명시적으로 드러냅니다.
 
 <a id="start-here"></a>

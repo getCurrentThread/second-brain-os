@@ -38,7 +38,7 @@ words. If there are two unrelated ideas, make two pages. Keep the recording date
 
 ## 회의
 
-회의에서 간직할 만한 것은 세 가지이고, 그렇지 않은 것이 압도적으로 많습니다. 결정, 담당자가 있는 약속, 열려 있는 질문입니다.
+회의에서 간직할 만한 것은 세 가지이고, 그렇지 않은 것이 압도적으로 많습니다. 결정, 담당자가 정해진 할 일, 열려 있는 질문입니다.
 
 ```
 This is a meeting transcript. Extract decisions made, commitments with who owns
@@ -46,7 +46,7 @@ each one, and open questions. Link every person mentioned to their entity page.
 Skip discussion that did not lead anywhere.
 ```
 
-약속은 위키가 아니라 해당 프로젝트의 `Inputs/`로 보냅니다. 약속은 지식이 아니라 일이며, 일주일이면 낡습니다. [두 계층](../01-concepts/two-layers.md) 페이지에서 이 분리가 왜 중요한지 다룹니다.
+할 일은 위키가 아니라 해당 프로젝트의 `Inputs/`로 보냅니다. 할 일은 지식이 아니라 작업이며, 일주일이면 낡습니다. [두 계층](../01-concepts/two-layers.md) 페이지에서 이 분리가 왜 중요한지 다룹니다.
 
 <a id="consent-and-other-people"></a>
 

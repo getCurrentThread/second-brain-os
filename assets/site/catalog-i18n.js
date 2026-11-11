@@ -41,7 +41,7 @@ window.SBOS_I18N.register('ko', {
   'General skill libraries': '범용 스킬 라이브러리',
   'Graph builders': '그래프 빌더',
   'The core stack': '핵심 스택',
-  'Alternative homes for a vault': '볼트의 다른 보금자리',
+  'Alternative homes for a vault': '볼트를 둘 수 있는 다른 앱',
   'AI-native knowledge apps': 'AI 네이티브 지식 앱',
   'Capture and processing': '수집과 처리',
   'Search and graph': '검색과 그래프',

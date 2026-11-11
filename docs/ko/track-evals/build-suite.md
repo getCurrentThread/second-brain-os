@@ -111,7 +111,7 @@ if __name__ == "__main__":
     main()
 ```
 
-`python eval_suite.py golden.jsonl`로 실행합니다. 케이스마다 한 줄씩 출력하고, `results.json`을 쓰고, `--threshold`를 주면 나쁜 실행에서 0이 아닌 코드로 종료합니다. CI에 필요한 것은 이것이 전부입니다.
+`python eval_suite.py golden.jsonl`로 실행합니다. 케이스마다 한 줄씩 출력하고, `results.json`을 쓰고, `--threshold`를 주면 실행 결과가 기준에 못 미치면 0이 아닌 코드로 종료합니다. CI에 필요한 것은 이것이 전부입니다.
 
 <a id="calibrate-the-judge-before-trusting-it"></a>
 

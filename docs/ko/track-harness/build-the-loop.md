@@ -1,8 +1,8 @@
 # 실습: 루프
 
-[구성 요소 페이지](what-a-harness-is.md)는 모든 하네스의 핵심이 while 루프라고 주장했습니다. 이 페이지가 그것을 증명합니다. 약 70줄의 Python으로, 실제 Claude API를 상대로 파일을 읽고 명령을 실행하는 에이전트를 얻습니다. [다음 부](build-guardrails.md)는 이것을 하네스로 만들어 주는 장치를 더합니다. 세 페이지를 모두 하는 데 저녁 한 번이면 되고, 코드는 합쳐서 약 150줄입니다.
+[구성 요소 페이지](what-a-harness-is.md)는 모든 하네스의 핵심이 while 루프라고 주장했습니다. 이 페이지가 그것을 증명합니다. 약 70줄의 Python으로, 실제 Claude API를 상대로 파일을 읽고 명령을 실행하는 에이전트를 만듭니다. [2부](build-guardrails.md)는 이것을 하네스로 만들어 주는 장치를 더합니다. 세 페이지를 모두 하는 데 하룻저녁이면 되고, 코드는 합쳐서 약 150줄입니다.
 
-Python 3.10 이상, `pip install anthropic`(1.x SDK), 그리고 환경에 설정한 `ANTHROPIC_API_KEY`가 필요합니다.
+Python 3.10 이상, `pip install anthropic`(1.x SDK), 그리고 환경 변수로 설정한 `ANTHROPIC_API_KEY`가 필요합니다.
 
 <a id="two-tools"></a>
 

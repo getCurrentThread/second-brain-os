@@ -12,13 +12,13 @@
 
 ## 파일로 둔 NetworkX
 
-PageRank, 커뮤니티 탐지, 중심성 같은 알고리즘이 필요하면 그래프를 [NetworkX](https://networkx.org)에 불러오고 GraphML이나 JSON으로 노트 옆에 저장하십시오. 메모리 안에서 도는 Python이라 인프라가 필요 없고, 노드가 수만 개까지는 괜찮습니다. 여러 [GraphRAG](graphrag.md) 구현이 바로 이것을 기본 백엔드로 쓰는데, 그들이 실제로 예상하는 규모가 어느 정도인지 알려 줍니다.
+PageRank, 커뮤니티 탐지, 중심성 같은 알고리즘이 필요하면 그래프를 [NetworkX](https://networkx.org)에 불러오고 GraphML이나 JSON으로 노트 옆에 저장하십시오. 메모리 안에서 도는 Python이라 인프라가 필요 없고, 노드가 수만 개까지는 괜찮습니다. 여러 [GraphRAG](graphrag.md) 구현이 바로 이것을 기본 백엔드로 쓰는데, 이 구현들이 실제로 염두에 둔 규모가 어느 정도인지 알 수 있습니다.
 
 <a id="embedded-databases-and-the-kuzu-lesson"></a>
 
 ## 임베디드 데이터베이스와 Kuzu의 교훈
 
-Kuzu는 뻔한 임베디드 선택지였습니다. 그래프용 DuckDB, Cypher, 파일 하나. 그런데 Kùzu Inc.가 Apple에 인수되었고 [저장소](https://github.com/kuzudb/kuzu)는 2025년 10월에 0.11.3을 마지막 릴리스로 아카이브되었습니다. 여전히 동작하고 커뮤니티 포크도 있지만, 이 일화는 위에서 말한 계층들을 옹호하는 논거입니다. MIT 라이선스가 코드를 구했지만, 일반 파일은 구해 줄 필요조차 없었을 것입니다. [Kuzu 이후의 지형](https://gdotv.com/blog/kuzu-legacy-embedded-graph-database-landscape/)은 아직 정리되는 중입니다.
+Kuzu는 누구나 먼저 꼽던 임베디드 선택지였습니다. 그래프용 DuckDB, Cypher, 파일 하나. 그런데 Kùzu Inc.가 Apple에 인수되었고 [저장소](https://github.com/kuzudb/kuzu)는 2025년 10월에 0.11.3을 마지막 릴리스로 아카이브되었습니다. 여전히 동작하고 커뮤니티 포크도 있지만, 이 일화는 위에서 말한 계층들을 옹호하는 논거입니다. MIT 라이선스가 코드를 구했지만, 일반 파일은 구해 줄 필요조차 없었을 것입니다. [Kuzu 이후의 지형](https://gdotv.com/blog/kuzu-legacy-embedded-graph-database-landscape/)은 아직 정리되는 중입니다.
 
 <a id="servers-neo4j-and-falkordb"></a>
 
@@ -35,4 +35,4 @@ Kuzu는 뻔한 임베디드 선택지였습니다. 그래프용 DuckDB, Cypher, 
 - 단일 에이전트 메모리: 메모리 라이브러리의 기본값을 따르십시오. [Graphiti](https://github.com/getzep/graphiti)는 Neo4j나 FalkorDB를 요구하고, 다른 것들은 NetworkX를 번들로 넣습니다. [도구](tools.md)를 보십시오.
 - 멀티 에이전트, 공유, 동시 쓰기: 진짜 서버입니다. 이제 운영해야 할 데이터베이스가 생깁니다.
 
-저장소는 추출 파이프라인이 동작한 뒤에 고르고, 그 전에는 고르지 마십시오. 파일에 있는 그래프는 오후 한나절이면 Neo4j로 옮길 수 있습니다. 반대 방향의 마이그레이션은 프로젝트가 자기 그래프가 서버를 둘 만한 가치가 없었음을 발견하는 방식입니다. 기준선의 논리는 [지식 그래프가 필요한 이유](why-graphs.md)에 있습니다.
+저장소는 추출 파이프라인이 동작한 뒤에 고르고, 그 전에는 고르지 마십시오. 파일에 있는 그래프는 오후 한나절이면 Neo4j로 옮길 수 있습니다. 반대 방향으로 옮기는 프로젝트는 대개 자기 그래프에 서버를 둘 만한 가치가 처음부터 없었음을 그제야 깨닫습니다. 판단 기준은 [지식 그래프가 필요한 이유](why-graphs.md)에 있습니다.

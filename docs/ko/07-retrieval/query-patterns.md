@@ -13,13 +13,13 @@ What do I know about agent harnesses? Read the concept pages and the sources
 behind them. Say where my sources disagree.
 ```
 
-두 번째 문장이 페이지 하나를 직접 읽는 것보다 낫게 만듭니다. 읽은 모든 것을 통합한 시각, 그리고 드러난 불일치는 어느 한 페이지에도 들어 있지 않습니다.
+두 번째 문장 덕분에 페이지 하나를 직접 읽는 것보다 나은 답이 나옵니다. 읽은 모든 것을 종합해 불일치까지 드러낸 관점은 어느 한 페이지에도 들어 있지 않습니다.
 
 <a id="what-connects-x-and-y"></a>
 
 ## X와 Y를 잇는 것은 무엇인가
 
-검색 인덱스는 전혀 답할 수 없는 질문입니다.
+검색 인덱스로는 전혀 답할 수 없는 질문입니다.
 
 ```
 What connects retrieval quality and context length in my vault? Show the path
@@ -39,7 +39,7 @@ Find pages where a later source superseded an earlier claim. What did I believe,
 what changed it, and when?
 ```
 
-분기마다 돌려 보십시오. 자신의 생각을 바깥에서 지켜보는 일에 가장 가까우며, 모르는 사이에 고친 믿음이 대개 적어도 하나는 드러납니다.
+분기마다 돌려 보십시오. 자신의 생각을 바깥에서 지켜보는 일에 가장 가까우며, 자신도 모르게 바꾼 믿음이 적어도 하나는 대개 나옵니다.
 
 <a id="what-is-missing"></a>
 
@@ -50,11 +50,11 @@ Look at my concept pages on prediction markets. What questions do they raise
 that no source in my vault answers?
 ```
 
-이렇게 하면 볼트는 내가 클릭할 것이라고 알고리즘이 짐작하는 글이 아니라, 자신의 빈틈에서 만들어진 읽기 목록이 됩니다.
+이렇게 하면 볼트는 내가 클릭할 것이라고 알고리즘이 짐작하는 글이 아니라, 자신의 빈틈에서 만들어진 읽을거리 목록이 됩니다.
 
 <a id="what-did-i-say-about-this-before"></a>
 
-## 이에 대해 전에 내가 한 말은 무엇인가
+## 이 주제로 전에 내가 한 말은 무엇인가
 
 [채팅 내보내기](../03-ingestion/chat-exports.md)를 인제스트해 두었다면 특히 쓸모 있습니다.
 
@@ -77,9 +77,9 @@ I am about to argue that X. What in my vault argues against it?
 
 ## 다른 곳에 물어야 할 질문
 
-세계의 현재 상태에 관한 모든 것. 볼트가 아는 것은 자료를 저장한 날 그 자료가 한 말이고, 그 뒤의 일은 알지 못합니다.
+세상의 현재 상황에 관한 모든 것. 볼트가 아는 것은 자료를 저장한 날 그 자료가 한 말이고, 그 뒤의 일은 알지 못합니다.
 
-모델이 이미 아는 일반적인 모든 것. 문서화가 잘된 개념을 볼트에 처음부터 설명해 달라고 하면, 그냥 답을 받을 때보다 못한 판본을 얻습니다.
+모델이 이미 아는 일반 지식. 문서화가 잘된 개념을 볼트에 처음부터 설명해 달라고 하면, 모델에게 곧바로 물을 때보다 못한 답을 얻습니다.
 
 <a id="next"></a>
 

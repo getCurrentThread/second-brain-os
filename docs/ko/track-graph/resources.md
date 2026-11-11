@@ -19,7 +19,7 @@
 
 - [Knowledge Graphs for RAG](https://www.deeplearning.ai/courses/knowledge-graphs-rag): Neo4j와 함께 만든 DeepLearning.AI 단기 강좌입니다. 몇 시간짜리 실습 중심이며 Cypher도 포함됩니다.
 - [Neo4j GraphAcademy: knowledge graphs and GraphRAG](https://graphacademy.neo4j.com/knowledge-graph-rag/): 무료이고, 더 깊으며, 자기 속도로 진행합니다.
-- [Building Knowledge Graphs with LLM Graph Transformer](https://medium.com/data-science/building-knowledge-graphs-with-llm-graph-transformer-a91045c49b59): Tomaz Bratanic이 스키마 제약 추출을 차근차근 보여 줍니다. 이 주제에서 실용적으로 가장 쓸모 있는 글 하나입니다.
+- [Building Knowledge Graphs with LLM Graph Transformer](https://medium.com/data-science/building-knowledge-graphs-with-llm-graph-transformer-a91045c49b59): Tomaz Bratanic이 스키마 제약 추출을 차근차근 보여 줍니다. 이 주제에서 가장 쓸모 있는 실무 글입니다.
 - [Implementing "from local to global" GraphRAG with Neo4j and LangChain](https://neo4j.com/blog/developer/global-graphrag-neo4j-langchain/): 전체 파이프라인을 단계별로 재현해, 비용이 어디서 드는지 구체적으로 볼 수 있습니다.
 - [LazyGraphRAG](https://www.microsoft.com/en-us/research/blog/lazygraphrag-setting-a-new-standard-for-quality-and-cost/): 인덱싱 비용을 질의 시점으로 미루는 방법을 다룬 Microsoft Research의 글입니다.
 
@@ -35,4 +35,4 @@
 
 1. [지식 그래프가 필요한 이유](why-graphs.md)를 읽고, 자신의 실제 코퍼스와 실제 질문에 기준선 테스트를 적용하십시오. 선 아래라면 멈추십시오. 위키의 링크가 이미 그래프입니다.
 2. DeepLearning.AI 단기 강좌를 듣고, 자신의 문서 백 개에 LightRAG를 돌려 추출된 트리플을 읽으십시오. 추출의 실패 모드를 이보다 빨리 가르쳐 주는 것은 없습니다.
-3. Zep 논문을 읽은 뒤, [그래프 저장소](graph-stores.md)로 저장소를 의도적으로 정하십시오. 먼저 파일, 서버는 동시 쓰기가 강제할 때만입니다.
+3. Zep 논문을 읽은 뒤, [그래프 저장소](graph-stores.md)로 저장소를 의도적으로 정하십시오. 먼저 파일, 서버는 동시 쓰기 때문에 어쩔 수 없을 때만 쓰십시오.

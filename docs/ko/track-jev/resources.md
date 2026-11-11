@@ -1,12 +1,12 @@
 # Jev 자료
 
-Jev는 2026년 9월 15일에 출시되었습니다. 이 분야는 나온 지 일주일밖에 안 되었습니다. 아래 링크는 2026년 9월 21일에 확인했고, 이 페이지는 빠르게 낡을 것입니다. 개념은 [시스템 1 모델](system-one-models.md)에 있습니다.
+Jev는 2026년 9월 15일에 출시되었습니다. 이 분야는 생긴 지 일주일밖에 안 되었습니다. 아래 링크는 2026년 9월 21일에 확인했고, 이 페이지는 빠르게 낡을 것입니다. 개념은 [시스템 1 모델](system-one-models.md)에 있습니다.
 
 <a id="official"></a>
 
 ## 공식
 
-- [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — 출시 글. 주장, 가격, 이름 짓기
+- [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — 출시 글. 주장, 가격, 작명
 - [TypeSafe docs](https://docs.typesafe.ai/)와 [System One concepts](https://docs.typesafe.ai/concepts/system-one) — API의 모양, 기본 요소, 한도
 - [HTTP API reference](https://docs.typesafe.ai/api)와 [workflow evals](https://evals.typesafe.ai/) — 벤더 자체의 벤치마크 방법론
 - [Console](https://console.typesafe.ai/) — 대기자 명단, 키, 플레이그라운드
@@ -29,7 +29,7 @@ Jev는 2026년 9월 15일에 출시되었습니다. 이 분야는 나온 지 일
 
 ## 회의적인 시각
 
-- [Anthony Maio: the language model that won't talk](https://anthonymaio.substack.com/p/jev-the-language-model-that-wont) — 가장 좋은 비판적 글. 보정과 분포 이동 아래에서의 성능은 여전히 입증되지 않았습니다
+- [Anthony Maio: the language model that won't talk](https://anthonymaio.substack.com/p/jev-the-language-model-that-wont) — 가장 좋은 비판적 글. 보정과 분포 이동 상황에서의 성능은 여전히 입증되지 않았습니다
 - [KDnuggets: what everyone is getting wrong about Jev](https://www.kdnuggets.com/what-everyone-is-getting-wrong-about-typesafe-ais-jev) — "환각 제로"는 스키마 밖 출력이 0이라는 뜻이지, 틀린 답이 0이라는 뜻이 아닙니다
 - [MindStudio: RLCD vs RLHF](https://www.mindstudio.ai/blog/typesafe-jev-rlcd-vs-rlhf) — 학습 방식에 대한 주장이 실제로 말하는 것
 

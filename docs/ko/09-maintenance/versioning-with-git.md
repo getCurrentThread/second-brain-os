@@ -6,7 +6,7 @@ Git은 에이전트를 무인으로 돌려도 안전하게 만들어 주는 것�
 
 ## 커밋 단위
 
-실행 한 번에 커밋 하나, 그리고 그 실행의 이름을 붙입니다.
+실행 한 번에 커밋 하나, 그리고 커밋 메시지에 그 실행의 이름을 붙입니다.
 
 ```
 ingest 2026-09-07: 4 sources, 9 pages
@@ -37,7 +37,7 @@ git checkout .           # discard uncommitted work
 git checkout HEAD~3 -- wiki/concepts/some-page.md   # one page back
 ```
 
-가운데 명령이 큰 작업 전에 커밋해야 하는 이유입니다. 중간에 잘못된 백필은 볼트가 아니라 그 실행 하나만 잃게 합니다.
+가운데 명령이 큰 작업 전에 커밋해야 하는 이유입니다. 작업 도중에 잘못된 백필은 볼트가 아니라 그 실행 하나만 잃게 합니다.
 
 <a id="branches"></a>
 
@@ -49,7 +49,7 @@ git checkout HEAD~3 -- wiki/concepts/some-page.md   # one page back
 git checkout -b new-schema
 ```
 
-실행하고, 결과를 읽고, 브랜치를 병합하거나 삭제합니다. 이것을 `main`에서 하고 나중에 결정하면, 볼트가 아무도 끝내고 싶지 않은 반쯤 이전된 상태로 남게 됩니다.
+실행하고, 결과를 읽고, 브랜치를 병합하거나 삭제합니다. 이것을 `main`에서 하고 나중에 결정하면, 볼트가 아무도 끝내고 싶지 않은 반쯤 마이그레이션된 상태로 남게 됩니다.
 
 <a id="what-not-to-commit"></a>
 
