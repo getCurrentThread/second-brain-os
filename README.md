@@ -365,11 +365,11 @@ claude plugin install agents-course@second-brain-os
 모든 자료를 망라하기보다 유용한 자료를 엄선했습니다. 필터링 가능한 전체 목록은 [웹의 자료실](https://secondbrainos.dev/resources.html)에, 항목별 설명은 [`resources/`](resources/README.md)에 있습니다.
 
 #### 주제별 읽을거리
-- [**Agent harnesses**](docs/track-harness/resources.md) - 2026년 9월 확인한 하네스 참고 자료
-- [**Loop engineering**](docs/track-loop/resources.md) - 장시간 실행 루프·비평가·종료 조건
-- [**Eval engineering**](docs/track-evals/resources.md) - 선정 이유가 분명한 간결한 평가 읽을거리
-- [**Knowledge graphs**](docs/track-graph/resources.md) - 2026년 9월 확인한 논문·저장소·도구
-- [**Jev and System One models**](docs/track-jev/resources.md) - Jev 공개 일주일 뒤 확인한 의사결정 모델 관련 링크
+- [**에이전트 하네스**](docs/track-harness/resources.md) - 2026년 9월 확인한 하네스 참고 자료
+- [**루프 엔지니어링**](docs/track-loop/resources.md) - 장시간 실행 루프·비평가·종료 조건
+- [**평가 엔지니어링**](docs/track-evals/resources.md) - 선정 이유가 분명한 간결한 평가 읽을거리
+- [**지식 그래프**](docs/track-graph/resources.md) - 2026년 9월 확인한 논문·저장소·도구
+- [**Jev와 System One 모델**](docs/track-jev/resources.md) - Jev 공개 일주일 뒤 확인한 의사결정 모델 관련 링크
 
 #### 그래프·RAG·메모리 <sub>2026년 9월 기준 별 수</sub>
 - [**Graphify**](https://github.com/Graphify-Labs/graphify) - 어떤 폴더에서든 그래프 구축 · 116K
@@ -429,17 +429,16 @@ claude plugin install agents-course@second-brain-os
 
 ## 세컨드 브레인의 작동 원리
 
-```
-   you                    raw/                 agent                 wiki/
- ┌───────┐          ┌──────────────┐      ┌────────────┐      ┌──────────────┐
- │ clip  │  ──────> │ articles     │ ───> │  ingest    │ ───> │ sources/     │
- │ save  │          │ transcripts  │      │  extract   │      │ concepts/    │
- │ dump  │          │ pdfs         │      │  link      │      │ entities/    │
- └───────┘          │ chat exports │      │  lint      │      │ synthesis/   │
+```text
+ 사용자                  raw/               에이전트                  wiki/
+ ┌────────┐         ┌──────────────┐      ┌────────────┐      ┌──────────────┐
+ │ 자료   │ ──────> │ articles     │ ───> │ 수집       │ ───> │ sources/     │
+ │ 저장   │         │ transcripts  │      │ 추출       │      │ concepts/    │
+ │ 기록   │         │ pdfs         │      │ 연결       │      │ entities/    │
+ └────────┘         │ chat exports │      │ 검증       │      │ synthesis/   │
                     └──────────────┘      └────────────┘      └──────────────┘
                                                 │                     │
-                                                │   ask anything      │
-                                                └─────────────────────┘
+                                                └───── 질문과 답변 ─────┘
 ```
 
 원본 자료는 아카이브이며, 실제 결과물은 위키입니다. 위키는 이해하기 쉬운 언어로 한 페이지에 한 가지 개념을 담고 촘촘하게 연결됩니다. 새로운 출처는 문서를 무작정 늘리는 대신 기존 문서를 갱신하므로, 볼트는 커질수록 더 유용해집니다. 위키 옆에는 프로젝트별 `CLAUDE.md`가 있는 프로젝트 계층이 있습니다. 위키는 **알고 있는 것**, 프로젝트는 **진행 중인 일**을 담습니다. 두 영역을 분리하는 이유는 [두 계층](docs/01-concepts/two-layers.md)을 참고하세요.
